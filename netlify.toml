@@ -1,6 +1,6 @@
 [build]
   command = "npm run build"
-  publish = ".next"
+  publish = "out"
 
 [build.environment]
   NODE_VERSION = "18"
@@ -13,7 +13,7 @@
 [dev]
   command = "npm run dev"
   port = 3000
-  publish = ".next"
+  publish = "out"
 
 # Netlify Forms configuration
 [[headers]]
