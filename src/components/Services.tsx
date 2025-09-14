@@ -43,11 +43,6 @@ function Modal({ children, isOpen, onClose }: { children: React.ReactNode; isOpe
 export default function Services() {
   const { langContent } = useLanguage();
   const [activeModal, setActiveModal] = useState<string | null>(null);
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
 
   // Prevent body scroll when modal is open
   useEffect(() => {

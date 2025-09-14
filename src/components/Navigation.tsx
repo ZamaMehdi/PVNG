@@ -5,7 +5,7 @@ import { usePathname } from 'next/navigation';
 import { useLanguage } from '@/contexts/LanguageContext';
 
 export default function Navigation() {
-  const { currentLang, langContent, toggleLanguage } = useLanguage();
+  const { langContent, toggleLanguage } = useLanguage();
   const pathname = usePathname();
 
   const isActive = (path: string) => {

@@ -104,7 +104,7 @@ export default function About() {
             </div>
             
             <p className="text-sm md:text-base text-gray-900 leading-relaxed max-w-4xl mx-auto">
-              Meet the visionary leaders who drive our success and shape our company's future.
+              Meet the visionary leaders who drive our success and shape our company&apos;s future.
             </p>
               </div>
               
