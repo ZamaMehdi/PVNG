@@ -1,9 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { useLanguage } from '@/contexts/LanguageContext';
 import { chatServices, ServiceQA, Question } from '@/lib/chatData';
-import Image from 'next/image';
 
 interface ChatSystemProps {
   isOpen: boolean;
@@ -11,10 +9,8 @@ interface ChatSystemProps {
 }
 
 export default function ChatSystem({ isOpen, onClose }: ChatSystemProps) {
-  const { langContent } = useLanguage();
   const [selectedService, setSelectedService] = useState<ServiceQA | null>(null);
   const [selectedQuestion, setSelectedQuestion] = useState<Question | null>(null);
-  const [chatHistory, setChatHistory] = useState<Array<{type: 'service' | 'question' | 'answer', content: any}>>([]);
 
   const getIcon = (iconName: string) => {
     const icons = {
@@ -50,26 +46,19 @@ export default function ChatSystem({ isOpen, onClose }: ChatSystemProps) {
   const handleServiceSelect = (service: ServiceQA) => {
     setSelectedService(service);
     setSelectedQuestion(null);
-    setChatHistory(prev => [...prev, { type: 'service', content: service }]);
   };
 
   const handleQuestionSelect = (question: Question) => {
     setSelectedQuestion(question);
-    setChatHistory(prev => [...prev, 
-      { type: 'question', content: question },
-      { type: 'answer', content: question }
-    ]);
   };
 
   const handleBackToServices = () => {
     setSelectedService(null);
     setSelectedQuestion(null);
-    setChatHistory([]);
   };
 
   const handleBackToQuestions = () => {
     setSelectedQuestion(null);
-    setChatHistory(prev => prev.slice(0, 1)); // Keep only the service selection
   };
 
   if (!isOpen) return null;
@@ -111,7 +100,7 @@ export default function ChatSystem({ isOpen, onClose }: ChatSystemProps) {
                 </svg>
               </div>
               <div className="bg-white rounded-lg p-3 shadow-sm max-w-xs">
-                <p className="text-sm text-gray-800">Hi! I'm here to help you learn about our services. What would you like to know?</p>
+                <p className="text-sm text-gray-800">Hi! I&apos;m here to help you learn about our services. What would you like to know?</p>
               </div>
             </div>
 
