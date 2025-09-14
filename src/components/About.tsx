@@ -203,7 +203,7 @@ export default function About() {
                 <div className="text-base font-semibold text-blue-600 mb-4">Head of Electromechanical, Firefighting & Gas Pipeline Works</div>
                 
                 <p className="text-sm text-gray-900 leading-relaxed mb-4">
-                  Mr. Thiru is the head of our electromechanical, firefighting, and gas pipeline works and maintenance division. His expertise is a direct result of years of hands-on experience, and his reputation has earned him a loyal client base who work exclusively with him. He has recently expanded his portfolio to include specialized low voltage and security systems, broadening our service offerings. His commitment to ensuring "class in service" is the guiding principle behind every project he oversees.
+                  Mr. Thiru is the head of our electromechanical, firefighting, and gas pipeline works and maintenance division. His expertise is a direct result of years of hands-on experience, and his reputation has earned him a loyal client base who work exclusively with him. He has recently expanded his portfolio to include specialized low voltage and security systems, broadening our service offerings. His commitment to ensuring &quot;class in service&quot; is the guiding principle behind every project he oversees.
                 </p>
                 
                 {/* Key Expertise */}

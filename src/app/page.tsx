@@ -57,15 +57,15 @@ export default function Home() {
             
             <div className="space-y-6 text-lg md:text-xl text-gray-700 leading-relaxed max-w-5xl mx-auto">
               <p className="fade-in" style={{animationDelay: '0.2s'}}>
-                At <span className="font-semibold text-blue-700">PVNG Electromechanical Works L.L.C.</span>, we are committed to powering a greener tomorrow. With over a decade of experience in Dubai's electromechanical sector, we deliver innovative solutions that not only meet your needs today but also protect the environment for future generations.
+                At <span className="font-semibold text-blue-700">PVNG Electromechanical Works L.L.C.</span>, we are committed to powering a greener tomorrow. With over a decade of experience in Dubai&apos;s electromechanical sector, we deliver innovative solutions that not only meet your needs today but also protect the environment for future generations.
               </p>
               
               <p className="fade-in" style={{animationDelay: '0.4s'}}>
-                Our expert team integrates sustainable practices, energy-efficient systems, and cutting-edge technology to create safer, smarter, and more eco-friendly spaces. Whether it's for commercial or residential projects, we focus on reducing environmental impact while maximizing performance and reliability.
+                Our expert team integrates sustainable practices, energy-efficient systems, and cutting-edge technology to create safer, smarter, and more eco-friendly spaces. Whether it&apos;s for commercial or residential projects, we focus on reducing environmental impact while maximizing performance and reliability.
               </p>
               
               <p className="fade-in font-medium text-gray-800" style={{animationDelay: '0.6s'}}>
-                Partner with us to build a better future — one that values efficiency, responsibility, and long-term sustainability. At PVNG, it's more than service; it's a commitment to preserving the planet while driving progress.
+                Partner with us to build a better future — one that values efficiency, responsibility, and long-term sustainability. At PVNG, it&apos;s more than service; it&apos;s a commitment to preserving the planet while driving progress.
               </p>
             </div>
 
