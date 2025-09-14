@@ -28,12 +28,55 @@ export default function Home() {
       
       {/* Website Banner */}
       <section className="w-full">
+        {/* Desktop Banner */}
         <img
-          src="/images/Website Banner.png"
+          src="/images/PVNG_Hero_Banner_Desktop.png"
           alt="PVNG Banner"
-          className="w-full h-[600px] object-fill"
-          style={{display: 'block'}}
+          className="hidden md:block w-full h-auto max-w-full object-contain"
         />
+        {/* Mobile Banner */}
+        <img
+          src="/images/PVNG_Hero_Banner_Mobile.png"
+          alt="PVNG Banner"
+          className="block md:hidden w-full h-auto max-w-full object-contain"
+        />
+      </section>
+
+      {/* Sustainability Section */}
+      <section className="py-16 px-5 bg-gradient-to-br from-blue-50 to-green-50">
+        <div className="max-w-6xl mx-auto text-center">
+          <div className="fade-in">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-8 relative">
+              <span className="bg-gradient-to-r from-green-600 via-blue-600 to-green-700 bg-clip-text text-transparent">
+                Sustainable Solutions. Lasting Impact.
+              </span>
+              {/* Decorative Elements */}
+              <div className="absolute -top-2 -left-2 w-4 h-4 bg-green-400 rounded-full opacity-70 animate-bounce"></div>
+              <div className="absolute -bottom-1 -right-2 w-3 h-3 bg-blue-400 rounded-full opacity-70 animate-bounce" style={{animationDelay: '1s'}}></div>
+            </h2>
+            
+            <div className="space-y-6 text-lg md:text-xl text-gray-700 leading-relaxed max-w-5xl mx-auto">
+              <p className="fade-in" style={{animationDelay: '0.2s'}}>
+                At <span className="font-semibold text-blue-700">PVNG Electromechanical Works L.L.C.</span>, we are committed to powering a greener tomorrow. With over a decade of experience in Dubai's electromechanical sector, we deliver innovative solutions that not only meet your needs today but also protect the environment for future generations.
+              </p>
+              
+              <p className="fade-in" style={{animationDelay: '0.4s'}}>
+                Our expert team integrates sustainable practices, energy-efficient systems, and cutting-edge technology to create safer, smarter, and more eco-friendly spaces. Whether it's for commercial or residential projects, we focus on reducing environmental impact while maximizing performance and reliability.
+              </p>
+              
+              <p className="fade-in font-medium text-gray-800" style={{animationDelay: '0.6s'}}>
+                Partner with us to build a better future — one that values efficiency, responsibility, and long-term sustainability. At PVNG, it's more than service; it's a commitment to preserving the planet while driving progress.
+              </p>
+            </div>
+
+            {/* Accent Line */}
+            <div className="fade-in flex items-center justify-center mt-8" style={{animationDelay: '0.8s'}}>
+              <div className="w-16 h-1 bg-gradient-to-r from-transparent to-green-400"></div>
+              <div className="w-20 h-1 bg-gradient-to-r from-green-400 to-blue-500 mx-4"></div>
+              <div className="w-16 h-1 bg-gradient-to-r from-blue-500 to-transparent"></div>
+            </div>
+          </div>
+        </div>
       </section>
 
       {/* Services Showcase */}
@@ -62,15 +105,16 @@ export default function Home() {
             </div>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {/* Service 1 - Fire Fighting Systems */}
             <div className="service-card fade-in">
-              <div className="w-20 h-20 mx-auto mb-6 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center animate-pulse">
+              <div className="w-20 h-20 mx-auto mb-6 bg-gradient-to-br from-red-500 to-red-600 rounded-2xl flex items-center justify-center animate-pulse">
                 <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.777 17.656 7.343A7.975 7.975 0 0120 13a7.975 7.975 0 01-2.343 5.657z" />
                 </svg>
               </div>
               <h3 className="text-2xl font-bold text-gray-800 mb-4">{langContent.service1Heading}</h3>
-              <p className="text-gray-900 mb-6">Complete fire safety solutions for residential, commercial, and industrial properties with cutting-edge technology.</p>
-              <Link href="/services" className="text-blue-600 hover:text-blue-800 font-semibold flex items-center gap-2">
+              <p className="text-gray-900 mb-6">{langContent.service1Para}</p>
+              <Link href="/services#service-1" className="text-blue-600 hover:text-blue-800 font-semibold flex items-center gap-2">
                 Learn More 
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
@@ -78,15 +122,50 @@ export default function Home() {
               </Link>
             </div>
 
+            {/* Service 2 - Low Voltage (LV) Systems */}
+            <div className="service-card fade-in" style={{animationDelay: '0.1s'}}>
+              <div className="w-20 h-20 mx-auto mb-6 bg-gradient-to-br from-yellow-500 to-orange-600 rounded-2xl flex items-center justify-center animate-pulse">
+                <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                </svg>
+              </div>
+              <h3 className="text-2xl font-bold text-gray-800 mb-4">{langContent.service2Heading}</h3>
+              <p className="text-gray-900 mb-6">{langContent.service2Para}</p>
+              <Link href="/services#service-2" className="text-blue-600 hover:text-blue-800 font-semibold flex items-center gap-2">
+                Learn More 
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </Link>
+            </div>
+
+            {/* Service 3 - Gas Piping Solutions */}
             <div className="service-card fade-in" style={{animationDelay: '0.2s'}}>
+              <div className="w-20 h-20 mx-auto mb-6 bg-gradient-to-br from-green-500 to-green-600 rounded-2xl flex items-center justify-center animate-pulse">
+                <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" />
+                </svg>
+              </div>
+              <h3 className="text-2xl font-bold text-gray-800 mb-4">{langContent.service3Heading}</h3>
+              <p className="text-gray-900 mb-6">{langContent.service3Para}</p>
+              <Link href="/services#service-3" className="text-blue-600 hover:text-blue-800 font-semibold flex items-center gap-2">
+                Learn More 
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </Link>
+            </div>
+
+            {/* Service 4 - Commercial and Residential Security Systems */}
+            <div className="service-card fade-in" style={{animationDelay: '0.3s'}}>
               <div className="w-20 h-20 mx-auto mb-6 bg-gradient-to-br from-blue-400 to-blue-500 rounded-2xl flex items-center justify-center animate-pulse">
                 <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
                 </svg>
               </div>
               <h3 className="text-2xl font-bold text-gray-800 mb-4">{langContent.service4Heading}</h3>
-              <p className="text-gray-900 mb-6">Advanced CCTV, access control, and intruder alarm systems for maximum protection and peace of mind.</p>
-              <Link href="/services" className="text-blue-600 hover:text-blue-800 font-semibold flex items-center gap-2">
+              <p className="text-gray-900 mb-6">{langContent.service4Para}</p>
+              <Link href="/services#service-4" className="text-blue-600 hover:text-blue-800 font-semibold flex items-center gap-2">
                 Learn More 
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
@@ -94,15 +173,16 @@ export default function Home() {
               </Link>
             </div>
 
+            {/* Service 5 - Sustainability Consultants & Experts */}
             <div className="service-card fade-in" style={{animationDelay: '0.4s'}}>
-              <div className="w-20 h-20 mx-auto mb-6 bg-gradient-to-br from-blue-600 to-blue-700 rounded-2xl flex items-center justify-center animate-pulse">
+              <div className="w-20 h-20 mx-auto mb-6 bg-gradient-to-br from-purple-500 to-purple-600 rounded-2xl flex items-center justify-center animate-pulse">
                 <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zM21 5a2 2 0 00-2-2h-4a2 2 0 00-2 2v12a4 4 0 004 4h4a2 2 0 002-2V5z" />
                 </svg>
               </div>
               <h3 className="text-2xl font-bold text-gray-800 mb-4">{langContent.service5Heading}</h3>
-              <p className="text-gray-900 mb-6">Solar energy, energy storage, and sustainable building practices consulting for a greener future.</p>
-              <Link href="/services" className="text-blue-600 hover:text-blue-800 font-semibold flex items-center gap-2">
+              <p className="text-gray-900 mb-6">{langContent.service5Para}</p>
+              <Link href="/services#service-5" className="text-blue-600 hover:text-blue-800 font-semibold flex items-center gap-2">
                 Learn More 
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
@@ -113,55 +193,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* About Preview */}
-      <section className="py-20 px-5">
-        <div className="max-w-6xl mx-auto">
-          <div className="card fade-in">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-              <div className="fade-in-left">
-                <h2 className="text-4xl font-bold text-gray-800 mb-6">{langContent.aboutTitle}</h2>
-                <p className="text-lg text-gray-900 mb-6">
-                  With over a decade of excellence in the electromechanical sector, we deliver robust and innovative solutions that underscore our unwavering commitment to quality, reliability, and client satisfaction.
-                </p>
-                <div className="flex flex-wrap gap-4">
-                  <div className="icon-box">
-                    <svg className="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
-                    </svg>
-                    <h4>Quality</h4>
-                  </div>
-                  <div className="icon-box">
-                    <svg className="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
-                    </svg>
-                    <h4>Innovation</h4>
-                  </div>
-                  <div className="icon-box">
-                    <svg className="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.367 2.684 3 3 0 00-5.367-2.684z" />
-                    </svg>
-                    <h4>Partnership</h4>
-                  </div>
-                </div>
-              </div>
-              <div className="fade-in-right">
-                <div className="relative">
-                  <div className="w-full h-80 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center">
-                    <svg className="w-32 h-32 text-white opacity-50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
-                    </svg>
-                  </div>
-                  <div className="absolute -bottom-6 -right-6 w-24 h-24 bg-yellow-400 rounded-full flex items-center justify-center animate-pulse">
-                    <svg className="w-12 h-12 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                    </svg>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* Stats Section */}
       <section className="py-20 px-5">

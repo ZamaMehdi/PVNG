@@ -199,7 +199,7 @@ export default function Services() {
 
           <div className="space-y-20">
             {services.map((service, index) => (
-              <div key={service.id} className="fade-in" style={{ animationDelay: `${index * 0.2}s` }}>
+              <div key={service.id} id={`service-${service.id}`} className="fade-in scroll-mt-20" style={{ animationDelay: `${index * 0.2}s` }}>
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                   {/* Content Side */}
                   <div className={index % 2 === 0 ? 'lg:order-1' : 'lg:order-2'}>

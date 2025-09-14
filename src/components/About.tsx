@@ -182,6 +182,44 @@ export default function About() {
                 </div>
               </div>
             </div>
+            
+            {/* Mr. Thiru */}
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 items-start">
+              {/* Image Card */}
+              <div className="service-card fade-in p-4 hover:transform-none">
+                <div className="relative w-full h-80 lg:h-96">
+                  <Image
+                    src="/images/thiru.jpg"
+                    alt="Mr. Thiru"
+                    fill
+                    className="object-contain rounded-2xl shadow-lg"
+                  />
+                </div>
+              </div>
+              
+              {/* Content Card */}
+              <div className="service-card fade-in p-4">
+                <h3 className="text-xl font-bold text-gray-900 mb-2">Mr. Thiru</h3>
+                <div className="text-base font-semibold text-blue-600 mb-4">Head of Electromechanical, Firefighting & Gas Pipeline Works</div>
+                
+                <p className="text-sm text-gray-900 leading-relaxed mb-4">
+                  Mr. Thiru is the head of our electromechanical, firefighting, and gas pipeline works and maintenance division. His expertise is a direct result of years of hands-on experience, and his reputation has earned him a loyal client base who work exclusively with him. He has recently expanded his portfolio to include specialized low voltage and security systems, broadening our service offerings. His commitment to ensuring "class in service" is the guiding principle behind every project he oversees.
+                </p>
+                
+                {/* Key Expertise */}
+                <div className="space-y-2">
+                  <h4 className="text-base font-semibold text-gray-900 mb-2">Key Expertise:</h4>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                    <div className="text-xs text-gray-900 font-medium bg-gray-100 px-2 py-1 rounded-md">Electromechanical Systems</div>
+                    <div className="text-xs text-gray-900 font-medium bg-gray-100 px-2 py-1 rounded-md">Firefighting Systems</div>
+                    <div className="text-xs text-gray-900 font-medium bg-gray-100 px-2 py-1 rounded-md">Gas Pipeline Works</div>
+                    <div className="text-xs text-gray-900 font-medium bg-gray-100 px-2 py-1 rounded-md">Low Voltage Systems</div>
+                    <div className="text-xs text-gray-900 font-medium bg-gray-100 px-2 py-1 rounded-md">Security Systems</div>
+                    <div className="text-xs text-gray-900 font-medium bg-gray-100 px-2 py-1 rounded-md">Maintenance & Service</div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
