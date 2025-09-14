@@ -108,8 +108,8 @@ export default function Home() {
             {/* Service 1 - Fire Fighting Systems */}
             <div className="fade-in">
               <Link href="/services#service-1" className="relative block group">
-                <img src="/images/Firefighting_homepagecard.png" alt="Fire Fighting Systems" className="w-auto h-auto cursor-pointer" />
-                <div className="absolute bottom-0 left-0 right-0 bg-black bg-opacity-75 flex flex-col items-center justify-end p-4">
+                <img src="/images/Firefighting_homepagecard.png" alt="Fire Fighting Systems" className="w-auto h-auto cursor-pointer group-hover:brightness-75 transition-all duration-300" />
+                <div className="absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 flex flex-col items-center justify-end p-4">
                   <span className="text-white text-2xl font-normal mb-2 text-center">{langContent.service1Heading}</span>
                   <div className="flex items-center">
                     <span className="text-white text-lg font-medium">Learn More</span>
@@ -122,8 +122,8 @@ export default function Home() {
             {/* Service 2 - Low Voltage (LV) Systems */}
             <div className="fade-in" style={{animationDelay: '0.1s'}}>
               <Link href="/services#service-2" className="relative block group">
-                <img src="/images/LV_homepagecard.png" alt="Low Voltage Systems" className="w-auto h-auto cursor-pointer" />
-                <div className="absolute bottom-0 left-0 right-0 bg-black bg-opacity-75 flex flex-col items-center justify-end p-4">
+                <img src="/images/LV_homepagecard.png" alt="Low Voltage Systems" className="w-auto h-auto cursor-pointer group-hover:brightness-75 transition-all duration-300" />
+                <div className="absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 flex flex-col items-center justify-end p-4">
                   <span className="text-white text-2xl font-normal mb-2 text-center">{langContent.service2Heading}</span>
                   <div className="flex items-center">
                     <span className="text-white text-lg font-medium">Learn More</span>
@@ -136,8 +136,8 @@ export default function Home() {
             {/* Service 3 - Gas Piping Solutions */}
             <div className="fade-in" style={{animationDelay: '0.2s'}}>
               <Link href="/services#service-3" className="relative block group">
-                <img src="/images/GasPipeline_homepagecard.png" alt="Gas Piping Solutions" className="w-auto h-auto cursor-pointer" />
-                <div className="absolute bottom-0 left-0 right-0 bg-black bg-opacity-75 flex flex-col items-center justify-end p-4">
+                <img src="/images/GasPipeline_homepagecard.png" alt="Gas Piping Solutions" className="w-auto h-auto cursor-pointer group-hover:brightness-75 transition-all duration-300" />
+                <div className="absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 flex flex-col items-center justify-end p-4">
                   <span className="text-white text-2xl font-normal mb-2 text-center">{langContent.service3Heading}</span>
                   <div className="flex items-center">
                     <span className="text-white text-lg font-medium">Learn More</span>
@@ -150,8 +150,8 @@ export default function Home() {
             {/* Service 4 - Commercial and Residential Security Systems */}
             <div className="fade-in" style={{animationDelay: '0.3s'}}>
               <Link href="/services#service-4" className="relative block group">
-                <img src="/images/ResenditialSec_homepagecard.png" alt="Security Systems" className="w-auto h-auto cursor-pointer" />
-                <div className="absolute bottom-0 left-0 right-0 bg-black bg-opacity-75 flex flex-col items-center justify-end p-4">
+                <img src="/images/ResenditialSec_homepagecard.png" alt="Security Systems" className="w-auto h-auto cursor-pointer group-hover:brightness-75 transition-all duration-300" />
+                <div className="absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 flex flex-col items-center justify-end p-4">
                   <span className="text-white text-2xl font-normal mb-2 text-center">Security Systems</span>
                   <div className="flex items-center">
                     <span className="text-white text-lg font-medium">Learn More</span>
@@ -164,8 +164,8 @@ export default function Home() {
             {/* Service 5 - Sustainability Consultants & Experts */}
             <div className="fade-in" style={{animationDelay: '0.4s'}}>
               <Link href="/services#service-5" className="relative block group">
-                <img src="/images/Sustainability_homepagecard.png" alt="Sustainability Consultants" className="w-auto h-auto cursor-pointer" />
-                <div className="absolute bottom-0 left-0 right-0 bg-black bg-opacity-75 flex flex-col items-center justify-end p-4">
+                <img src="/images/Sustainability_homepagecard.png" alt="Sustainability Consultants" className="w-auto h-auto cursor-pointer group-hover:brightness-75 transition-all duration-300" />
+                <div className="absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 flex flex-col items-center justify-end p-4">
                   <span className="text-white text-2xl font-normal mb-2 text-center">Sustainable Consultants</span>
                   <div className="flex items-center">
                     <span className="text-white text-lg font-medium">Learn More</span>
