@@ -55,7 +55,7 @@ export default function Home() {
               <div className="absolute -bottom-1 -right-2 w-3 h-3 bg-blue-400 rounded-full opacity-70 animate-bounce" style={{animationDelay: '1s'}}></div>
             </h2>
             
-            <div className="space-y-4 text-base md:text-lg text-gray-700 leading-relaxed max-w-5xl mx-auto">
+            <div className="space-y-3 text-sm md:text-base text-black leading-relaxed max-w-5xl mx-auto">
               <p className="fade-in" style={{animationDelay: '0.2s'}}>
                 At <span className="font-semibold text-blue-700">PVNG Electromechanical Works L.L.C.</span>, we are committed to powering a greener tomorrow. With over a decade of experience in Dubai&apos;s electromechanical sector, we deliver innovative solutions that not only meet your needs today but also protect the environment for future generations.
               </p>

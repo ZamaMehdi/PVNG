@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { Inter, Cairo } from 'next/font/google'
 import './globals.css'
 import { LanguageProvider } from '@/contexts/LanguageContext'
+import FloatingChatButton from '@/components/FloatingChatButton'
 
 const inter = Inter({ 
   subsets: ['latin'],
@@ -90,6 +91,7 @@ export default function RootLayout({
       <body className="font-inter bg-gray-50 text-gray-900 leading-relaxed overflow-x-hidden flex flex-col">
         <LanguageProvider>
           {children}
+          <FloatingChatButton />
         </LanguageProvider>
       </body>
     </html>

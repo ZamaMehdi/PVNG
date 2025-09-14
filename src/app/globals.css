@@ -913,20 +913,17 @@ body > div {
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
 }
 
-/* Custom Scrollbar */
+/* Hide Scrollbar */
 ::-webkit-scrollbar {
-  width: 8px;
+  display: none;
 }
 
-::-webkit-scrollbar-track {
-  background: rgba(255, 255, 255, 0.1);
+/* Hide scrollbar for Firefox */
+html {
+  scrollbar-width: none;
 }
 
-::-webkit-scrollbar-thumb {
-  background: var(--gradient-primary);
-  border-radius: 4px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: var(--gradient-secondary);
+/* Hide scrollbar for IE and Edge */
+body {
+  -ms-overflow-style: none;
 }

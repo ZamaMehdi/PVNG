@@ -131,11 +131,11 @@ export default function Services() {
   return (
     <>
       {/* Product Banner */}
-      <section className="w-full mt-20">
+      <section className="w-full pt-20 bg-black">
         <img
           src="/images/productbanner.gif"
           alt="Products Banner"
-          className="w-full h-[500px] object-fill"
+          className="w-full h-[450px] object-fill"
           style={{
             display: 'block',
             imageRendering: '-webkit-optimize-contrast'
