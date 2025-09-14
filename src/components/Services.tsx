@@ -138,7 +138,6 @@ export default function Services() {
           className="w-full h-[500px] object-fill"
           style={{
             display: 'block',
-            imageRendering: 'high-quality',
             imageRendering: '-webkit-optimize-contrast'
           }}
         />
