@@ -143,7 +143,7 @@ export default function Services() {
         />
       </section>
 
-      <section id="services" className="py-20 px-5 bg-white relative overflow-hidden" style={{paddingTop: '6rem'}}>
+      <section id="services" className="py-12 px-5 bg-white relative overflow-hidden" style={{paddingTop: '3rem'}}>
         {/* Subtle Blue Background Elements */}
         <div className="absolute top-10 right-10 w-64 h-64 bg-blue-50 rounded-full blur-3xl animate-pulse"></div>
         <div className="absolute bottom-10 left-10 w-80 h-80 bg-blue-100/30 rounded-full blur-3xl animate-pulse" style={{animationDelay: '2s'}}></div>
@@ -161,7 +161,7 @@ export default function Services() {
 
             {/* Main Title with Enhanced Styling */}
             <div className="fade-in relative z-10">
-              <h2 className="text-3xl md:text-5xl font-bold mb-6 relative">
+              <h2 className="text-2xl md:text-4xl font-bold mb-4 relative">
                 <span className="bg-gradient-to-r from-gray-900 via-blue-700 to-purple-800 bg-clip-text text-transparent drop-shadow-lg">
                   {langContent.servicesTitle}
                 </span>
@@ -174,7 +174,7 @@ export default function Services() {
 
             {/* Enhanced Accent Line */}
             <div className="fade-in relative z-10" style={{animationDelay: '0.2s'}}>
-              <div className="flex items-center justify-center mb-12">
+              <div className="flex items-center justify-center mb-6">
                 <div className="w-20 h-1.5 bg-gradient-to-r from-transparent via-blue-400 to-blue-500 rounded-full"></div>
                 <div className="w-24 h-1.5 bg-gradient-to-r from-blue-500 via-purple-500 to-blue-600 mx-6 rounded-full shadow-lg"></div>
                 <div className="w-20 h-1.5 bg-gradient-to-r from-blue-500 via-blue-400 to-transparent rounded-full"></div>
@@ -184,14 +184,9 @@ export default function Services() {
             {/* Enhanced Description with Better Typography */}
             <div className="fade-in relative z-10" style={{animationDelay: '0.4s'}}>
               <div className="max-w-4xl mx-auto">
-                <p className="text-lg md:text-xl leading-relaxed text-gray-700 font-medium mb-6">
+                <p className="text-base md:text-lg leading-relaxed text-black font-medium">
                   {langContent.servicesIntro}
                 </p>
-                <div className="flex items-center justify-center space-x-4 text-blue-600">
-                  <div className="w-3 h-3 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full animate-pulse"></div>
-                  <span className="text-sm font-semibold uppercase tracking-wider">Excellence in Every Project</span>
-                  <div className="w-3 h-3 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full animate-pulse" style={{animationDelay: '1s'}}></div>
-                </div>
               </div>
             </div>
 
@@ -207,32 +202,32 @@ export default function Services() {
                       <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center shadow-lg">
                         {getIcon(service.icon)}
                       </div>
-                      <h3 className="text-4xl font-bold text-gray-800">
+                      <h3 className="text-3xl font-bold text-gray-800">
                         <span dangerouslySetInnerHTML={{ __html: service.heading }} />
                       </h3>
                     </div>
                     
                     <div className="space-y-6">
-                      <p className="text-lg text-gray-600 leading-relaxed">
+                      <p className="text-lg text-black leading-relaxed">
                         <span dangerouslySetInnerHTML={{ __html: service.description }} />
                       </p>
                       
                       <div className="grid grid-cols-1 gap-4">
                         <div className="flex items-start gap-3">
                           <div className="w-2 h-2 bg-gradient-to-r from-blue-500 to-blue-600 rounded-full mt-2 flex-shrink-0"></div>
-                          <p className="text-gray-600">
+                          <p className="text-black">
                             <span dangerouslySetInnerHTML={{ __html: langContent[`service${service.id}Feature1Desc` as keyof typeof langContent] }} />
                           </p>
                         </div>
                         <div className="flex items-start gap-3">
                           <div className="w-2 h-2 bg-gradient-to-r from-blue-500 to-blue-600 rounded-full mt-2 flex-shrink-0"></div>
-                          <p className="text-gray-600">
+                          <p className="text-black">
                             <span dangerouslySetInnerHTML={{ __html: langContent[`service${service.id}Feature2Desc` as keyof typeof langContent] }} />
                           </p>
                         </div>
                         <div className="flex items-start gap-3">
                           <div className="w-2 h-2 bg-gradient-to-r from-blue-500 to-blue-600 rounded-full mt-2 flex-shrink-0"></div>
-                          <p className="text-gray-600">
+                          <p className="text-black">
                             <span dangerouslySetInnerHTML={{ __html: langContent[`service${service.id}Feature3Desc` as keyof typeof langContent] }} />
                           </p>
                         </div>
@@ -270,10 +265,10 @@ export default function Services() {
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
                       </svg>
                     </div>
-                    <h3 className="text-2xl font-bold text-gray-800 mb-4">
+                    <h3 className="text-xl font-bold text-gray-800 mb-3">
                       <span dangerouslySetInnerHTML={{ __html: langContent.sustainabilitySolarHeading }} />
                     </h3>
-                    <p className="text-gray-600 mb-6 line-clamp-4">
+                    <p className="text-black mb-6 line-clamp-4">
                       {langContent.sustainabilitySolarPara1.split('.')[0]}.
                     </p>
                     <button 
@@ -299,10 +294,10 @@ export default function Services() {
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
                       </svg>
                     </div>
-                    <h3 className="text-2xl font-bold text-gray-800 mb-4">
+                    <h3 className="text-xl font-bold text-gray-800 mb-3">
                       <span dangerouslySetInnerHTML={{ __html: langContent.sustainabilityStorageHeading }} />
                     </h3>
-                    <p className="text-gray-600 mb-6 line-clamp-4">
+                    <p className="text-black mb-6 line-clamp-4">
                       {langContent.sustainabilityStoragePara1.split('.')[0]}.
                     </p>
                     <button 
@@ -328,10 +323,10 @@ export default function Services() {
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
                       </svg>
                     </div>
-                    <h3 className="text-2xl font-bold text-gray-800 mb-4">
+                    <h3 className="text-xl font-bold text-gray-800 mb-3">
                       <span dangerouslySetInnerHTML={{ __html: langContent.sustainabilityWindHeading }} />
                     </h3>
-                    <p className="text-gray-600 mb-6 line-clamp-4">
+                    <p className="text-black mb-6 line-clamp-4">
                       {langContent.sustainabilityWindPara1.split('.')[0]}.
                     </p>
                     <button 
@@ -371,17 +366,17 @@ export default function Services() {
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
                           </svg>
                         </div>
-                        <h3 className="text-4xl font-bold text-gray-800">
+                        <h3 className="text-3xl font-bold text-gray-800">
                           <span dangerouslySetInnerHTML={{ __html: langContent.sustainabilitySolarHeading }} />
                         </h3>
                       </div>
                       
                       <div className="space-y-6">
-                        <p className="text-lg text-gray-600 leading-relaxed">
+                        <p className="text-lg text-black leading-relaxed">
                           <span dangerouslySetInnerHTML={{ __html: langContent.sustainabilitySolarPara1 }} />
                         </p>
                         
-                        <p className="text-lg text-gray-600 leading-relaxed">
+                        <p className="text-lg text-black leading-relaxed">
                           <span dangerouslySetInnerHTML={{ __html: langContent.sustainabilitySolarPara2 }} />
                         </p>
                       </div>
@@ -416,17 +411,17 @@ export default function Services() {
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
                           </svg>
                         </div>
-                        <h3 className="text-4xl font-bold text-gray-800">
+                        <h3 className="text-3xl font-bold text-gray-800">
                           <span dangerouslySetInnerHTML={{ __html: langContent.sustainabilityStorageHeading }} />
                         </h3>
                       </div>
                       
                       <div className="space-y-6">
-                        <p className="text-lg text-gray-600 leading-relaxed">
+                        <p className="text-lg text-black leading-relaxed">
                           <span dangerouslySetInnerHTML={{ __html: langContent.sustainabilityStoragePara1 }} />
                         </p>
                         
-                        <p className="text-lg text-gray-600 leading-relaxed">
+                        <p className="text-lg text-black leading-relaxed">
                           <span dangerouslySetInnerHTML={{ __html: langContent.sustainabilityStoragePara2 }} />
                         </p>
                       </div>
@@ -461,17 +456,17 @@ export default function Services() {
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
                           </svg>
                         </div>
-                        <h3 className="text-4xl font-bold text-gray-800">
+                        <h3 className="text-3xl font-bold text-gray-800">
                           <span dangerouslySetInnerHTML={{ __html: langContent.sustainabilityWindHeading }} />
                         </h3>
                       </div>
                       
                       <div className="space-y-6">
-                        <p className="text-lg text-gray-600 leading-relaxed">
+                        <p className="text-lg text-black leading-relaxed">
                           <span dangerouslySetInnerHTML={{ __html: langContent.sustainabilityWindPara1 }} />
                         </p>
                         
-                        <p className="text-lg text-gray-600 leading-relaxed">
+                        <p className="text-lg text-black leading-relaxed">
                           <span dangerouslySetInnerHTML={{ __html: langContent.sustainabilityWindPara2 }} />
                         </p>
                       </div>

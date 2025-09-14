@@ -87,7 +87,7 @@ export default function RootLayout({
         <meta name="theme-color" content="#004080" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </head>
-      <body className="font-inter bg-gray-50 text-gray-900 leading-relaxed overflow-x-hidden min-h-screen flex flex-col" style={{transform: 'scale(0.95)', width: '105.26%', transformOrigin: 'top left'}}>
+      <body className="font-inter bg-gray-50 text-gray-900 leading-relaxed overflow-x-hidden flex flex-col">
         <LanguageProvider>
           {children}
         </LanguageProvider>

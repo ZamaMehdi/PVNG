@@ -16,6 +16,110 @@ html[lang="en"] *::after {
   direction: ltr !important;
 }
 
+/* Reset only for spacing issues */
+html, body {
+  margin: 0 !important;
+  padding: 0 !important;
+  height: auto !important;
+  min-height: auto !important;
+}
+
+/* Ensure viewport has no extra spacing */
+html {
+  overflow-x: hidden !important;
+  overflow-y: auto !important;
+}
+
+body {
+  overflow-x: hidden !important;
+  overflow-y: auto !important;
+}
+
+/* Remove any potential spacing from the document */
+document, documentElement {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* Force remove any spacing after footer */
+footer + * {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
+/* Ensure no spacing from any element after footer */
+footer ~ * {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
+/* Target the specific white space issue */
+body::after {
+  content: none !important;
+  display: none !important;
+  height: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* Ensure the last element has no bottom spacing */
+body > *:last-child {
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+/* Force remove any viewport spacing */
+html, body {
+  margin: 0 !important;
+  padding: 0 !important;
+  border: none !important;
+  outline: none !important;
+  height: auto !important;
+  min-height: auto !important;
+  max-height: none !important;
+}
+
+/* Ensure no spacing from the root element */
+#__next, #root, [data-reactroot] {
+  margin: 0 !important;
+  padding: 0 !important;
+  height: auto !important;
+  min-height: auto !important;
+}
+
+/* Target any potential spacing from the browser */
+* {
+  box-sizing: border-box !important;
+}
+
+/* Ensure no spacing from any pseudo-elements */
+*::before, *::after {
+  margin: 0 !important;
+  padding: 0 !important;
+  content: none !important;
+  display: none !important;
+}
+
+/* Force footer to stick to bottom and remove any spacing */
+footer {
+  position: relative !important;
+  bottom: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+/* Ensure no spacing after footer by making it the last element */
+footer:last-child {
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
+}
+
 /* Arabic text styling - only font and text alignment */
 html[lang="ar"] {
   font-family: var(--font-cairo), 'Cairo', sans-serif;
@@ -87,6 +191,9 @@ html[lang="ar"] footer {
 html {
   scroll-behavior: smooth;
   overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  height: auto;
 }
 
 body {
@@ -95,8 +202,15 @@ body {
   padding: 0;
   background: #f8fafc;
   color: #000000;
-  line-height: 1.6;
+  line-height: 1.5;
   overflow-x: hidden;
+  height: auto;
+  font-size: 14px;
+}
+
+/* Ensure no spacing after footer */
+footer:after {
+  content: none !important;
 }
 
 /* Glass Morphism Effect */
@@ -129,13 +243,13 @@ nav.scrolled {
 .nav-link {
   color: #ffffff !important;
   font-weight: 600 !important;
-  font-size: 0.9rem !important;
-  margin: 0 1.5rem !important;
+  font-size: 0.8rem !important;
+  margin: 0 1rem !important;
   text-decoration: none !important;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
   position: relative !important;
-  padding: 0.5rem 1rem !important;
-  border-radius: 0.5rem !important;
+  padding: 0.4rem 0.8rem !important;
+  border-radius: 0.4rem !important;
 }
 
 /* Transparent header for home page */
@@ -565,10 +679,10 @@ nav.transparent-header .brand-text {
 /* Back to Top Button */
 .back-to-top {
   position: fixed !important;
-  bottom: 2rem !important;
-  right: 2rem !important;
-  width: 3.5rem !important;
-  height: 3.5rem !important;
+  bottom: 1.5rem !important;
+  right: 1.5rem !important;
+  width: 3rem !important;
+  height: 3rem !important;
   background: var(--gradient-primary) !important;
   color: white !important;
   border: none !important;
@@ -601,8 +715,23 @@ footer {
   background: #000000 !important;
   color: white !important;
   text-align: center !important;
-  padding: 3rem 2rem !important;
-  margin-top: 0 !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  border: none !important;
+  outline: none !important;
+  position: relative !important;
+}
+
+/* Remove any potential spacing after footer */
+footer::after {
+  content: none !important;
+  display: none !important;
+}
+
+/* Ensure no spacing from parent containers */
+body > div {
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
 }
 
 /* Responsive Design */
