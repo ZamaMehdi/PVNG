@@ -28,11 +28,11 @@ function Modal({ children, isOpen, onClose }: { children: React.ReactNode; isOpe
       onClick={onClose}
     >
       <div
-        className="bg-white rounded-2xl max-w-6xl w-full max-h-[90vh] overflow-y-auto shadow-2xl"
+        className="bg-white rounded-2xl max-w-6xl w-full max-h-[90vh] overflow-y-auto shadow-2xl relative"
         style={style}
         onClick={(e) => e.stopPropagation()}
       >
-        <button onClick={onClose} className="absolute top-4 right-4">×</button>
+        <button onClick={onClose} className="sticky top-4 right-4 float-right z-10 bg-white rounded-full w-8 h-8 flex items-center justify-center text-xl font-bold hover:bg-gray-100 transition-colors">×</button>
         {children}
       </div>
     </div>,
@@ -184,7 +184,7 @@ export default function Services() {
             {/* Enhanced Description with Better Typography */}
             <div className="fade-in relative z-10" style={{animationDelay: '0.4s'}}>
               <div className="max-w-4xl mx-auto">
-                <p className="text-base md:text-lg leading-relaxed text-black font-medium">
+                <p className="text-sm md:text-base leading-relaxed text-black font-medium">
                   {langContent.servicesIntro}
                 </p>
               </div>
@@ -208,26 +208,26 @@ export default function Services() {
                     </div>
                     
                     <div className="space-y-6">
-                      <p className="text-lg text-black leading-relaxed">
+                      <p className="text-sm md:text-base text-black leading-relaxed">
                         <span dangerouslySetInnerHTML={{ __html: service.description }} />
                       </p>
                       
                       <div className="grid grid-cols-1 gap-4">
                         <div className="flex items-start gap-3">
                           <div className="w-2 h-2 bg-gradient-to-r from-blue-500 to-blue-600 rounded-full mt-2 flex-shrink-0"></div>
-                          <p className="text-black">
+                          <p className="text-sm md:text-base text-black">
                             <span dangerouslySetInnerHTML={{ __html: langContent[`service${service.id}Feature1Desc` as keyof typeof langContent] }} />
                           </p>
                         </div>
                         <div className="flex items-start gap-3">
                           <div className="w-2 h-2 bg-gradient-to-r from-blue-500 to-blue-600 rounded-full mt-2 flex-shrink-0"></div>
-                          <p className="text-black">
+                          <p className="text-sm md:text-base text-black">
                             <span dangerouslySetInnerHTML={{ __html: langContent[`service${service.id}Feature2Desc` as keyof typeof langContent] }} />
                           </p>
                         </div>
                         <div className="flex items-start gap-3">
                           <div className="w-2 h-2 bg-gradient-to-r from-blue-500 to-blue-600 rounded-full mt-2 flex-shrink-0"></div>
-                          <p className="text-black">
+                          <p className="text-sm md:text-base text-black">
                             <span dangerouslySetInnerHTML={{ __html: langContent[`service${service.id}Feature3Desc` as keyof typeof langContent] }} />
                           </p>
                         </div>
@@ -258,26 +258,53 @@ export default function Services() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {/* Solar Energy Compact Card */}
               <div className="fade-in" style={{ animationDelay: '1.0s' }}>
-                <div className="service-card h-full">
-                  <div className="text-center">
-                    <div className="w-16 h-16 bg-gradient-to-br from-yellow-500 to-orange-600 rounded-2xl flex items-center justify-center shadow-lg mx-auto mb-6">
+                <div className="service-card h-full flex flex-col">
+                  <div className="flex items-center gap-4 mb-6">
+                    <div className="w-16 h-16 bg-gradient-to-br from-yellow-500 to-orange-600 rounded-2xl flex items-center justify-center shadow-lg">
                       <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
                       </svg>
                     </div>
-                    <h3 className="text-xl font-bold text-gray-800 mb-3">
+                    <h3 className="text-xl font-bold text-gray-800">
                       <span dangerouslySetInnerHTML={{ __html: langContent.sustainabilitySolarHeading }} />
                     </h3>
-                    <p className="text-black mb-6 line-clamp-4">
-                      {langContent.sustainabilitySolarPara1.split('.')[0]}.
-                    </p>
+                  </div>
+                  
+                  <div className="flex-1 flex flex-col">
+                    <div className="space-y-4 flex-1">
+                      <p className="text-sm md:text-base text-black leading-relaxed">
+                        {langContent.sustainabilitySolarPara1.split('.')[0]}.
+                      </p>
+                      
+                      <div className="grid grid-cols-1 gap-3">
+                        <div className="flex items-start gap-3">
+                          <div className="w-2 h-2 bg-gradient-to-r from-yellow-500 to-orange-600 rounded-full mt-2 flex-shrink-0"></div>
+                          <p className="text-sm md:text-base text-black">
+                            Renewable energy solutions for sustainable power generation
+                          </p>
+                        </div>
+                        <div className="flex items-start gap-3">
+                          <div className="w-2 h-2 bg-gradient-to-r from-yellow-500 to-orange-600 rounded-full mt-2 flex-shrink-0"></div>
+                          <p className="text-sm md:text-base text-black">
+                            Custom solar panel installation and maintenance services
+                          </p>
+                        </div>
+                        <div className="flex items-start gap-3">
+                          <div className="w-2 h-2 bg-gradient-to-r from-yellow-500 to-orange-600 rounded-full mt-2 flex-shrink-0"></div>
+                          <p className="text-sm md:text-base text-black">
+                            Energy efficiency optimization and cost reduction strategies
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    
                     <button 
                       onClick={(e) => {
                         e.preventDefault();
                         e.stopPropagation();
                         setActiveModal('solar');
                       }}
-                      className="btn-primary w-full"
+                      className="btn-primary w-full mt-6"
                     >
                       {langContent.readMore}
                     </button>
@@ -287,26 +314,53 @@ export default function Services() {
 
               {/* Energy Storage Compact Card */}
               <div className="fade-in" style={{ animationDelay: '1.2s' }}>
-                <div className="service-card h-full">
-                  <div className="text-center">
-                    <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-2xl flex items-center justify-center shadow-lg mx-auto mb-6">
+                <div className="service-card h-full flex flex-col">
+                  <div className="flex items-center gap-4 mb-6">
+                    <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-2xl flex items-center justify-center shadow-lg">
                       <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
                       </svg>
                     </div>
-                    <h3 className="text-xl font-bold text-gray-800 mb-3">
+                    <h3 className="text-xl font-bold text-gray-800">
                       <span dangerouslySetInnerHTML={{ __html: langContent.sustainabilityStorageHeading }} />
                     </h3>
-                    <p className="text-black mb-6 line-clamp-4">
-                      {langContent.sustainabilityStoragePara1.split('.')[0]}.
-                    </p>
+                  </div>
+                  
+                  <div className="flex-1 flex flex-col">
+                    <div className="space-y-4 flex-1">
+                      <p className="text-sm md:text-base text-black leading-relaxed">
+                        {langContent.sustainabilityStoragePara1.split('.')[0]}.
+                      </p>
+                      
+                      <div className="grid grid-cols-1 gap-3">
+                        <div className="flex items-start gap-3">
+                          <div className="w-2 h-2 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-full mt-2 flex-shrink-0"></div>
+                          <p className="text-sm md:text-base text-black">
+                            Advanced battery storage systems for reliable power backup
+                          </p>
+                        </div>
+                        <div className="flex items-start gap-3">
+                          <div className="w-2 h-2 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-full mt-2 flex-shrink-0"></div>
+                          <p className="text-sm md:text-base text-black">
+                            Smart energy management and load balancing solutions
+                          </p>
+                        </div>
+                        <div className="flex items-start gap-3">
+                          <div className="w-2 h-2 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-full mt-2 flex-shrink-0"></div>
+                          <p className="text-sm md:text-base text-black">
+                            Grid-tie and off-grid energy storage configurations
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    
                     <button 
                       onClick={(e) => {
                         e.preventDefault();
                         e.stopPropagation();
                         setActiveModal('storage');
                       }}
-                      className="btn-primary w-full"
+                      className="btn-primary w-full mt-6"
                     >
                       {langContent.readMore}
                     </button>
@@ -316,26 +370,53 @@ export default function Services() {
 
               {/* Wind Energy Compact Card */}
               <div className="fade-in" style={{ animationDelay: '1.4s' }}>
-                <div className="service-card h-full">
-                  <div className="text-center">
-                    <div className="w-16 h-16 bg-gradient-to-br from-teal-500 to-cyan-600 rounded-2xl flex items-center justify-center shadow-lg mx-auto mb-6">
+                <div className="service-card h-full flex flex-col">
+                  <div className="flex items-center gap-4 mb-6">
+                    <div className="w-16 h-16 bg-gradient-to-br from-teal-500 to-cyan-600 rounded-2xl flex items-center justify-center shadow-lg">
                       <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
                       </svg>
                     </div>
-                    <h3 className="text-xl font-bold text-gray-800 mb-3">
+                    <h3 className="text-xl font-bold text-gray-800">
                       <span dangerouslySetInnerHTML={{ __html: langContent.sustainabilityWindHeading }} />
                     </h3>
-                    <p className="text-black mb-6 line-clamp-4">
-                      {langContent.sustainabilityWindPara1.split('.')[0]}.
-                    </p>
+                  </div>
+                  
+                  <div className="flex-1 flex flex-col">
+                    <div className="space-y-4 flex-1">
+                      <p className="text-sm md:text-base text-black leading-relaxed">
+                        {langContent.sustainabilityWindPara1.split('.')[0]}.
+                      </p>
+                      
+                      <div className="grid grid-cols-1 gap-3">
+                        <div className="flex items-start gap-3">
+                          <div className="w-2 h-2 bg-gradient-to-r from-teal-500 to-cyan-600 rounded-full mt-2 flex-shrink-0"></div>
+                          <p className="text-sm md:text-base text-black">
+                            Wind turbine installation and maintenance services
+                          </p>
+                        </div>
+                        <div className="flex items-start gap-3">
+                          <div className="w-2 h-2 bg-gradient-to-r from-teal-500 to-cyan-600 rounded-full mt-2 flex-shrink-0"></div>
+                          <p className="text-sm md:text-base text-black">
+                            Site assessment and wind resource evaluation
+                          </p>
+                        </div>
+                        <div className="flex items-start gap-3">
+                          <div className="w-2 h-2 bg-gradient-to-r from-teal-500 to-cyan-600 rounded-full mt-2 flex-shrink-0"></div>
+                          <p className="text-sm md:text-base text-black">
+                            Integration with existing power systems and grid connectivity
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    
                     <button 
                       onClick={(e) => {
                         e.preventDefault();
                         e.stopPropagation();
                         setActiveModal('wind');
                       }}
-                      className="btn-primary w-full"
+                      className="btn-primary w-full mt-6"
                     >
                       {langContent.readMore}
                     </button>
@@ -372,11 +453,11 @@ export default function Services() {
                       </div>
                       
                       <div className="space-y-6">
-                        <p className="text-lg text-black leading-relaxed">
+                        <p className="text-sm md:text-base text-black leading-relaxed">
                           <span dangerouslySetInnerHTML={{ __html: langContent.sustainabilitySolarPara1 }} />
                         </p>
                         
-                        <p className="text-lg text-black leading-relaxed">
+                        <p className="text-sm md:text-base text-black leading-relaxed">
                           <span dangerouslySetInnerHTML={{ __html: langContent.sustainabilitySolarPara2 }} />
                         </p>
                       </div>
@@ -417,11 +498,11 @@ export default function Services() {
                       </div>
                       
                       <div className="space-y-6">
-                        <p className="text-lg text-black leading-relaxed">
+                        <p className="text-sm md:text-base text-black leading-relaxed">
                           <span dangerouslySetInnerHTML={{ __html: langContent.sustainabilityStoragePara1 }} />
                         </p>
                         
-                        <p className="text-lg text-black leading-relaxed">
+                        <p className="text-sm md:text-base text-black leading-relaxed">
                           <span dangerouslySetInnerHTML={{ __html: langContent.sustainabilityStoragePara2 }} />
                         </p>
                       </div>
@@ -462,11 +543,11 @@ export default function Services() {
                       </div>
                       
                       <div className="space-y-6">
-                        <p className="text-lg text-black leading-relaxed">
+                        <p className="text-sm md:text-base text-black leading-relaxed">
                           <span dangerouslySetInnerHTML={{ __html: langContent.sustainabilityWindPara1 }} />
                         </p>
                         
-                        <p className="text-lg text-black leading-relaxed">
+                        <p className="text-sm md:text-base text-black leading-relaxed">
                           <span dangerouslySetInnerHTML={{ __html: langContent.sustainabilityWindPara2 }} />
                         </p>
                       </div>

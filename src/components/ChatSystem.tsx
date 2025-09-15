@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { chatServices, ServiceQA, Question } from '@/lib/chatData';
+import { chatServices, ServiceQA, Question, SubService } from '@/lib/chatData';
 
 interface ChatSystemProps {
   isOpen: boolean;
@@ -10,6 +10,7 @@ interface ChatSystemProps {
 
 export default function ChatSystem({ isOpen, onClose }: ChatSystemProps) {
   const [selectedService, setSelectedService] = useState<ServiceQA | null>(null);
+  const [selectedSubService, setSelectedSubService] = useState<SubService | null>(null);
   const [selectedQuestion, setSelectedQuestion] = useState<Question | null>(null);
 
   const getIcon = (iconName: string) => {
@@ -38,6 +39,21 @@ export default function ChatSystem({ isOpen, onClose }: ChatSystemProps) {
         <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
         </svg>
+      ),
+      'sun': (
+        <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+        </svg>
+      ),
+      'battery': (
+        <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+        </svg>
+      ),
+      'wind': (
+        <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+        </svg>
       )
     };
     return icons[iconName as keyof typeof icons] || null;
@@ -45,6 +61,12 @@ export default function ChatSystem({ isOpen, onClose }: ChatSystemProps) {
 
   const handleServiceSelect = (service: ServiceQA) => {
     setSelectedService(service);
+    setSelectedSubService(null);
+    setSelectedQuestion(null);
+  };
+
+  const handleSubServiceSelect = (subService: SubService) => {
+    setSelectedSubService(subService);
     setSelectedQuestion(null);
   };
 
@@ -54,6 +76,12 @@ export default function ChatSystem({ isOpen, onClose }: ChatSystemProps) {
 
   const handleBackToServices = () => {
     setSelectedService(null);
+    setSelectedSubService(null);
+    setSelectedQuestion(null);
+  };
+
+  const handleBackToSubServices = () => {
+    setSelectedSubService(null);
     setSelectedQuestion(null);
   };
 
@@ -108,25 +136,47 @@ export default function ChatSystem({ isOpen, onClose }: ChatSystemProps) {
             <div className="space-y-2">
               <p className="text-xs text-gray-500 ml-8 mb-2">Choose a service:</p>
               {chatServices.map((service) => (
-                <button
-                  key={service.id}
-                  onClick={() => handleServiceSelect(service)}
-                  className="ml-8 bg-white border border-gray-200 rounded-lg p-3 hover:bg-blue-50 hover:border-blue-300 transition-all duration-200 text-left w-full max-w-xs shadow-sm"
-                >
-                  <div className="flex items-center gap-2">
-                    <div className="w-6 h-6 bg-blue-100 rounded flex items-center justify-center">
-                      {getIcon(service.icon)}
+                <div key={service.id} className="space-y-1">
+                  {/* Main Service */}
+                  <button
+                    onClick={() => handleServiceSelect(service)}
+                    className="ml-8 bg-white border border-gray-200 rounded-lg p-3 hover:bg-blue-50 hover:border-blue-300 transition-all duration-200 text-left w-full max-w-xs shadow-sm"
+                  >
+                    <div className="flex items-center gap-2">
+                      <div className="w-6 h-6 bg-blue-100 rounded flex items-center justify-center">
+                        {getIcon(service.icon)}
+                      </div>
+                      <span className="text-sm font-medium text-gray-800">{service.name}</span>
                     </div>
-                    <span className="text-sm font-medium text-gray-800">{service.name}</span>
-                  </div>
-                </button>
+                  </button>
+                  
+                  {/* Sub-services */}
+                  {service.subServices && service.subServices.length > 0 && (
+                    <div className="ml-12 space-y-1">
+                      {service.subServices.map((subService) => (
+                        <button
+                          key={subService.id}
+                          onClick={() => handleSubServiceSelect(subService)}
+                          className="bg-gradient-to-r from-green-50 to-blue-50 border border-green-200 rounded-lg p-2 hover:from-green-100 hover:to-blue-100 hover:border-green-300 transition-all duration-200 text-left w-full max-w-xs shadow-sm"
+                        >
+                          <div className="flex items-center gap-2">
+                            <div className="w-4 h-4 bg-green-100 rounded flex items-center justify-center">
+                              {getIcon(subService.icon)}
+                            </div>
+                            <span className="text-xs font-medium text-gray-700">{subService.name}</span>
+                          </div>
+                        </button>
+                      ))}
+                    </div>
+                  )}
+                </div>
               ))}
             </div>
           </div>
         )}
 
         {/* Questions View */}
-        {selectedService && !selectedQuestion && (
+        {selectedService && !selectedSubService && !selectedQuestion && (
           <div className="space-y-3">
             {/* Back button as message */}
             <div className="flex justify-end">
@@ -165,16 +215,56 @@ export default function ChatSystem({ isOpen, onClose }: ChatSystemProps) {
           </div>
         )}
 
+        {/* Sub-service Questions View */}
+        {selectedSubService && !selectedQuestion && (
+          <div className="space-y-3">
+            {/* Back button as message */}
+            <div className="flex justify-end">
+              <button
+                onClick={handleBackToSubServices}
+                className="bg-blue-500 text-white rounded-lg px-3 py-2 text-sm hover:bg-blue-600 transition-colors"
+              >
+                ← Back to {selectedService?.name}
+              </button>
+            </div>
+
+            {/* Sub-service selection message */}
+            <div className="flex items-start gap-2">
+              <div className="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0">
+                <svg className="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M20 2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h4l4 4 4-4h4c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-2 12H6v-2h12v2zm0-3H6V9h12v2zm0-3H6V6h12v2z"/>
+                </svg>
+              </div>
+              <div className="bg-white rounded-lg p-3 shadow-sm max-w-xs">
+                <p className="text-sm text-gray-800">Here are questions about <strong>{selectedSubService.name}</strong>:</p>
+              </div>
+            </div>
+
+            {/* Sub-service Questions as clickable messages */}
+            <div className="space-y-2">
+              {selectedSubService.questions.map((question) => (
+                <button
+                  key={question.id}
+                  onClick={() => handleQuestionSelect(question)}
+                  className="ml-8 bg-white border border-gray-200 rounded-lg p-3 hover:bg-green-50 hover:border-green-300 transition-all duration-200 text-left w-full max-w-xs shadow-sm"
+                >
+                  <p className="text-sm text-gray-800">{question.question}</p>
+                </button>
+              ))}
+            </div>
+          </div>
+        )}
+
         {/* Answer View */}
         {selectedQuestion && (
           <div className="space-y-3">
             {/* Back button as message */}
             <div className="flex justify-end">
               <button
-                onClick={handleBackToQuestions}
+                onClick={selectedSubService ? handleBackToSubServices : handleBackToQuestions}
                 className="bg-blue-500 text-white rounded-lg px-3 py-2 text-sm hover:bg-blue-600 transition-colors"
               >
-                ← Back to Questions
+                ← Back to {selectedSubService ? selectedSubService.name : 'Questions'}
               </button>
             </div>
 
