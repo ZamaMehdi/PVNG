@@ -226,8 +226,6 @@ export interface Content {
   bidSpecialistUK: string;
   mrThiru: string;
   headElectromechanicalFirefightingGas: string;
-  thiruDescription: string;
-  keyExpertise: string;
   electromechanicalSystems: string;
   firefightingSystems: string;
   gasPipelineWorks: string;
@@ -235,9 +233,7 @@ export interface Content {
   securitySystems: string;
   maintenanceService: string;
   ghulamAli: string;
-  environmentalManagementSpecialist: string;
   hinaZehra: string;
-  operationsManager: string;
 }
 
 export const content: { en: Content; ar: Content } = {
@@ -378,8 +374,6 @@ export const content: { en: Content; ar: Content } = {
   bidSpecialistUK: 'Bid Specialist (UK)',
   mrThiru: 'Mr. Thiru',
   headElectromechanicalFirefightingGas: 'Head of Electromechanical, Firefighting & Gas Pipeline Works',
-  thiruDescription: 'Mr. Thiru is the head of our electromechanical, firefighting, and gas pipeline works and maintenance division. His expertise is a direct result of years of hands-on experience, and his reputation has earned him a loyal client base who work exclusively with him. He has recently expanded his portfolio to include specialized low voltage and security systems, broadening our service offerings. His commitment to ensuring "class in service" is the guiding principle behind every project he oversees.',
-  keyExpertise: 'Key Expertise:',
   electromechanicalSystems: 'Electromechanical Systems',
   firefightingSystems: 'Firefighting Systems',
   gasPipelineWorks: 'Gas Pipeline Works',
@@ -387,9 +381,7 @@ export const content: { en: Content; ar: Content } = {
   securitySystems: 'Security Systems',
   maintenanceService: 'Maintenance & Service',
   ghulamAli: 'Ghulam Ali',
-  environmentalManagementSpecialist: 'Environmental Management Specialist',
   hinaZehra: 'Hina Zehra',
-  operationsManager: 'Operations Manager',
     readMore: 'Read More',
     aboutPara4: 'More than just service providers, we are partners dedicated to helping our clients build safer, more efficient, and sustainable environments. At PVNG Electromechanical Works, our mission is to create long-term value and lasting relationships through dependable services that exceed expectations.',
     ghulamAliDescription: 'Ghulam Ali brings extensive expertise in environmental management and sustainability, with a background rooted in the UK. He is certified in ISO 14001 Environmental Management Systems (EMS) and is a CF APMP (Certified Proposal Management Professional). With a strong focus on emissions management, he has assisted over 100 SMEs in preparing, calculating, and reporting their emissions.',
@@ -628,8 +620,6 @@ export const content: { en: Content; ar: Content } = {
   bidSpecialistUK: 'أخصائي العطاءات (المملكة المتحدة)',
   mrThiru: 'السيد ثائر',
   headElectromechanicalFirefightingGas: 'رئيس الأعمال الكهروميكانيكية ومكافحة الحرائق وخطوط الأنابيب',
-  thiruDescription: 'السيد ثائر هو رئيس قسم الأعمال الكهروميكانيكية ومكافحة الحرائق وخطوط الأنابيب والصيانة. خبرته هي نتيجة مباشرة لسنوات من الخبرة العملية، وسمعته أكسبته قاعدة عملاء مخلصين يعملون حصرياً معه. لقد وسع مؤخراً محفظته لتشمل أنظمة الجهد المنخفض والأمان المتخصصة، مما يوسع عروض خدماتنا. التزامه بضمان "التميز في الخدمة" هو المبدأ التوجيهي وراء كل مشروع يشرف عليه.',
-  keyExpertise: 'الخبرات الرئيسية:',
   electromechanicalSystems: 'الأنظمة الكهروميكانيكية',
   firefightingSystems: 'أنظمة مكافحة الحرائق',
   gasPipelineWorks: 'أعمال خطوط الأنابيب',
@@ -637,9 +627,7 @@ export const content: { en: Content; ar: Content } = {
   securitySystems: 'أنظمة الأمان',
   maintenanceService: 'الصيانة والخدمة',
   ghulamAli: 'غلام علي',
-  environmentalManagementSpecialist: 'أخصائي الإدارة البيئية',
   hinaZehra: 'هناء زهرة',
-  operationsManager: 'مديرة العمليات',
     readMore: 'اقرأ المزيد',
     aboutPara4: 'أكثر من مجرد مقدمي خدمات، نحن شركاء ملتزمون بمساعدة عملائنا في بناء بيئات أكثر أماناً وكفاءة واستدامة. مهمتنا في بي في ان جي للأعمال الكهروميكانيكية هي خلق قيمة طويلة الأجل وعلاقات دائمة من خلال خدمات موثوقة تتجاوز التوقعات.',
     ghulamAliDescription: 'يتمتع غلام علي بخبرة واسعة في الإدارة البيئية والاستدامة، مع خلفية متجذرة في المملكة المتحدة. وهو معتمد في أنظمة الإدارة البيئية ISO 14001 وCF APMP (محترف إدارة المقترحات المعتمد). مع تركيز قوي على إدارة الانبعاثات، ساعد أكثر من 100 شركة صغيرة ومتوسطة في إعداد وحساب والإبلاغ عن انبعاثاتها.',
