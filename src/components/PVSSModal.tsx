@@ -273,7 +273,7 @@ export default function PVSSModal({ isOpen, onClose }: PVSSModalProps) {
     }, 100);
   };
 
-  const drawPanelLayout = (containerRef: React.RefObject<HTMLDivElement>, numberOfPanels: number, panelAreaSqm: number, usableRoofAreaSqm: number) => {
+  const drawPanelLayout = (containerRef: React.RefObject<HTMLDivElement | null>, numberOfPanels: number, panelAreaSqm: number, usableRoofAreaSqm: number) => {
     if (!containerRef.current) return;
     
     containerRef.current.innerHTML = '';
@@ -349,7 +349,7 @@ export default function PVSSModal({ isOpen, onClose }: PVSSModalProps) {
     containerRef.current.appendChild(svg);
   };
 
-  const drawMonthlyChart = (containerRef: React.RefObject<HTMLDivElement>, annualEnergyGeneratedKwh: number) => {
+  const drawMonthlyChart = (containerRef: React.RefObject<HTMLDivElement | null>, annualEnergyGeneratedKwh: number) => {
     if (!containerRef.current) return;
     
     containerRef.current.innerHTML = '';
@@ -443,7 +443,7 @@ export default function PVSSModal({ isOpen, onClose }: PVSSModalProps) {
     containerRef.current.appendChild(svg);
   };
 
-  const drawSavingsTimeline = (containerRef: React.RefObject<HTMLDivElement>, totalCost: number, annualSavings: number, paybackPeriod: number, currencySymbol: string) => {
+  const drawSavingsTimeline = (containerRef: React.RefObject<HTMLDivElement | null>, totalCost: number, annualSavings: number, paybackPeriod: number, currencySymbol: string) => {
     if (!containerRef.current) return;
     
     containerRef.current.innerHTML = '';
