@@ -234,6 +234,19 @@ export interface Content {
   maintenanceService: string;
   ghulamAli: string;
   hinaZehra: string;
+  // Sustainability bullet points
+  solarFeature1: string;
+  solarFeature2: string;
+  solarFeature3: string;
+  storageFeature1: string;
+  storageFeature2: string;
+  storageFeature3: string;
+  windFeature1: string;
+  windFeature2: string;
+  windFeature3: string;
+  pvssFeature1: string;
+  pvssFeature2: string;
+  pvssFeature3: string;
 }
 
 export const content: { en: Content; ar: Content } = {
@@ -382,6 +395,19 @@ export const content: { en: Content; ar: Content } = {
   maintenanceService: 'Maintenance & Service',
   ghulamAli: 'Ghulam Ali',
   hinaZehra: 'Hina Zehra',
+  // Sustainability bullet points
+  solarFeature1: 'Renewable energy solutions for sustainable power generation',
+  solarFeature2: 'Custom solar panel installation and maintenance services',
+  solarFeature3: 'Energy efficiency optimization and cost reduction strategies',
+  storageFeature1: 'Advanced battery storage systems for reliable power backup',
+  storageFeature2: 'Smart energy management and load balancing solutions',
+  storageFeature3: 'Grid-tie and off-grid energy storage configurations',
+  windFeature1: 'Wind turbine installation and maintenance services',
+  windFeature2: 'Site assessment and wind resource evaluation',
+  windFeature3: 'Integration with existing power systems and grid connectivity',
+  pvssFeature1: 'Instant cost & savings calculations',
+  pvssFeature2: 'Personalized system recommendations',
+  pvssFeature3: 'Visual charts & detailed reports',
     readMore: 'Read More',
     aboutPara4: 'More than just service providers, we are partners dedicated to helping our clients build safer, more efficient, and sustainable environments. At PVNG Electromechanical Works, our mission is to create long-term value and lasting relationships through dependable services that exceed expectations.',
     ghulamAliDescription: 'Ghulam Ali brings extensive expertise in environmental management and sustainability, with a background rooted in the UK. He is certified in ISO 14001 Environmental Management Systems (EMS) and is a CF APMP (Certified Proposal Management Professional). With a strong focus on emissions management, he has assisted over 100 SMEs in preparing, calculating, and reporting their emissions.',
@@ -628,6 +654,19 @@ export const content: { en: Content; ar: Content } = {
   maintenanceService: 'الصيانة والخدمة',
   ghulamAli: 'غلام علي',
   hinaZehra: 'هناء زهرة',
+  // Sustainability bullet points
+  solarFeature1: 'حلول الطاقة المتجددة لتوليد الطاقة المستدامة',
+  solarFeature2: 'خدمات تركيب وصيانة الألواح الشمسية المخصصة',
+  solarFeature3: 'تحسين كفاءة الطاقة واستراتيجيات تقليل التكلفة',
+  storageFeature1: 'أنظمة تخزين البطاريات المتقدمة للنسخ الاحتياطي الموثوق للطاقة',
+  storageFeature2: 'حلول إدارة الطاقة الذكية وتوازن الأحمال',
+  storageFeature3: 'تكوينات تخزين الطاقة المتصلة بالشبكة وغير المتصلة',
+  windFeature1: 'خدمات تركيب وصيانة توربينات الرياح',
+  windFeature2: 'تقييم الموقع وتقييم موارد الرياح',
+  windFeature3: 'التكامل مع أنظمة الطاقة الموجودة واتصال الشبكة',
+  pvssFeature1: 'حسابات فورية للتكلفة والوفورات',
+  pvssFeature2: 'توصيات النظام المخصصة',
+  pvssFeature3: 'الرسوم البيانية والتقارير التفصيلية',
     readMore: 'اقرأ المزيد',
     aboutPara4: 'أكثر من مجرد مقدمي خدمات، نحن شركاء ملتزمون بمساعدة عملائنا في بناء بيئات أكثر أماناً وكفاءة واستدامة. مهمتنا في بي في ان جي للأعمال الكهروميكانيكية هي خلق قيمة طويلة الأجل وعلاقات دائمة من خلال خدمات موثوقة تتجاوز التوقعات.',
     ghulamAliDescription: 'يتمتع غلام علي بخبرة واسعة في الإدارة البيئية والاستدامة، مع خلفية متجذرة في المملكة المتحدة. وهو معتمد في أنظمة الإدارة البيئية ISO 14001 وCF APMP (محترف إدارة المقترحات المعتمد). مع تركيز قوي على إدارة الانبعاثات، ساعد أكثر من 100 شركة صغيرة ومتوسطة في إعداد وحساب والإبلاغ عن انبعاثاتها.',

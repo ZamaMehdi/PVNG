@@ -15,7 +15,7 @@ export default function Footer() {
           {/* Company Info Section */}
           <div>
             <div className="mb-6">
-              <span className={`text-xl font-bold ${currentLang === 'ar' ? 'text-right' : 'text-left'}`}>PVNG Electromechanical Works</span>
+              <span className={`text-lg font-semibold text-white block ${currentLang === 'ar' ? 'text-right' : 'text-center'}`}>PVNG Electromechanical Works</span>
             </div>
             <p className={`text-gray-300 text-sm leading-relaxed mb-8 ${currentLang === 'ar' ? 'text-right' : 'text-left'}`}>
               {langContent.footerCompanyDescription}
@@ -41,7 +41,7 @@ export default function Footer() {
 
           {/* Quick Links Section */}
           <div>
-            <h3 className={`text-lg font-semibold mb-6 text-white ${currentLang === 'ar' ? 'text-right' : 'text-left'}`}>{langContent.footerQuickLinks}</h3>
+            <h3 className={`text-lg font-semibold mb-6 text-white text-center ${currentLang === 'ar' ? 'text-right' : 'text-center'}`}>{langContent.footerQuickLinks}</h3>
             <ul className="space-y-3">
               <li>
                 <Link href="/" className="text-gray-300 hover:text-blue-400 transition-colors duration-300 text-sm">
@@ -73,7 +73,7 @@ export default function Footer() {
 
           {/* Services Section */}
           <div>
-            <h3 className={`text-lg font-semibold mb-6 text-white ${currentLang === 'ar' ? 'text-right' : 'text-left'}`}>{langContent.footerOurServices}</h3>
+            <h3 className={`text-lg font-semibold mb-6 text-white text-center ${currentLang === 'ar' ? 'text-right' : 'text-center'}`}>{langContent.footerOurServices}</h3>
             <ul className="space-y-3">
               <li>
                 <span className="text-gray-300 hover:text-green-400 transition-colors duration-300 text-sm cursor-pointer">
@@ -105,7 +105,7 @@ export default function Footer() {
 
           {/* Contact Information Section */}
           <div>
-            <h3 className={`text-lg font-semibold mb-6 text-white ${currentLang === 'ar' ? 'text-right' : 'text-left'}`}>{langContent.footerContactInfo}</h3>
+            <h3 className={`text-lg font-semibold mb-6 text-white text-center ${currentLang === 'ar' ? 'text-right' : 'text-center'}`}>{langContent.footerContactInfo}</h3>
             <div className="space-y-4">
               <div>
                 <p className="text-gray-300 text-sm font-medium">{langContent.footerAddress}</p>

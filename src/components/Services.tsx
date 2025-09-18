@@ -215,19 +215,19 @@ export default function Services() {
                       </p>
                       
                       <div className="grid grid-cols-1 gap-4">
-                        <div className="flex items-start gap-3">
+                        <div className="flex items-start gap-3 flex-row-reverse">
                           <div className="w-2 h-2 bg-gradient-to-r from-blue-500 to-blue-600 rounded-full mt-2 flex-shrink-0"></div>
                           <p className="text-sm md:text-base text-black">
                             <span dangerouslySetInnerHTML={{ __html: langContent[`service${service.id}Feature1Desc` as keyof typeof langContent] }} />
                           </p>
                         </div>
-                        <div className="flex items-start gap-3">
+                        <div className="flex items-start gap-3 flex-row-reverse">
                           <div className="w-2 h-2 bg-gradient-to-r from-blue-500 to-blue-600 rounded-full mt-2 flex-shrink-0"></div>
                           <p className="text-sm md:text-base text-black">
                             <span dangerouslySetInnerHTML={{ __html: langContent[`service${service.id}Feature2Desc` as keyof typeof langContent] }} />
                           </p>
                         </div>
-                        <div className="flex items-start gap-3">
+                        <div className="flex items-start gap-3 flex-row-reverse">
                           <div className="w-2 h-2 bg-gradient-to-r from-blue-500 to-blue-600 rounded-full mt-2 flex-shrink-0"></div>
                           <p className="text-sm md:text-base text-black">
                             <span dangerouslySetInnerHTML={{ __html: langContent[`service${service.id}Feature3Desc` as keyof typeof langContent] }} />
@@ -279,22 +279,22 @@ export default function Services() {
                       </p>
                       
                       <div className="grid grid-cols-1 gap-3">
-                        <div className="flex items-start gap-3">
+                        <div className="flex items-start gap-3 flex-row-reverse">
                           <div className="w-2 h-2 bg-gradient-to-r from-yellow-500 to-orange-600 rounded-full mt-2 flex-shrink-0"></div>
                           <p className="text-sm md:text-base text-black">
-                            Renewable energy solutions for sustainable power generation
+                            {langContent.solarFeature1}
                           </p>
                         </div>
-                        <div className="flex items-start gap-3">
+                        <div className="flex items-start gap-3 flex-row-reverse">
                           <div className="w-2 h-2 bg-gradient-to-r from-yellow-500 to-orange-600 rounded-full mt-2 flex-shrink-0"></div>
                           <p className="text-sm md:text-base text-black">
-                            Custom solar panel installation and maintenance services
+                            {langContent.solarFeature2}
                           </p>
                         </div>
-                        <div className="flex items-start gap-3">
+                        <div className="flex items-start gap-3 flex-row-reverse">
                           <div className="w-2 h-2 bg-gradient-to-r from-yellow-500 to-orange-600 rounded-full mt-2 flex-shrink-0"></div>
                           <p className="text-sm md:text-base text-black">
-                            Energy efficiency optimization and cost reduction strategies
+                            {langContent.solarFeature3}
                           </p>
                         </div>
                       </div>
@@ -335,22 +335,22 @@ export default function Services() {
                       </p>
                       
                       <div className="grid grid-cols-1 gap-3">
-                        <div className="flex items-start gap-3">
+                        <div className="flex items-start gap-3 flex-row-reverse">
                           <div className="w-2 h-2 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-full mt-2 flex-shrink-0"></div>
                           <p className="text-sm md:text-base text-black">
-                            Advanced battery storage systems for reliable power backup
+                            {langContent.storageFeature1}
                           </p>
                         </div>
-                        <div className="flex items-start gap-3">
+                        <div className="flex items-start gap-3 flex-row-reverse">
                           <div className="w-2 h-2 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-full mt-2 flex-shrink-0"></div>
                           <p className="text-sm md:text-base text-black">
-                            Smart energy management and load balancing solutions
+                            {langContent.storageFeature2}
                           </p>
                         </div>
-                        <div className="flex items-start gap-3">
+                        <div className="flex items-start gap-3 flex-row-reverse">
                           <div className="w-2 h-2 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-full mt-2 flex-shrink-0"></div>
                           <p className="text-sm md:text-base text-black">
-                            Grid-tie and off-grid energy storage configurations
+                            {langContent.storageFeature3}
                           </p>
                         </div>
                       </div>
@@ -391,22 +391,22 @@ export default function Services() {
                       </p>
                       
                       <div className="grid grid-cols-1 gap-3">
-                        <div className="flex items-start gap-3">
+                        <div className="flex items-start gap-3 flex-row-reverse">
                           <div className="w-2 h-2 bg-gradient-to-r from-teal-500 to-cyan-600 rounded-full mt-2 flex-shrink-0"></div>
                           <p className="text-sm md:text-base text-black">
-                            Wind turbine installation and maintenance services
+                            {langContent.windFeature1}
                           </p>
                         </div>
-                        <div className="flex items-start gap-3">
+                        <div className="flex items-start gap-3 flex-row-reverse">
                           <div className="w-2 h-2 bg-gradient-to-r from-teal-500 to-cyan-600 rounded-full mt-2 flex-shrink-0"></div>
                           <p className="text-sm md:text-base text-black">
-                            Site assessment and wind resource evaluation
+                            {langContent.windFeature2}
                           </p>
                         </div>
-                        <div className="flex items-start gap-3">
+                        <div className="flex items-start gap-3 flex-row-reverse">
                           <div className="w-2 h-2 bg-gradient-to-r from-teal-500 to-cyan-600 rounded-full mt-2 flex-shrink-0"></div>
                           <p className="text-sm md:text-base text-black">
-                            Integration with existing power systems and grid connectivity
+                            {langContent.windFeature3}
                           </p>
                         </div>
                       </div>
@@ -447,22 +447,22 @@ export default function Services() {
                       </p>
                       
                       <div className="grid grid-cols-1 gap-3">
-                        <div className="flex items-start gap-3">
+                        <div className="flex items-start gap-3 flex-row-reverse">
                           <div className="w-2 h-2 bg-gradient-to-r from-green-500 to-blue-600 rounded-full mt-2 flex-shrink-0"></div>
                           <p className="text-sm md:text-base text-gray-700">
-                            Instant cost & savings calculations
+                            {langContent.pvssFeature1}
                           </p>
                         </div>
-                        <div className="flex items-start gap-3">
+                        <div className="flex items-start gap-3 flex-row-reverse">
                           <div className="w-2 h-2 bg-gradient-to-r from-green-500 to-blue-600 rounded-full mt-2 flex-shrink-0"></div>
                           <p className="text-sm md:text-base text-gray-700">
-                            Personalized system recommendations
+                            {langContent.pvssFeature2}
                           </p>
                         </div>
-                        <div className="flex items-start gap-3">
+                        <div className="flex items-start gap-3 flex-row-reverse">
                           <div className="w-2 h-2 bg-gradient-to-r from-green-500 to-blue-600 rounded-full mt-2 flex-shrink-0"></div>
                           <p className="text-sm md:text-base text-gray-700">
-                            Visual charts & detailed reports
+                            {langContent.pvssFeature3}
                           </p>
                         </div>
                       </div>

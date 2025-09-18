@@ -1114,3 +1114,15 @@ html {
 body {
   -ms-overflow-style: none;
 }
+
+/* Override text alignment for stats section specifically */
+.service-card h3,
+.service-card p {
+  text-align: left !important;
+}
+
+/* Override for Arabic language stats section */
+html[lang="ar"] .service-card h3,
+html[lang="ar"] .service-card p {
+  text-align: left !important;
+}
