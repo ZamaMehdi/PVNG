@@ -75,7 +75,6 @@ export default function PVSSModal({ isOpen, onClose }: PVSSModalProps) {
   const [dailyConsumption, setDailyConsumption] = useState('');
   const [includeMaintenance, setIncludeMaintenance] = useState(false);
   const [maintenancePercentage, setMaintenancePercentage] = useState(1);
-  const [maintenanceCost, setMaintenanceCost] = useState(200);
   const [showResults, setShowResults] = useState(false);
   const [results, setResults] = useState<Results | null>(null);
   const [errorMessage, setErrorMessage] = useState('');
