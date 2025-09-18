@@ -6,6 +6,7 @@ export interface Content {
   navAbout: string;
   navServices: string;
   navProjects: string;
+  navPVSS: string;
   navContact: string;
   aboutTitle: string;
   aboutPara1: string;
@@ -97,11 +98,146 @@ export interface Content {
   contactAlternativeCall: string;
   contactPerson: string;
     footerCopyright: string;
+  footerCompanyDescription: string;
+  footerQuickLinks: string;
+  footerOurServices: string;
+  footerContactInfo: string;
+  footerHome: string;
+  footerAboutUs: string;
+  footerServices: string;
+  footerProjects: string;
+  footerContact: string;
+  footerSolarEnergySystems: string;
+  footerSecuritySystems: string;
+  footerLowVoltageSystems: string;
+  footerGasPipingSolutions: string;
+  footerSustainabilityConsulting: string;
+  footerAddress: string;
+  footerPhone: string;
+  footerEmail: string;
+  footerAllRightsReserved: string;
+  statsYearsExperience: string;
+  statsProjectsCompleted: string;
+  statsClientSatisfaction: string;
+  statsSupportAvailable: string;
+  heroTitle: string;
+  heroPara1: string;
+  heroPara2: string;
+  heroPara3: string;
+  learnMore: string;
+  solarCalculator: string;
+  calculateYourSystem: string;
+  ourValues: string;
+  qualityExcellence: string;
+  qualityExcellenceDesc: string;
+  innovation: string;
+  innovationDesc: string;
+  reliability: string;
+  reliabilityDesc: string;
+  sustainability: string;
+  sustainabilityDesc: string;
+  tradeLicenseNo: string;
+  tenantNo: string;
+  ourMission: string;
+  ourMissionDesc: string;
+  ourVision: string;
+  ourVisionDesc: string;
+  ourLeadership: string;
+  leadershipIntro: string;
+  environmentalManagementSpecialist: string;
+  keyCertifications: string;
+  operationsManager: string;
+  keyResponsibilities: string;
+  headElectromechanical: string;
+  thiruDescription: string;
+  keyExpertise: string;
+  ourAchievements: string;
+  yearsOfExcellence: string;
+  projectsCompleted: string;
+  clientSatisfaction: string;
+  supportAvailable: string;
     aboutPara4: string;
     ghulamAliDescription: string;
     hinaZehraDescription: string;
     hinaZehraResponsibilities: string[];
   readMore: string;
+  // PVSS Calculator translations
+  pvssTitle: string;
+  pvssSubtitle: string;
+  pvssCloseButton: string;
+  pvssRoofSizeLabel: string;
+  pvssRoofSizeUnit: string;
+  pvssPanelTypeLabel: string;
+  pvssInverterTypeLabel: string;
+  pvssBedroomsLabel: string;
+  pvssAppliancesLabel: string;
+  pvssApplianceAC: string;
+  pvssApplianceWaterHeater: string;
+  pvssApplianceRefrigerator: string;
+  pvssApplianceWashingMachine: string;
+  pvssApplianceOven: string;
+  pvssApplianceElectronics: string;
+  pvssDailyConsumptionLabel: string;
+  pvssDailyConsumptionUnit: string;
+  pvssMaintenanceTitle: string;
+  pvssMaintenanceLabel: string;
+  pvssMaintenancePercentage: string;
+  pvssMaintenanceCost: string;
+  pvssCalculateButton: string;
+  pvssClearButton: string;
+  pvssResultsTitle: string;
+  pvssPanelSizeLabel: string;
+  pvssEnergyGeneratedLabel: string;
+  pvssBatteryStorageLabel: string;
+  pvssInverterSizeLabel: string;
+  pvssCO2SavingsLabel: string;
+  pvssCostBreakdownTitle: string;
+  pvssCostPanels: string;
+  pvssCostInverter: string;
+  pvssCostBattery: string;
+  pvssCostInstallation: string;
+  pvssTotalCostGBP: string;
+  pvssTotalCostAED: string;
+  pvssSavingsTitle: string;
+  pvssMaintenanceCostLabel: string;
+  pvssAnnualSavingsGBP: string;
+  pvssAnnualSavingsAED: string;
+  pvssPaybackPeriod: string;
+  pvssAssumptionsTitle: string;
+  pvssAssumption1: string;
+  pvssAssumption2: string;
+  pvssAssumption3: string;
+  pvssAssumption4: string;
+  pvssAssumption5: string;
+  pvssAssumption6: string;
+  pvssAssumption7: string;
+  pvssAssumption8: string;
+  pvssAssumption9: string;
+  pvssAssumption10: string;
+  pvssAssumption11: string;
+  pvssAssumption12: string;
+  pvssDisclaimer: string;
+  pvssVisualSystemLayout: string;
+  pvssMonthlyEnergyProduction: string;
+  pvssSavingsTimeline: string;
+  cfAPMP: string;
+  carbonReductionPlanSpecialist: string;
+  iso14001EMS: string;
+  bidSpecialistUK: string;
+  mrThiru: string;
+  headElectromechanicalFirefightingGas: string;
+  thiruDescription: string;
+  keyExpertise: string;
+  electromechanicalSystems: string;
+  firefightingSystems: string;
+  gasPipelineWorks: string;
+  lowVoltageSystems: string;
+  securitySystems: string;
+  maintenanceService: string;
+  ghulamAli: string;
+  environmentalManagementSpecialist: string;
+  hinaZehra: string;
+  operationsManager: string;
 }
 
 export const content: { en: Content; ar: Content } = {
@@ -113,6 +249,7 @@ export const content: { en: Content; ar: Content } = {
     navAbout: 'About Us',
     navServices: 'Our Services',
     navProjects: 'Our Projects',
+    navPVSS: 'PVSS',
     navContact: 'Contact Us',
     aboutTitle: 'About Us',
     aboutPara1: 'At <strong>PVNG Electromechanical Works L.L.C.</strong>, we are a trusted name in Dubai\'s electromechanical sector, backed by over a decade of experience and a proven track record of delivering innovative and reliable solutions. Our commitment to quality, precision, and customer satisfaction drives everything we do, ensuring that every project is executed with excellence from start to finish.',
@@ -177,6 +314,82 @@ export const content: { en: Content; ar: Content } = {
     contactAlternativeCall: 'Or Alternatively you can call us at',
     contactPerson: '<strong>Thiru</strong><br><i class="fas fa-phone"></i> +971 56 546 3955',
     footerCopyright: '&copy; 2025 PVNG Electromechanical Works L.L.C. | All Rights Reserved | By Ghulam Ali',
+  footerCompanyDescription: 'Leading provider of comprehensive electromechanical solutions, specializing in solar energy systems, security solutions, and sustainable infrastructure across the UAE.',
+  footerQuickLinks: 'Quick Links',
+  footerOurServices: 'Our Services',
+  footerContactInfo: 'Contact Info',
+  footerHome: 'Home',
+  footerAboutUs: 'About Us',
+  footerServices: 'Services',
+  footerProjects: 'Projects',
+  footerContact: 'Contact',
+  footerSolarEnergySystems: 'Solar Energy Systems',
+  footerSecuritySystems: 'Security Systems',
+  footerLowVoltageSystems: 'Low Voltage Systems',
+  footerGasPipingSolutions: 'Gas Piping Solutions',
+  footerSustainabilityConsulting: 'Sustainability Consulting',
+  footerAddress: 'Address',
+  footerPhone: 'Phone',
+  footerEmail: 'Email',
+  footerAllRightsReserved: '© 2025 All Rights Reserved',
+  statsYearsExperience: 'Years Experience',
+  statsProjectsCompleted: 'Projects Completed',
+  statsClientSatisfaction: 'Client Satisfaction',
+  statsSupportAvailable: 'Support Available',
+  heroTitle: 'Sustainable Solutions. Lasting Impact.',
+  heroPara1: 'At PVNG Electromechanical Works L.L.C., we are committed to powering a greener tomorrow. With over a decade of experience in Dubai\'s electromechanical sector, we deliver innovative solutions that not only meet your needs today but also protect the environment for future generations.',
+  heroPara2: 'Our expert team integrates sustainable practices, energy-efficient systems, and cutting-edge technology to create safer, smarter, and more eco-friendly spaces. Whether it\'s for commercial or residential projects, we focus on reducing environmental impact while maximizing performance and reliability.',
+  heroPara3: 'Partner with us to build a better future — one that values efficiency, responsibility, and long-term sustainability. At PVNG, it\'s more than service; it\'s a commitment to preserving the planet while driving progress.',
+  learnMore: 'Learn More',
+  solarCalculator: 'Solar Calculator',
+  calculateYourSystem: 'Calculate Your System',
+  ourValues: 'Our Values',
+  qualityExcellence: 'Quality Excellence',
+  qualityExcellenceDesc: 'Delivering superior solutions that exceed industry standards and client expectations.',
+  innovation: 'Innovation',
+  innovationDesc: 'Embracing cutting-edge technology and sustainable practices for future-ready solutions.',
+  reliability: 'Reliability',
+  reliabilityDesc: 'Building lasting partnerships through consistent, dependable service delivery.',
+  sustainability: 'Sustainability',
+  sustainabilityDesc: 'Committed to environmental responsibility and sustainable development practices.',
+  tradeLicenseNo: 'Trade License No:',
+  tenantNo: 'Tenant No:',
+  ourMission: 'Our Mission',
+  ourMissionDesc: 'To provide innovative electromechanical solutions that enhance safety, efficiency, and sustainability while building lasting partnerships with our clients through excellence in service delivery.',
+  ourVision: 'Our Vision',
+  ourVisionDesc: 'To be the leading electromechanical solutions provider in Dubai, recognized for our commitment to innovation, sustainability, and exceptional client satisfaction.',
+  ourLeadership: 'Our Leadership',
+  leadershipIntro: 'Meet the visionary leaders who drive our success and shape our company\'s future.',
+  environmentalManagementSpecialist: 'Environmental Management Specialist',
+  keyCertifications: 'Key Certifications:',
+  operationsManager: 'Operations Manager',
+  keyResponsibilities: 'Key Responsibilities:',
+  headElectromechanical: 'Head of Electromechanical, Firefighting & Gas Pipeline Works',
+  thiruDescription: 'Mr. Thiru is the head of our electromechanical, firefighting, and gas pipeline works and maintenance division. His expertise is a direct result of years of hands-on experience, and his reputation has earned him a loyal client base who work exclusively with him. He has recently expanded his portfolio to include specialized low voltage and security systems, broadening our service offerings. His commitment to ensuring "class in service" is the guiding principle behind every project he oversees.',
+  keyExpertise: 'Key Expertise:',
+  ourAchievements: 'Our Achievements',
+  yearsOfExcellence: 'Years of Excellence',
+  projectsCompleted: 'Projects Completed',
+  clientSatisfaction: 'Client Satisfaction',
+  supportAvailable: 'Support Available',
+  cfAPMP: 'CF APMP',
+  carbonReductionPlanSpecialist: 'Carbon Reduction Plan Specialist',
+  iso14001EMS: 'ISO 14001:2015 EMS',
+  bidSpecialistUK: 'Bid Specialist (UK)',
+  mrThiru: 'Mr. Thiru',
+  headElectromechanicalFirefightingGas: 'Head of Electromechanical, Firefighting & Gas Pipeline Works',
+  thiruDescription: 'Mr. Thiru is the head of our electromechanical, firefighting, and gas pipeline works and maintenance division. His expertise is a direct result of years of hands-on experience, and his reputation has earned him a loyal client base who work exclusively with him. He has recently expanded his portfolio to include specialized low voltage and security systems, broadening our service offerings. His commitment to ensuring "class in service" is the guiding principle behind every project he oversees.',
+  keyExpertise: 'Key Expertise:',
+  electromechanicalSystems: 'Electromechanical Systems',
+  firefightingSystems: 'Firefighting Systems',
+  gasPipelineWorks: 'Gas Pipeline Works',
+  lowVoltageSystems: 'Low Voltage Systems',
+  securitySystems: 'Security Systems',
+  maintenanceService: 'Maintenance & Service',
+  ghulamAli: 'Ghulam Ali',
+  environmentalManagementSpecialist: 'Environmental Management Specialist',
+  hinaZehra: 'Hina Zehra',
+  operationsManager: 'Operations Manager',
     readMore: 'Read More',
     aboutPara4: 'More than just service providers, we are partners dedicated to helping our clients build safer, more efficient, and sustainable environments. At PVNG Electromechanical Works, our mission is to create long-term value and lasting relationships through dependable services that exceed expectations.',
     ghulamAliDescription: 'Ghulam Ali brings extensive expertise in environmental management and sustainability, with a background rooted in the UK. He is certified in ISO 14001 Environmental Management Systems (EMS) and is a CF APMP (Certified Proposal Management Professional). With a strong focus on emissions management, he has assisted over 100 SMEs in preparing, calculating, and reporting their emissions.',
@@ -217,7 +430,66 @@ export const content: { en: Content; ar: Content } = {
     service5Feature2: 'Sustainable Building Practices',
     service5Feature2Desc: 'We champion sustainable building practices to help achieve your sustainability goals, ensuring both ecological responsibility and economic benefits.',
     service5Feature3: 'Environmental Footprint Reduction',
-    service5Feature3Desc: 'Our goal is to empower clients to significantly reduce their environmental footprint while simultaneously optimising operational costs and enhancing long-term value.'
+    service5Feature3Desc: 'Our goal is to empower clients to significantly reduce their environmental footprint while simultaneously optimising operational costs and enhancing long-term value.',
+    // PVSS Calculator translations
+    pvssTitle: 'PV Solar System Calculator',
+    pvssSubtitle: 'Calculate your optimal solar system',
+    pvssCloseButton: 'Close calculator',
+    pvssRoofSizeLabel: 'Roof Area:',
+    pvssRoofSizeUnit: 'Square meters (m²)',
+    pvssPanelTypeLabel: 'Solar Panel Type:',
+    pvssInverterTypeLabel: 'Inverter Type:',
+    pvssBedroomsLabel: 'Number of Bedrooms:',
+    pvssAppliancesLabel: 'Select Common Appliances (Daily Use):',
+    pvssApplianceAC: 'Air Conditioning (Central)',
+    pvssApplianceWaterHeater: 'Water Heater',
+    pvssApplianceRefrigerator: 'Refrigerator',
+    pvssApplianceWashingMachine: 'Washing Machine',
+    pvssApplianceOven: 'Electric Oven/Cooker',
+    pvssApplianceElectronics: 'Lights & Electronics (TVs, Chargers)',
+    pvssDailyConsumptionLabel: 'Average Daily Energy Consumption (Optional, manual override):',
+    pvssDailyConsumptionUnit: 'kWh',
+    pvssMaintenanceTitle: 'Include Maintenance Costs',
+    pvssMaintenanceLabel: 'Include annual maintenance cost in calculations',
+    pvssMaintenancePercentage: 'Annual maintenance cost (% of total system cost):',
+    pvssMaintenanceCost: 'Estimated annual maintenance cost:',
+    pvssCalculateButton: 'Calculate PV System',
+    pvssClearButton: 'Clear Inputs',
+    pvssResultsTitle: 'Your PV System Recommendation',
+    pvssPanelSizeLabel: 'Recommended PV Panel Size:',
+    pvssEnergyGeneratedLabel: 'Estimated Annual Energy Generated:',
+    pvssBatteryStorageLabel: 'Recommended Battery Storage (Daily):',
+    pvssInverterSizeLabel: 'Recommended Inverter Size:',
+    pvssCO2SavingsLabel: 'Estimated Annual CO₂ Savings:',
+    pvssCostBreakdownTitle: 'Estimated Cost Breakdown',
+    pvssCostPanels: 'PV Panels Cost:',
+    pvssCostInverter: 'Inverter Type:',
+    pvssCostBattery: 'Battery Storage Cost:',
+    pvssCostInstallation: 'Installation & Soft Costs:',
+    pvssTotalCostGBP: 'Estimated Total Cost (GBP):',
+    pvssTotalCostAED: 'Estimated Total Cost (AED):',
+    pvssSavingsTitle: 'Estimated Savings & Payback',
+    pvssMaintenanceCostLabel: 'Estimated Annual Maintenance Cost:',
+    pvssAnnualSavingsGBP: 'Estimated Annual Savings (GBP):',
+    pvssAnnualSavingsAED: 'Estimated Annual Savings (AED):',
+    pvssPaybackPeriod: 'Estimated Payback Period:',
+    pvssAssumptionsTitle: 'Assumptions & Disclaimer:',
+    pvssAssumption1: 'System Efficiency: 80% roof utilization, 4.5 average sun hours per day',
+    pvssAssumption2: 'Energy Costs: £0.28/AED 0.45 per kWh average electricity rate',
+    pvssAssumption3: 'CO₂ Emissions: 0.233 kg CO₂ per kWh from grid electricity',
+    pvssAssumption4: 'Maintenance: Annual maintenance cost included in calculations',
+    pvssAssumption5: 'Panel Efficiency: Assumed 18% (average for modern residential panels)',
+    pvssAssumption6: 'Usable Roof Area: Assumed 70% of total roof area due to shading, obstructions, and spacing',
+    pvssAssumption7: 'Peak Sun Hours (Dubai): Assumed 5.5 hours/day (average daily sunlight equivalent to 1000 W/m² radiation)',
+    pvssAssumption8: 'System Losses: Assumed 20% losses (due to temperature, wiring, inverter efficiency, dust)',
+    pvssAssumption9: 'Battery Size: Based on estimated daily generation or your entered daily consumption, aiming for 100% daily energy coverage',
+    pvssAssumption10: 'Estimated Consumption: Based on 5 kWh/day per bedroom, plus specific values for selected appliances',
+    pvssAssumption11: 'Disclaimer: These calculations are estimates. Actual performance may vary based on location, weather, and system configuration. Consult with a professional solar installer for accurate assessments.',
+    pvssAssumption12: 'This is an estimation tool. For precise sizing, accurate costing, and professional advice, please consult a certified solar energy expert.',
+    pvssDisclaimer: 'These calculations are estimates. For accurate measurements, precise costs, and professional consultation, please consult a certified solar energy expert.',
+    pvssVisualSystemLayout: 'Visual System Layout',
+    pvssMonthlyEnergyProduction: 'Monthly Energy Production',
+    pvssSavingsTimeline: 'Savings Timeline'
   },
   ar: {
     langButton: 'View in English',
@@ -227,6 +499,7 @@ export const content: { en: Content; ar: Content } = {
     navAbout: 'من نحن',
     navServices: 'خدماتنا',
     navProjects: 'مشاريعنا',
+    navPVSS: 'حاسبة الطاقة الشمسية',
     navContact: 'اتصل بنا',
     aboutTitle: 'من نحن',
     aboutPara1: 'في <strong>بي في ان جي للأعمال الكهروميكانيكية ذ.م.م.</strong>، نحن اسم موثوق في قطاع الكهروميكانيكا بدبي، مدعومون بأكثر من عقد من الخبرة وسجل حافل بتقديم حلول مبتكرة وموثوقة. التزامنا بالجودة والدقة ورضا العملاء يدفع كل ما نقوم به، مما يضمن تنفيذ كل مشروع بتميز من البداية إلى النهاية.',
@@ -291,6 +564,82 @@ export const content: { en: Content; ar: Content } = {
     contactAlternativeCall: 'أو بدلاً من ذلك يمكنك الاتصال بنا على',
     contactPerson: '<strong>ثائر</strong><br><i class="fas fa-phone"></i> +971 56 546 3955',
     footerCopyright: '&copy; 2025 بي في ان جي للأعمال الكهروميكانيكية ذ.م.م. | جميع الحقوق محفوظة | بقلم غلام علي',
+  footerCompanyDescription: 'الرائد في تقديم الحلول الكهروميكانيكية الشاملة، متخصصون في أنظمة الطاقة الشمسية، حلول الأمان، والبنية التحتية المستدامة في جميع أنحاء دولة الإمارات العربية المتحدة.',
+  footerQuickLinks: 'روابط سريعة',
+  footerOurServices: 'خدماتنا',
+  footerContactInfo: 'معلومات الاتصال',
+  footerHome: 'الرئيسية',
+  footerAboutUs: 'من نحن',
+  footerServices: 'الخدمات',
+  footerProjects: 'المشاريع',
+  footerContact: 'اتصل بنا',
+  footerSolarEnergySystems: 'أنظمة الطاقة الشمسية',
+  footerSecuritySystems: 'أنظمة الأمان',
+  footerLowVoltageSystems: 'أنظمة الجهد المنخفض',
+  footerGasPipingSolutions: 'حلول أنابيب الغاز',
+  footerSustainabilityConsulting: 'الاستشارات المستدامة',
+  footerAddress: 'العنوان',
+  footerPhone: 'الهاتف',
+  footerEmail: 'البريد الإلكتروني',
+  footerAllRightsReserved: '© ٢٠٢٥ جميع الحقوق محفوظة',
+  statsYearsExperience: 'سنوات من الخبرة',
+  statsProjectsCompleted: 'مشروع مكتمل',
+  statsClientSatisfaction: 'رضا العملاء',
+  statsSupportAvailable: 'دعم متاح',
+  heroTitle: 'حلول مستدامة. تأثير دائم.',
+  heroPara1: 'في بي في ان جي للأعمال الكهروميكانيكية ذ.م.م.، نحن ملتزمون بتشغيل غد أكثر خضرة. مع أكثر من عقد من الخبرة في القطاع الكهروميكانيكي في دبي، نقدم حلولاً مبتكرة لا تلبي احتياجاتك اليوم فحسب، بل تحمي البيئة للأجيال القادمة.',
+  heroPara2: 'فريقنا الخبير يدمج الممارسات المستدامة وأنظمة كفاءة الطاقة والتكنولوجيا المتطورة لإنشاء مساحات أكثر أماناً وذكاءً وصديقة للبيئة. سواء كانت للمشاريع التجارية أو السكنية، نركز على تقليل التأثير البيئي مع تعظيم الأداء والموثوقية.',
+  heroPara3: 'شارك معنا لبناء مستقبل أفضل - مستقبل يقدر الكفاءة والمسؤولية والاستدامة طويلة الأجل. في بي في ان جي، الأمر أكثر من مجرد خدمة؛ إنه التزام بحفظ الكوكب مع دفع التقدم.',
+  learnMore: 'اعرف المزيد',
+  solarCalculator: 'حاسبة الطاقة الشمسية',
+  calculateYourSystem: 'احسب نظامك',
+  ourValues: 'قيمنا',
+  qualityExcellence: 'التميز في الجودة',
+  qualityExcellenceDesc: 'تقديم حلول متفوقة تتجاوز المعايير الصناعية وتوقعات العملاء.',
+  innovation: 'الابتكار',
+  innovationDesc: 'تبني التكنولوجيا المتطورة والممارسات المستدامة لحلول جاهزة للمستقبل.',
+  reliability: 'الموثوقية',
+  reliabilityDesc: 'بناء شراكات دائمة من خلال تقديم خدمات متسقة وموثوقة.',
+  sustainability: 'الاستدامة',
+  sustainabilityDesc: 'ملتزمون بالمسؤولية البيئية وممارسات التنمية المستدامة.',
+  tradeLicenseNo: 'رقم الترخيص التجاري:',
+  tenantNo: 'رقم المستأجر:',
+  ourMission: 'مهمتنا',
+  ourMissionDesc: 'تقديم حلول كهروميكانيكية مبتكرة تعزز السلامة والكفاءة والاستدامة مع بناء شراكات دائمة مع عملائنا من خلال التميز في تقديم الخدمات.',
+  ourVision: 'رؤيتنا',
+  ourVisionDesc: 'أن نكون المزود الرائد للحلول الكهروميكانيكية في دبي، معترف بنا لالتزامنا بالابتكار والاستدامة ورضا العملاء الاستثنائي.',
+  ourLeadership: 'قيادتنا',
+  leadershipIntro: 'تعرف على القادة الرؤيويين الذين يقودون نجاحنا ويشكلون مستقبل شركتنا.',
+  environmentalManagementSpecialist: 'أخصائي الإدارة البيئية',
+  keyCertifications: 'الشهادات الرئيسية:',
+  operationsManager: 'مديرة العمليات',
+  keyResponsibilities: 'المسؤوليات الرئيسية:',
+  headElectromechanical: 'رئيس الأعمال الكهروميكانيكية ومكافحة الحرائق وخطوط الأنابيب',
+  thiruDescription: 'السيد ثائر هو رئيس قسم الأعمال الكهروميكانيكية ومكافحة الحرائق وخطوط الأنابيب والصيانة. خبرته هي نتيجة مباشرة لسنوات من الخبرة العملية، وسمعته أكسبته قاعدة عملاء مخلصين يعملون حصرياً معه. لقد وسع مؤخراً محفظته لتشمل أنظمة الجهد المنخفض والأمان المتخصصة، مما يوسع عروض خدماتنا. التزامه بضمان "التميز في الخدمة" هو المبدأ التوجيهي وراء كل مشروع يشرف عليه.',
+  keyExpertise: 'الخبرات الرئيسية:',
+  ourAchievements: 'إنجازاتنا',
+  yearsOfExcellence: 'سنوات من التميز',
+  projectsCompleted: 'مشروع مكتمل',
+  clientSatisfaction: 'رضا العملاء',
+  supportAvailable: 'دعم متاح',
+  cfAPMP: 'CF APMP',
+  carbonReductionPlanSpecialist: 'أخصائي خطة تقليل الكربون',
+  iso14001EMS: 'ISO 14001:2015 EMS',
+  bidSpecialistUK: 'أخصائي العطاءات (المملكة المتحدة)',
+  mrThiru: 'السيد ثائر',
+  headElectromechanicalFirefightingGas: 'رئيس الأعمال الكهروميكانيكية ومكافحة الحرائق وخطوط الأنابيب',
+  thiruDescription: 'السيد ثائر هو رئيس قسم الأعمال الكهروميكانيكية ومكافحة الحرائق وخطوط الأنابيب والصيانة. خبرته هي نتيجة مباشرة لسنوات من الخبرة العملية، وسمعته أكسبته قاعدة عملاء مخلصين يعملون حصرياً معه. لقد وسع مؤخراً محفظته لتشمل أنظمة الجهد المنخفض والأمان المتخصصة، مما يوسع عروض خدماتنا. التزامه بضمان "التميز في الخدمة" هو المبدأ التوجيهي وراء كل مشروع يشرف عليه.',
+  keyExpertise: 'الخبرات الرئيسية:',
+  electromechanicalSystems: 'الأنظمة الكهروميكانيكية',
+  firefightingSystems: 'أنظمة مكافحة الحرائق',
+  gasPipelineWorks: 'أعمال خطوط الأنابيب',
+  lowVoltageSystems: 'أنظمة الجهد المنخفض',
+  securitySystems: 'أنظمة الأمان',
+  maintenanceService: 'الصيانة والخدمة',
+  ghulamAli: 'غلام علي',
+  environmentalManagementSpecialist: 'أخصائي الإدارة البيئية',
+  hinaZehra: 'هناء زهرة',
+  operationsManager: 'مديرة العمليات',
     readMore: 'اقرأ المزيد',
     aboutPara4: 'أكثر من مجرد مقدمي خدمات، نحن شركاء ملتزمون بمساعدة عملائنا في بناء بيئات أكثر أماناً وكفاءة واستدامة. مهمتنا في بي في ان جي للأعمال الكهروميكانيكية هي خلق قيمة طويلة الأجل وعلاقات دائمة من خلال خدمات موثوقة تتجاوز التوقعات.',
     ghulamAliDescription: 'يتمتع غلام علي بخبرة واسعة في الإدارة البيئية والاستدامة، مع خلفية متجذرة في المملكة المتحدة. وهو معتمد في أنظمة الإدارة البيئية ISO 14001 وCF APMP (محترف إدارة المقترحات المعتمد). مع تركيز قوي على إدارة الانبعاثات، ساعد أكثر من 100 شركة صغيرة ومتوسطة في إعداد وحساب والإبلاغ عن انبعاثاتها.',
@@ -331,7 +680,66 @@ export const content: { en: Content; ar: Content } = {
     service5Feature2: 'ممارسات البناء المستدام',
     service5Feature2Desc: 'ندعم ممارسات البناء المستدام لمساعدتك في تحقيق أهداف الاستدامة الخاصة بك، مما يضمن المسؤولية البيئية والفوائد الاقتصادية.',
     service5Feature3: 'تقليل البصمة البيئية',
-    service5Feature3Desc: 'هدفنا هو تمكين العملاء من تقليل بصمتهم البيئية بشكل كبير مع تحسين التكاليف التشغيلية وتعزيز القيمة طويلة الأجل.'
+    service5Feature3Desc: 'هدفنا هو تمكين العملاء من تقليل بصمتهم البيئية بشكل كبير مع تحسين التكاليف التشغيلية وتعزيز القيمة طويلة الأجل.',
+    // PVSS Calculator translations
+    pvssTitle: 'حاسبة نظام الطاقة الشمسية',
+    pvssSubtitle: 'احسب نظام الطاقة الشمسية الأمثل لك',
+    pvssCloseButton: 'إغلاق الحاسبة',
+    pvssRoofSizeLabel: 'مساحة السطح:',
+    pvssRoofSizeUnit: 'متر مربع (م²)',
+    pvssPanelTypeLabel: 'نوع الألواح الشمسية:',
+    pvssInverterTypeLabel: 'نوع العاكس:',
+    pvssBedroomsLabel: 'عدد غرف النوم:',
+    pvssAppliancesLabel: 'اختر الأجهزة الشائعة (الاستخدام اليومي):',
+    pvssApplianceAC: 'تكييف الهواء (مركزي)',
+    pvssApplianceWaterHeater: 'سخان المياه',
+    pvssApplianceRefrigerator: 'ثلاجة',
+    pvssApplianceWashingMachine: 'غسالة ملابس',
+    pvssApplianceOven: 'فرن/موقد كهربائي',
+    pvssApplianceElectronics: 'الإضاءة والإلكترونيات (تلفزيونات، شواحن)',
+    pvssDailyConsumptionLabel: 'متوسط استهلاك الطاقة اليومي (اختياري، تجاوز يدوي):',
+    pvssDailyConsumptionUnit: 'كيلوواط ساعة',
+    pvssMaintenanceTitle: 'تضمين تكاليف الصيانة',
+    pvssMaintenanceLabel: 'تضمين تكلفة الصيانة السنوية في الحسابات',
+    pvssMaintenancePercentage: 'تكلفة الصيانة السنوية (% من إجمالي تكلفة النظام):',
+    pvssMaintenanceCost: 'تكلفة الصيانة السنوية المقدرة:',
+    pvssCalculateButton: 'احسب نظام الطاقة الشمسية',
+    pvssClearButton: 'مسح الإدخالات',
+    pvssResultsTitle: 'توصيات نظام الطاقة الشمسية الخاص بك',
+    pvssPanelSizeLabel: 'الحجم الموصى به للألواح الشمسية:',
+    pvssEnergyGeneratedLabel: 'تقدير الطاقة السنوية المولدة:',
+    pvssBatteryStorageLabel: 'تخزين البطارية الموصى به (يومي):',
+    pvssInverterSizeLabel: 'الحجم الموصى به للمحول (العاكس):',
+    pvssCO2SavingsLabel: 'تقدير توفير ثاني أكسيد الكربون سنوياً:',
+    pvssCostBreakdownTitle: 'تفاصيل التكلفة المقدرة',
+    pvssCostPanels: 'تكلفة الألواح الشمسية:',
+    pvssCostInverter: 'تكلفة العاكس:',
+    pvssCostBattery: 'تكلفة تخزين البطارية:',
+    pvssCostInstallation: 'تكاليف التركيب والخدمات الإضافية:',
+    pvssTotalCostGBP: 'التكلفة الإجمالية المقدرة (GBP):',
+    pvssTotalCostAED: 'التكلفة الإجمالية المقدرة (AED):',
+    pvssSavingsTitle: 'الوفورات المقدرة وفترة الاسترداد',
+    pvssMaintenanceCostLabel: 'تكلفة الصيانة السنوية المقدرة:',
+    pvssAnnualSavingsGBP: 'الوفورات السنوية المقدرة (GBP):',
+    pvssAnnualSavingsAED: 'الوفورات السنوية المقدرة (AED):',
+    pvssPaybackPeriod: 'فترة الاسترداد المقدرة:',
+    pvssAssumptionsTitle: 'افتراضات وإخلاء مسؤولية:',
+    pvssAssumption1: 'كفاءة النظام: 80% استخدام للسطح، 4.5 ساعات شمس في المتوسط يومياً',
+    pvssAssumption2: 'تكاليف الطاقة: 0.28 جنيه إسترليني/0.45 درهم إماراتي لكل كيلوواط ساعة متوسط أسعار الكهرباء',
+    pvssAssumption3: 'انبعاثات ثاني أكسيد الكربون: 0.233 كجم ثاني أكسيد الكربون لكل كيلوواط ساعة من كهرباء الشبكة',
+    pvssAssumption4: 'الصيانة: تكلفة الصيانة السنوية مضمونة في الحسابات',
+    pvssAssumption5: 'كفاءة اللوح: مفترضة 18% (متوسط للألواح السكنية الحديثة)',
+    pvssAssumption6: 'مساحة السطح القابلة للاستخدام: مفترضة 70% من إجمالي مساحة السطح بسبب التظليل والعوائق والتباعد',
+    pvssAssumption7: 'ساعات ذروة الشمس (دبي): مفترضة 5.5 ساعات/يوم (متوسط ضوء الشمس اليومي يعادل 1000 واط/م² من الإشعاع)',
+    pvssAssumption8: 'فقدان النظام: مفترض 20% خسائر (بسبب درجة الحرارة، الأسلاك، كفاءة المحول، الغبار)',
+    pvssAssumption9: 'حجم البطارية: يعتمد على التوليد اليومي المقدر أو استهلاكك اليومي المدخل، بهدف تغطية 100% من الطاقة اليومية',
+    pvssAssumption10: 'الاستهلاك المقدر: يعتمد على 5 كيلوواط ساعة/يوم لكل غرفة نوم، بالإضافة إلى قيم محددة للأجهزة المختارة',
+    pvssAssumption11: 'إخلاء المسؤولية: هذه الحسابات تقديرية. قد يختلف الأداء الفعلي بناءً على الموقع والطقس وتكوين النظام. استشر خبير تركيب الطاقة الشمسية للحصول على تقييمات دقيقة.',
+    pvssAssumption12: 'هذه أداة تقدير. للحصول على قياس دقيق وتكلفة دقيقة واستشارة مهنية، يرجى استشارة خبير طاقة شمسية معتمد.',
+    pvssDisclaimer: 'هذه الحسابات تقديرية. للحصول على قياس دقيق وتكلفة دقيقة واستشارة مهنية، يرجى استشارة خبير طاقة شمسية معتمد.',
+    pvssVisualSystemLayout: 'تخطيط النظام المرئي',
+    pvssMonthlyEnergyProduction: 'إنتاج الطاقة الشهري',
+    pvssSavingsTimeline: 'الجدول الزمني للوفورات'
   }
 };
 

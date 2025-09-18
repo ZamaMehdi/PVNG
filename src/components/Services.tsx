@@ -4,6 +4,7 @@ import { useLanguage } from '@/contexts/LanguageContext';
 import Image from 'next/image';
 import { useState, useEffect } from 'react';
 import { createPortal } from 'react-dom';
+import PVSSModal from './PVSSModal';
 
 function Modal({ children, isOpen, onClose }: { children: React.ReactNode; isOpen: boolean; onClose: () => void }) {
   const [style, setStyle] = useState({});
@@ -43,6 +44,7 @@ function Modal({ children, isOpen, onClose }: { children: React.ReactNode; isOpe
 export default function Services() {
   const { langContent } = useLanguage();
   const [activeModal, setActiveModal] = useState<string | null>(null);
+  const [isPVSSModalOpen, setIsPVSSModalOpen] = useState(false);
 
   // Prevent body scroll when modal is open
   useEffect(() => {
@@ -71,28 +73,28 @@ export default function Services() {
       id: 2,
       heading: langContent.service2Heading,
       description: langContent.service2Para,
-      image: 'https://images.unsplash.com/photo-1581091226033-d5c48150dbaa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80',
+      image: '/images/LVsystem.jpg',
       icon: 'bolt'
     },
     {
       id: 3,
       heading: langContent.service3Heading,
       description: langContent.service3Para,
-      image: '/images/Gas pipeline.jpeg',
+      image: '/images/GasPL.jpg',
       icon: 'gas'
     },
     {
       id: 4,
       heading: langContent.service4Heading,
       description: langContent.service4Para,
-      image: 'https://images.unsplash.com/photo-1509391366360-2e959784a276?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80',
+      image: '/images/commercial and residential security.jpg',
       icon: 'shield'
     },
     {
       id: 5,
       heading: langContent.service5Heading,
       description: langContent.service5Para,
-      image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80',
+      image: '/images/SustCE.jpg',
       icon: 'building'
     }
   ];
@@ -255,7 +257,7 @@ export default function Services() {
 
           {/* Sustainability Section */}
           <div className="mt-16">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {/* Solar Energy Compact Card */}
               <div className="fade-in" style={{ animationDelay: '1.0s' }}>
                 <div className="service-card h-full flex flex-col">
@@ -423,6 +425,60 @@ export default function Services() {
                   </div>
                 </div>
               </div>
+
+              {/* PVSS Calculator Compact Card */}
+              <div className="fade-in" style={{ animationDelay: '1.6s' }}>
+                <div className="service-card h-full flex flex-col bg-gradient-to-br from-green-50 to-blue-50 border-2 border-green-200 hover:border-green-400 transition-all duration-300 cursor-pointer group" onClick={() => setIsPVSSModalOpen(true)}>
+                  <div className="flex items-center gap-4 mb-6">
+                    <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-blue-600 rounded-2xl flex items-center justify-center shadow-lg group-hover:shadow-xl transition-shadow duration-300">
+                      <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
+                      </svg>
+                    </div>
+                    <h3 className="text-xl font-bold text-gray-800 group-hover:text-green-700 transition-colors duration-300">
+                      PVSS Calculator
+                    </h3>
+                  </div>
+                  
+                  <div className="flex-1 flex flex-col">
+                    <div className="space-y-4 flex-1">
+                      <p className="text-sm md:text-base text-gray-700 leading-relaxed font-medium">
+                        Calculate your perfect solar system in minutes! Get instant estimates for costs, savings, and payback periods tailored to your home.
+                      </p>
+                      
+                      <div className="grid grid-cols-1 gap-3">
+                        <div className="flex items-start gap-3">
+                          <div className="w-2 h-2 bg-gradient-to-r from-green-500 to-blue-600 rounded-full mt-2 flex-shrink-0"></div>
+                          <p className="text-sm md:text-base text-gray-700">
+                            Instant cost & savings calculations
+                          </p>
+                        </div>
+                        <div className="flex items-start gap-3">
+                          <div className="w-2 h-2 bg-gradient-to-r from-green-500 to-blue-600 rounded-full mt-2 flex-shrink-0"></div>
+                          <p className="text-sm md:text-base text-gray-700">
+                            Personalized system recommendations
+                          </p>
+                        </div>
+                        <div className="flex items-start gap-3">
+                          <div className="w-2 h-2 bg-gradient-to-r from-green-500 to-blue-600 rounded-full mt-2 flex-shrink-0"></div>
+                          <p className="text-sm md:text-base text-gray-700">
+                            Visual charts & detailed reports
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <div className="mt-6 flex items-center justify-between">
+                      <span className="text-green-600 font-semibold text-sm group-hover:text-green-700 transition-colors duration-300">
+                        Calculate Now —
+                      </span>
+                      <svg className="w-5 h-5 text-green-600 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -467,7 +523,7 @@ export default function Services() {
                     <div>
                       <div className="relative overflow-hidden rounded-2xl shadow-2xl">
                         <Image
-                          src="https://images.unsplash.com/photo-1509391366360-2e959784a276?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80"
+                          src="/images/SolarEhome.jpg"
                           alt="Solar panels in a green field"
                           width={600}
                           height={400}
@@ -512,7 +568,7 @@ export default function Services() {
                     <div>
                       <div className="relative overflow-hidden rounded-2xl shadow-2xl">
                         <Image
-                          src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80"
+                          src="/images/EnergySS.jpg"
                           alt="Energy storage batteries"
                           width={600}
                           height={400}
@@ -557,7 +613,7 @@ export default function Services() {
                     <div>
                       <div className="relative overflow-hidden rounded-2xl shadow-2xl">
                         <Image
-                          src="https://images.unsplash.com/photo-1581091226033-d5c48150dbaa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80"
+                          src="/images/wind energy.jpg"
                           alt="Wind turbines at sunset"
                           width={600}
                           height={400}
@@ -571,6 +627,12 @@ export default function Services() {
               )}
         </div>
       </Modal>
+
+      {/* PVSS Calculator Modal */}
+      <PVSSModal 
+        isOpen={isPVSSModalOpen} 
+        onClose={() => setIsPVSSModalOpen(false)} 
+      />
     </>
   );
 }

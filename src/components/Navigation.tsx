@@ -3,10 +3,13 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useLanguage } from '@/contexts/LanguageContext';
+import { useState } from 'react';
+import PVSSModal from './PVSSModal';
 
 export default function Navigation() {
   const { langContent, toggleLanguage } = useLanguage();
   const pathname = usePathname();
+  const [isPVSSModalOpen, setIsPVSSModalOpen] = useState(false);
 
   const isActive = (path: string) => {
     return pathname === path;
@@ -51,6 +54,12 @@ export default function Navigation() {
           >
             {langContent.navProjects}
           </Link>
+          <button 
+            onClick={() => setIsPVSSModalOpen(true)}
+            className={`nav-link ${isHomePage ? 'text-white' : ''} hover:opacity-80 transition-opacity`}
+          >
+            {langContent.navPVSS}
+          </button>
           <Link 
             href="/contact"
             className={`nav-link ${isActive('/contact') ? 'active' : ''} ${isHomePage ? 'text-white' : ''}`}
@@ -69,6 +78,11 @@ export default function Navigation() {
           {langContent.langButton}
         </button>
       </div>
+      
+      <PVSSModal 
+        isOpen={isPVSSModalOpen} 
+        onClose={() => setIsPVSSModalOpen(false)} 
+      />
     </nav>
   );
 }
