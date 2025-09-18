@@ -253,9 +253,15 @@ export default function PVSSModal({ isOpen, onClose }: PVSSModalProps) {
 
     // Draw charts after a short delay to ensure DOM is updated
     setTimeout(() => {
-      drawPanelLayout(panelLayoutRef, numberOfPanels, selectedPanel.areaSqm, usableRoofArea);
-      drawMonthlyChart(monthlyChartRef, annualEnergyGeneratedKwh);
-      drawSavingsTimeline(savingsTimelineRef, totalCostGbp, netAnnualSavingsGbp, paybackPeriod, '£');
+      if (panelLayoutRef.current) {
+        drawPanelLayout(panelLayoutRef, numberOfPanels, selectedPanel.areaSqm, usableRoofArea);
+      }
+      if (monthlyChartRef.current) {
+        drawMonthlyChart(monthlyChartRef, annualEnergyGeneratedKwh);
+      }
+      if (savingsTimelineRef.current) {
+        drawSavingsTimeline(savingsTimelineRef, totalCostGbp, netAnnualSavingsGbp, paybackPeriod, '£');
+      }
       
       // Scroll to results section
       if (resultsSectionRef.current) {
