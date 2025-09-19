@@ -1126,3 +1126,36 @@ html[lang="ar"] .service-card h3,
 html[lang="ar"] .service-card p {
   text-align: left !important;
 }
+
+/* Force center alignment for hero section Arabic text */
+html[lang="ar"] .hero-section p,
+html[lang="ar"] .hero-section h1,
+html[lang="ar"] .hero-section h2,
+html[lang="ar"] .hero-section h3,
+html[lang="ar"] .sustainability-section p,
+html[lang="ar"] .sustainability-section h1,
+html[lang="ar"] .sustainability-section h2,
+html[lang="ar"] .sustainability-section h3,
+html[lang="ar"] .services-showcase p,
+html[lang="ar"] .services-showcase h1,
+html[lang="ar"] .services-showcase h2,
+html[lang="ar"] .services-showcase h3,
+html[lang="ar"] .services-section p,
+html[lang="ar"] .services-section h1,
+html[lang="ar"] .services-section h2,
+html[lang="ar"] .services-section h3,
+html[lang="ar"] .about-section p,
+html[lang="ar"] .about-section h1,
+html[lang="ar"] .about-section h2,
+html[lang="ar"] .about-section h3,
+html[lang="ar"] .hero-content p,
+html[lang="ar"] .hero-content h1,
+html[lang="ar"] .hero-content h2,
+html[lang="ar"] .hero-content h3,
+html[lang="ar"] .max-w-5xl p,
+html[lang="ar"] .max-w-5xl h1,
+html[lang="ar"] .max-w-5xl h2,
+html[lang="ar"] .max-w-5xl h3 {
+  text-align: center !important;
+  direction: ltr !important;
+}

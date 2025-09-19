@@ -45,11 +45,11 @@ export default function Home() {
       </section>
 
       {/* Sustainability Section */}
-      <section className="py-16 px-5 bg-gradient-to-br from-blue-50 to-green-50">
+      <section className="py-16 px-5 bg-gradient-to-br from-blue-50 to-green-50 sustainability-section">
         <div className="max-w-6xl mx-auto text-center">
           <div className="fade-in">
-            <h2 className="text-xl md:text-2xl lg:text-3xl font-bold mb-6 relative">
-              <span className="bg-gradient-to-r from-green-600 via-blue-600 to-green-700 bg-clip-text text-transparent">
+            <h2 className="text-xl md:text-2xl lg:text-3xl font-bold mb-6 relative" style={{textAlign: 'center', direction: 'ltr'}}>
+              <span className="bg-gradient-to-r from-green-600 via-blue-600 to-green-700 bg-clip-text text-transparent" style={{textAlign: 'center', direction: 'ltr'}}>
                 {langContent.heroTitle}
               </span>
               {/* Decorative Elements */}
@@ -57,16 +57,16 @@ export default function Home() {
               <div className="absolute -bottom-1 -right-2 w-3 h-3 bg-blue-400 rounded-full opacity-70 animate-bounce" style={{animationDelay: '1s'}}></div>
             </h2>
             
-            <div className="space-y-3 text-sm md:text-base text-black leading-relaxed max-w-5xl mx-auto">
-              <p className="fade-in" style={{animationDelay: '0.2s'}}>
+            <div className="space-y-3 text-sm md:text-base text-black leading-relaxed max-w-5xl mx-auto" style={{direction: 'ltr', textAlign: 'center', textAlignLast: 'center'}}>
+              <p className="fade-in" style={{animationDelay: '0.2s', direction: 'ltr', textAlign: 'center', textAlignLast: 'center', unicodeBidi: 'bidi-override', display: 'block', width: '100%'}}>
                 {langContent.heroPara1}
               </p>
               
-              <p className="fade-in" style={{animationDelay: '0.4s'}}>
+              <p className="fade-in" style={{animationDelay: '0.4s', direction: 'ltr', textAlign: 'center', textAlignLast: 'center', unicodeBidi: 'bidi-override', display: 'block', width: '100%'}}>
                 {langContent.heroPara2}
               </p>
               
-              <p className="fade-in font-medium text-gray-800" style={{animationDelay: '0.6s'}}>
+              <p className="fade-in font-medium text-gray-800" style={{animationDelay: '0.6s', direction: 'ltr', textAlign: 'center', textAlignLast: 'center', unicodeBidi: 'bidi-override', display: 'block', width: '100%'}}>
                 {langContent.heroPara3}
               </p>
         </div>
@@ -82,7 +82,7 @@ export default function Home() {
       </section>
 
       {/* Services Showcase */}
-      <section className="py-12 px-5 bg-white relative overflow-hidden" style={{paddingTop: '2rem'}}>
+      <section className="py-12 px-5 bg-white relative overflow-hidden services-showcase" style={{paddingTop: '2rem'}}>
         {/* Subtle Blue Background Elements */}
         <div className="absolute top-10 right-10 w-64 h-64 bg-blue-50 rounded-full blur-3xl animate-pulse"></div>
         <div className="absolute bottom-10 left-10 w-80 h-80 bg-blue-100/30 rounded-full blur-3xl animate-pulse" style={{animationDelay: '2s'}}></div>
@@ -90,8 +90,8 @@ export default function Home() {
         <div className="max-w-7xl mx-auto relative z-10">
           {/* Enhanced Header Section */}
           <div className="text-center mb-8">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 relative">
-              <span className="bg-gradient-to-r from-gray-800 via-blue-600 to-blue-800 bg-clip-text text-transparent">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 relative" style={{textAlign: 'center', direction: 'ltr'}}>
+              <span className="bg-gradient-to-r from-gray-800 via-blue-600 to-blue-800 bg-clip-text text-transparent" style={{textAlign: 'center', direction: 'ltr'}}>
                 {langContent.servicesTitle}
               </span>
               {/* Decorative Blue Elements */}
