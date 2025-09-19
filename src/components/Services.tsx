@@ -134,9 +134,11 @@ export default function Services() {
     <>
       {/* Product Banner */}
       <section className="w-full pt-20 bg-black">
-        <img
+        <Image
           src="/images/productbanner.gif"
           alt="Products Banner"
+          width={1200}
+          height={450}
           className="w-full h-[450px] object-fill"
           style={{
             display: 'block',
@@ -436,11 +438,13 @@ export default function Services() {
                 <div className="text-center mb-8">
                   <div className="flex justify-center mb-6">
                     <div className="inline-flex items-center justify-center w-20 h-20 bg-white rounded-3xl shadow-lg group-hover:shadow-xl transition-shadow duration-300 p-4">
-                      <img 
-                        src="/images/calculatoricon.png" 
-                        alt="Calculator" 
-                        className="w-12 h-12"
-                      />
+                    <Image 
+                      src="/images/calculatoricon.png" 
+                      alt="Calculator" 
+                      width={48}
+                      height={48}
+                      className="w-12 h-12"
+                    />
                     </div>
                   </div>
                   <h3 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4 group-hover:text-green-700 transition-colors duration-300">
