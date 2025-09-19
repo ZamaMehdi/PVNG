@@ -1,10 +1,8 @@
 'use client';
 
-import { useState } from 'react';
 import Image from 'next/image';
 
 export default function FloatingCalculator() {
-  const [isCalculatorOpen, setIsCalculatorOpen] = useState(false);
 
   const handleCalculatorClick = () => {
     // For now, we'll open the calculator in a new tab
