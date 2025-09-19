@@ -2,12 +2,20 @@
 
 import Image from 'next/image';
 
-export default function FloatingCalculator() {
+interface FloatingCalculatorProps {
+  onCalculatorClick?: () => void;
+}
+
+export default function FloatingCalculator({ onCalculatorClick }: FloatingCalculatorProps) {
 
   const handleCalculatorClick = () => {
-    // For now, we'll open the calculator in a new tab
-    // You can modify this to open a modal or navigate to a calculator page
-    window.open('/pvss', '_blank');
+    if (onCalculatorClick) {
+      onCalculatorClick();
+    } else {
+      // Fallback: try to trigger modal if no callback provided
+      const event = new CustomEvent('openPVSSModal');
+      window.dispatchEvent(event);
+    }
   };
 
   return (

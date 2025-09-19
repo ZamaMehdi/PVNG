@@ -278,7 +278,7 @@ export default function Home() {
       <Footer />
       
       {/* Floating Calculator Button */}
-      <FloatingCalculator />
+      <FloatingCalculator onCalculatorClick={() => setIsPVSSModalOpen(true)} />
       
       {/* PVSS Calculator Modal */}
       <PVSSModal 

@@ -1,15 +1,17 @@
 'use client';
 
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import Navigation from '@/components/Navigation';
 import Services from '@/components/Services';
 import Footer from '@/components/Footer';
 import FloatingCalculator from '@/components/FloatingCalculator';
+import PVSSModal from '@/components/PVSSModal';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 
 export default function ServicesPage() {
   const { currentLang } = useLanguage();
+  const [isPVSSModalOpen, setIsPVSSModalOpen] = useState(false);
 
   useEffect(() => {
     // Update HTML attributes based on current language
@@ -29,7 +31,13 @@ export default function ServicesPage() {
       </main>
       
       <Footer />
-      <FloatingCalculator />
+      <FloatingCalculator onCalculatorClick={() => setIsPVSSModalOpen(true)} />
+      
+      {/* PVSS Calculator Modal */}
+      <PVSSModal 
+        isOpen={isPVSSModalOpen} 
+        onClose={() => setIsPVSSModalOpen(false)} 
+      />
     </div>
   );
 }
