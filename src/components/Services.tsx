@@ -257,7 +257,7 @@ export default function Services() {
 
           {/* Sustainability Section */}
           <div className="mt-16">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {/* Solar Energy Compact Card */}
               <div className="fade-in" style={{ animationDelay: '1.0s' }}>
                 <div className="service-card h-full flex flex-col">
@@ -426,57 +426,62 @@ export default function Services() {
                 </div>
               </div>
 
-              {/* PVSS Calculator Compact Card */}
-              <div className="fade-in" style={{ animationDelay: '1.6s' }}>
-                <div className="service-card h-full flex flex-col bg-gradient-to-br from-green-50 to-blue-50 border-2 border-green-200 hover:border-green-400 transition-all duration-300 cursor-pointer group" onClick={() => setIsPVSSModalOpen(true)}>
-                  <div className="flex items-center gap-4 mb-6">
-                    <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-blue-600 rounded-2xl flex items-center justify-center shadow-lg group-hover:shadow-xl transition-shadow duration-300">
-                      <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
-                      </svg>
-                    </div>
-                    <h3 className="text-xl font-bold text-gray-800 group-hover:text-green-700 transition-colors duration-300">
-                      PVSS Calculator
-                    </h3>
-                  </div>
-                  
-                  <div className="flex-1 flex flex-col">
-                    <div className="space-y-4 flex-1">
-                      <p className="text-sm md:text-base text-gray-700 leading-relaxed font-medium">
-                        Calculate your perfect solar system in minutes! Get instant estimates for costs, savings, and payback periods tailored to your home.
-                      </p>
-                      
-                      <div className="grid grid-cols-1 gap-3">
-                        <div className="flex items-start gap-3">
-                          <div className="w-2 h-2 bg-gradient-to-r from-green-500 to-blue-600 rounded-full mt-2 flex-shrink-0"></div>
-                          <p className="text-sm md:text-base text-gray-700">
-                            Instant cost & savings calculations
-                          </p>
-                        </div>
-                        <div className="flex items-start gap-3">
-                          <div className="w-2 h-2 bg-gradient-to-r from-green-500 to-blue-600 rounded-full mt-2 flex-shrink-0"></div>
-                          <p className="text-sm md:text-base text-gray-700">
-                            Personalized system recommendations
-                          </p>
-                        </div>
-                        <div className="flex items-start gap-3">
-                          <div className="w-2 h-2 bg-gradient-to-r from-green-500 to-blue-600 rounded-full mt-2 flex-shrink-0"></div>
-                          <p className="text-sm md:text-base text-gray-700">
-                            Visual charts & detailed reports
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                    
-                    <div className="mt-6 flex items-center justify-between">
-                      <span className="text-green-600 font-semibold text-sm group-hover:text-green-700 transition-colors duration-300">
-                        Calculate Now —
-                      </span>
-                      <svg className="w-5 h-5 text-green-600 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-                      </svg>
+            </div>
+          </div>
+
+          {/* PVSS Calculator Standalone Section */}
+          <div className="mt-8">
+            <div className="max-w-4xl mx-auto">
+              <div className="bg-gradient-to-br from-green-50 via-blue-50 to-emerald-50 rounded-3xl p-8 md:p-12 border-2 border-green-200 hover:border-green-400 transition-all duration-300 cursor-pointer group shadow-xl hover:shadow-2xl" onClick={() => setIsPVSSModalOpen(true)}>
+                <div className="text-center mb-8">
+                  <div className="flex justify-center mb-6">
+                    <div className="inline-flex items-center justify-center w-20 h-20 bg-white rounded-3xl shadow-lg group-hover:shadow-xl transition-shadow duration-300 p-4">
+                      <img 
+                        src="/images/calculatoricon.png" 
+                        alt="Calculator" 
+                        className="w-12 h-12"
+                      />
                     </div>
                   </div>
+                  <h3 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4 group-hover:text-green-700 transition-colors duration-300">
+                    {langContent.pvssCalculatorTitle}
+                  </h3>
+                  <p className="text-lg md:text-xl text-gray-600 leading-relaxed max-w-2xl mx-auto">
+                    {langContent.pvssCalculatorSubtitle}
+                  </p>
+                </div>
+                
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                  <div className="flex items-start gap-4 p-4 bg-white/60 rounded-2xl backdrop-blur-sm">
+                    <div className="w-3 h-3 bg-gradient-to-r from-green-500 to-blue-600 rounded-full mt-1 flex-shrink-0"></div>
+                    <p className="text-gray-700 font-medium">
+                      {langContent.pvssFeature1}
+                    </p>
+                  </div>
+                  <div className="flex items-start gap-4 p-4 bg-white/60 rounded-2xl backdrop-blur-sm">
+                    <div className="w-3 h-3 bg-gradient-to-r from-green-500 to-blue-600 rounded-full mt-1 flex-shrink-0"></div>
+                    <p className="text-gray-700 font-medium">
+                      {langContent.pvssFeature2}
+                    </p>
+                  </div>
+                  <div className="flex items-start gap-4 p-4 bg-white/60 rounded-2xl backdrop-blur-sm">
+                    <div className="w-3 h-3 bg-gradient-to-r from-green-500 to-blue-600 rounded-full mt-1 flex-shrink-0"></div>
+                    <p className="text-gray-700 font-medium">
+                      {langContent.pvssFeature3}
+                    </p>
+                  </div>
+                </div>
+                
+                <div className="flex justify-center">
+                  <button className="flex items-center justify-center gap-3 bg-gradient-to-r from-green-600 to-blue-600 text-white px-8 py-4 rounded-2xl font-semibold text-lg shadow-lg hover:shadow-xl transition-all duration-300 group-hover:scale-105">
+                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
+                    </svg>
+                    <span>{langContent.pvssCalculatorButton}</span>
+                    <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                    </svg>
+                  </button>
                 </div>
               </div>
             </div>

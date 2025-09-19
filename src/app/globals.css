@@ -863,39 +863,6 @@ nav.transparent-header .brand-text {
   animation: pulse 2s ease-in-out infinite !important;
 }
 
-/* Back to Top Button */
-.back-to-top {
-  position: fixed !important;
-  bottom: 1.5rem !important;
-  right: 1.5rem !important;
-  width: 3rem !important;
-  height: 3rem !important;
-  background: var(--gradient-primary) !important;
-  color: white !important;
-  border: none !important;
-  border-radius: 50% !important;
-  cursor: pointer !important;
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  box-shadow: var(--shadow-soft) !important;
-  transition: all 0.3s ease !important;
-  z-index: 1000 !important;
-  opacity: 0 !important;
-  visibility: hidden !important;
-  transform: translateY(20px) !important;
-}
-
-.back-to-top.show {
-  opacity: 1 !important;
-  visibility: visible !important;
-  transform: translateY(0) !important;
-}
-
-.back-to-top:hover {
-  transform: translateY(-5px) !important;
-  box-shadow: var(--shadow-medium) !important;
-}
 
 /* Footer */
 footer {

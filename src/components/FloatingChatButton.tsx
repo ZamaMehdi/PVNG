@@ -13,7 +13,7 @@ export default function FloatingChatButton() {
         href="https://wa.me/971501234567"
         target="_blank"
         rel="noopener noreferrer"
-        className="fixed bottom-40 right-6 z-40 bg-green-500 text-white p-3 rounded-full shadow-lg hover:shadow-xl hover:bg-green-600 transition-all duration-200 group"
+        className="fixed bottom-28 right-6 z-40 bg-green-500 text-white p-3 rounded-full shadow-lg hover:shadow-xl hover:bg-green-600 transition-all duration-200 group"
         aria-label="Contact us on WhatsApp"
       >
         <svg className="w-8 h-8 text-white group-hover:scale-110 transition-transform duration-200" fill="currentColor" viewBox="0 0 24 24">
@@ -24,7 +24,7 @@ export default function FloatingChatButton() {
       {/* Floating Chat Button */}
       <button
         onClick={() => setIsChatOpen(true)}
-        className="fixed bottom-20 right-6 z-40 bg-white text-gray-700 p-3 rounded-full shadow-lg hover:shadow-xl border border-gray-200 hover:border-blue-300 transition-all duration-200 group animate-bounce hover:animate-none"
+        className="fixed bottom-6 right-6 z-40 bg-white text-gray-700 p-3 rounded-full shadow-lg hover:shadow-xl border border-gray-200 hover:border-blue-300 transition-all duration-200 group animate-bounce hover:animate-none"
         aria-label="Open Chat"
         style={{ animationDuration: '2s' }}
       >

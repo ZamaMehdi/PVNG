@@ -4,7 +4,6 @@ import { useEffect } from 'react';
 import Navigation from '@/components/Navigation';
 import ContactForm from '@/components/ContactForm';
 import Footer from '@/components/Footer';
-import BackToTop from '@/components/BackToTop';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 
@@ -28,7 +27,6 @@ export default function ContactPage() {
         <ContactForm />
       </main>
       <Footer />
-      <BackToTop />
     </div>
   );
 }

@@ -4,8 +4,8 @@ import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
-import BackToTop from '@/components/BackToTop';
 import PVSSModal from '@/components/PVSSModal';
+import FloatingCalculator from '@/components/FloatingCalculator';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 
@@ -271,7 +271,9 @@ export default function Home() {
       </main>
       
       <Footer />
-      <BackToTop />
+      
+      {/* Floating Calculator Button */}
+      <FloatingCalculator />
       
       {/* PVSS Calculator Modal */}
       <PVSSModal 

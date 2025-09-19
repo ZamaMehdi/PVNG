@@ -211,6 +211,9 @@ export interface Content {
   pvssAssumption5: string;
   pvssAssumption6: string;
   pvssAssumption7: string;
+  pvssCalculatorTitle: string;
+  pvssCalculatorSubtitle: string;
+  pvssCalculatorButton: string;
   pvssAssumption8: string;
   pvssAssumption9: string;
   pvssAssumption10: string;
@@ -408,6 +411,12 @@ export const content: { en: Content; ar: Content } = {
   pvssFeature1: 'Instant cost & savings calculations',
   pvssFeature2: 'Personalized system recommendations',
   pvssFeature3: 'Visual charts & detailed reports',
+  pvssTitle: 'PVSS Calculator',
+  pvssSubtitle: 'Calculate your perfect solar system in minutes! Get instant estimates for costs, savings, and payback periods tailored to your home.',
+  pvssCalculateButton: 'Calculate Now',
+  pvssCalculatorTitle: 'PVSS Calculator',
+  pvssCalculatorSubtitle: 'Calculate your perfect solar system in minutes! Get instant estimates for costs, savings, and payback periods tailored to your home.',
+  pvssCalculatorButton: 'Calculate Now',
     readMore: 'Read More',
     aboutPara4: 'More than just service providers, we are partners dedicated to helping our clients build safer, more efficient, and sustainable environments. At PVNG Electromechanical Works, our mission is to create long-term value and lasting relationships through dependable services that exceed expectations.',
     ghulamAliDescription: 'Ghulam Ali brings extensive expertise in environmental management and sustainability, with a background rooted in the UK. He is certified in ISO 14001 Environmental Management Systems (EMS) and is a CF APMP (Certified Proposal Management Professional). With a strong focus on emissions management, he has assisted over 100 SMEs in preparing, calculating, and reporting their emissions.',
@@ -711,6 +720,9 @@ export const content: { en: Content; ar: Content } = {
     // PVSS Calculator translations
     pvssTitle: 'حاسبة نظام الطاقة الشمسية',
     pvssSubtitle: 'احسب نظام الطاقة الشمسية الأمثل لك',
+    pvssCalculatorTitle: 'حاسبة PVSS',
+    pvssCalculatorSubtitle: 'احسب نظامك الشمسي المثالي في دقائق! احصل على تقديرات فورية للتكاليف والمدخرات وفترات الاسترداد المصممة خصيصًا لمنزلك.',
+    pvssCalculatorButton: 'احسب الآن',
     pvssCloseButton: 'إغلاق الحاسبة',
     pvssRoofSizeLabel: 'مساحة السطح:',
     pvssRoofSizeUnit: 'متر مربع (م²)',

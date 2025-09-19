@@ -4,7 +4,7 @@ import { useEffect } from 'react';
 import Navigation from '@/components/Navigation';
 import About from '@/components/About';
 import Footer from '@/components/Footer';
-import BackToTop from '@/components/BackToTop';
+import FloatingCalculator from '@/components/FloatingCalculator';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 
@@ -28,7 +28,7 @@ export default function AboutPage() {
         <About />
       </main>
       <Footer />
-      <BackToTop />
+      <FloatingCalculator />
     </div>
   );
 }
