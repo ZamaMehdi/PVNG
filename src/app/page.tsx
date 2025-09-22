@@ -61,7 +61,7 @@ export default function Home() {
               <div className="absolute -bottom-1 -right-2 w-3 h-3 bg-blue-400 rounded-full opacity-70 animate-bounce" style={{animationDelay: '1s'}}></div>
             </h2>
             
-            <div className="space-y-3 text-xs sm:text-sm md:text-base text-black leading-relaxed max-w-5xl mx-auto" style={{direction: 'ltr', textAlign: 'center', textAlignLast: 'center'}}>
+            <div className="space-y-3 text-base text-black leading-relaxed max-w-5xl mx-auto" style={{direction: 'ltr', textAlign: 'center', textAlignLast: 'center'}}>
               <p className="fade-in" style={{animationDelay: '0.2s', direction: 'ltr', textAlign: 'center', textAlignLast: 'center', unicodeBidi: 'bidi-override', display: 'block', width: '100%'}}>
                 {langContent.heroPara1}
               </p>

@@ -217,7 +217,7 @@ export default function Services() {
             {/* Enhanced Description with Better Typography */}
             <div className="fade-in relative z-10" style={{animationDelay: '0.4s'}}>
               <div className="max-w-4xl mx-auto">
-                <p className="text-xs sm:text-sm md:text-base leading-relaxed text-black font-medium">
+                <p className="text-base leading-relaxed text-black font-medium">
                   {langContent.servicesIntro}
                 </p>
               </div>
@@ -241,26 +241,26 @@ export default function Services() {
                     </div>
                     
                     <div className="space-y-6">
-                      <p className="text-xs sm:text-sm md:text-base text-black leading-relaxed">
+                      <p className="text-base text-black leading-relaxed">
                         <span dangerouslySetInnerHTML={{ __html: service.description }} />
                       </p>
                       
                       <div className="grid grid-cols-1 gap-4">
                         <div className={`flex items-start gap-3 ${currentLang === 'ar' ? 'flex-row-reverse' : ''}`}>
                           <div className="w-2 h-2 bg-gradient-to-r from-blue-500 to-blue-600 rounded-full mt-2 flex-shrink-0"></div>
-                          <p className="text-xs sm:text-sm md:text-base text-black">
+                          <p className="text-base text-black">
                             <span dangerouslySetInnerHTML={{ __html: langContent[`service${service.id}Feature1Desc` as keyof typeof langContent] }} />
                           </p>
                         </div>
                         <div className={`flex items-start gap-3 ${currentLang === 'ar' ? 'flex-row-reverse' : ''}`}>
                           <div className="w-2 h-2 bg-gradient-to-r from-blue-500 to-blue-600 rounded-full mt-2 flex-shrink-0"></div>
-                          <p className="text-xs sm:text-sm md:text-base text-black">
+                          <p className="text-base text-black">
                             <span dangerouslySetInnerHTML={{ __html: langContent[`service${service.id}Feature2Desc` as keyof typeof langContent] }} />
                           </p>
                         </div>
                         <div className={`flex items-start gap-3 ${currentLang === 'ar' ? 'flex-row-reverse' : ''}`}>
                           <div className="w-2 h-2 bg-gradient-to-r from-blue-500 to-blue-600 rounded-full mt-2 flex-shrink-0"></div>
-                          <p className="text-xs sm:text-sm md:text-base text-black">
+                          <p className="text-base text-black">
                             <span dangerouslySetInnerHTML={{ __html: langContent[`service${service.id}Feature3Desc` as keyof typeof langContent] }} />
                           </p>
                         </div>
@@ -305,26 +305,26 @@ export default function Services() {
                   
                   <div className="flex-1 flex flex-col">
                     <div className="space-y-4 flex-1">
-                      <p className="text-sm md:text-base text-black leading-relaxed">
+                      <p className="text-base text-black leading-relaxed">
                         {langContent.sustainabilitySolarPara1.split('.')[0]}.
                       </p>
                       
                       <div className="grid grid-cols-1 gap-3">
                         <div className={`flex items-start gap-3 ${currentLang === 'ar' ? 'flex-row-reverse' : ''}`}>
                           <div className="w-2 h-2 bg-gradient-to-r from-yellow-500 to-orange-600 rounded-full mt-2 flex-shrink-0"></div>
-                          <p className="text-sm md:text-base text-black">
+                          <p className="text-base text-black">
                             <span dangerouslySetInnerHTML={{ __html: langContent.solarFeature1 }} />
                           </p>
                         </div>
                         <div className={`flex items-start gap-3 ${currentLang === 'ar' ? 'flex-row-reverse' : ''}`}>
                           <div className="w-2 h-2 bg-gradient-to-r from-yellow-500 to-orange-600 rounded-full mt-2 flex-shrink-0"></div>
-                          <p className="text-sm md:text-base text-black">
+                          <p className="text-base text-black">
                             <span dangerouslySetInnerHTML={{ __html: langContent.solarFeature2 }} />
                           </p>
                         </div>
                         <div className={`flex items-start gap-3 ${currentLang === 'ar' ? 'flex-row-reverse' : ''}`}>
                           <div className="w-2 h-2 bg-gradient-to-r from-yellow-500 to-orange-600 rounded-full mt-2 flex-shrink-0"></div>
-                          <p className="text-sm md:text-base text-black">
+                          <p className="text-base text-black">
                             <span dangerouslySetInnerHTML={{ __html: langContent.solarFeature3 }} />
                           </p>
                         </div>
@@ -361,26 +361,26 @@ export default function Services() {
                   
                   <div className="flex-1 flex flex-col">
                     <div className="space-y-4 flex-1">
-                      <p className="text-sm md:text-base text-black leading-relaxed">
+                      <p className="text-base text-black leading-relaxed">
                         {langContent.sustainabilityStoragePara1.split('.')[0]}.
                       </p>
                       
                       <div className="grid grid-cols-1 gap-3">
                         <div className={`flex items-start gap-3 ${currentLang === 'ar' ? 'flex-row-reverse' : ''}`}>
                           <div className="w-2 h-2 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-full mt-2 flex-shrink-0"></div>
-                          <p className="text-sm md:text-base text-black">
+                          <p className="text-base text-black">
                             <span dangerouslySetInnerHTML={{ __html: langContent.storageFeature1 }} />
                           </p>
                         </div>
                         <div className={`flex items-start gap-3 ${currentLang === 'ar' ? 'flex-row-reverse' : ''}`}>
                           <div className="w-2 h-2 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-full mt-2 flex-shrink-0"></div>
-                          <p className="text-sm md:text-base text-black">
+                          <p className="text-base text-black">
                             <span dangerouslySetInnerHTML={{ __html: langContent.storageFeature2 }} />
                           </p>
                         </div>
                         <div className={`flex items-start gap-3 ${currentLang === 'ar' ? 'flex-row-reverse' : ''}`}>
                           <div className="w-2 h-2 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-full mt-2 flex-shrink-0"></div>
-                          <p className="text-sm md:text-base text-black">
+                          <p className="text-base text-black">
                             <span dangerouslySetInnerHTML={{ __html: langContent.storageFeature3 }} />
                           </p>
                         </div>
@@ -417,26 +417,26 @@ export default function Services() {
                   
                   <div className="flex-1 flex flex-col">
                     <div className="space-y-4 flex-1">
-                      <p className="text-sm md:text-base text-black leading-relaxed">
+                      <p className="text-base text-black leading-relaxed">
                         {langContent.sustainabilityWindPara1.split('.')[0]}.
                       </p>
                       
                       <div className="grid grid-cols-1 gap-3">
                         <div className={`flex items-start gap-3 ${currentLang === 'ar' ? 'flex-row-reverse' : ''}`}>
                           <div className="w-2 h-2 bg-gradient-to-r from-teal-500 to-cyan-600 rounded-full mt-2 flex-shrink-0"></div>
-                          <p className="text-sm md:text-base text-black">
+                          <p className="text-base text-black">
                             <span dangerouslySetInnerHTML={{ __html: langContent.windFeature1 }} />
                           </p>
                         </div>
                         <div className={`flex items-start gap-3 ${currentLang === 'ar' ? 'flex-row-reverse' : ''}`}>
                           <div className="w-2 h-2 bg-gradient-to-r from-teal-500 to-cyan-600 rounded-full mt-2 flex-shrink-0"></div>
-                          <p className="text-sm md:text-base text-black">
+                          <p className="text-base text-black">
                             <span dangerouslySetInnerHTML={{ __html: langContent.windFeature2 }} />
                           </p>
                         </div>
                         <div className={`flex items-start gap-3 ${currentLang === 'ar' ? 'flex-row-reverse' : ''}`}>
                           <div className="w-2 h-2 bg-gradient-to-r from-teal-500 to-cyan-600 rounded-full mt-2 flex-shrink-0"></div>
-                          <p className="text-sm md:text-base text-black">
+                          <p className="text-base text-black">
                             <span dangerouslySetInnerHTML={{ __html: langContent.windFeature3 }} />
                           </p>
                         </div>
@@ -547,11 +547,11 @@ export default function Services() {
                       </div>
                       
                       <div className="space-y-6">
-                        <p className="text-sm md:text-base text-black leading-relaxed">
+                        <p className="text-base text-black leading-relaxed">
                           <span dangerouslySetInnerHTML={{ __html: langContent.sustainabilitySolarPara1 }} />
                         </p>
                         
-                        <p className="text-sm md:text-base text-black leading-relaxed">
+                        <p className="text-base text-black leading-relaxed">
                           <span dangerouslySetInnerHTML={{ __html: langContent.sustainabilitySolarPara2 }} />
                         </p>
                       </div>
@@ -592,11 +592,11 @@ export default function Services() {
                       </div>
                       
                       <div className="space-y-6">
-                        <p className="text-sm md:text-base text-black leading-relaxed">
+                        <p className="text-base text-black leading-relaxed">
                           <span dangerouslySetInnerHTML={{ __html: langContent.sustainabilityStoragePara1 }} />
                         </p>
                         
-                        <p className="text-sm md:text-base text-black leading-relaxed">
+                        <p className="text-base text-black leading-relaxed">
                           <span dangerouslySetInnerHTML={{ __html: langContent.sustainabilityStoragePara2 }} />
                         </p>
                       </div>
@@ -637,11 +637,11 @@ export default function Services() {
                       </div>
                       
                       <div className="space-y-6">
-                        <p className="text-sm md:text-base text-black leading-relaxed">
+                        <p className="text-base text-black leading-relaxed">
                           <span dangerouslySetInnerHTML={{ __html: langContent.sustainabilityWindPara1 }} />
                         </p>
                         
-                        <p className="text-sm md:text-base text-black leading-relaxed">
+                        <p className="text-base text-black leading-relaxed">
                           <span dangerouslySetInnerHTML={{ __html: langContent.sustainabilityWindPara2 }} />
                         </p>
                       </div>
