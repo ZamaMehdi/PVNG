@@ -36,7 +36,15 @@ export default function Home() {
           alt="PVNG Banner"
           width={1920}
           height={800}
-          className="hidden md:block w-full h-auto max-w-full object-contain"
+          className="hidden lg:block w-full h-auto max-w-full object-contain"
+        />
+        {/* Tablet Banner */}
+        <Image
+          src="/images/PVNG_Hero_Banner_Desktop2.png"
+          alt="PVNG Banner"
+          width={1200}
+          height={600}
+          className="hidden md:block lg:hidden w-full h-auto max-w-full object-contain"
         />
         {/* Mobile Banner */}
         <Image
@@ -110,11 +118,11 @@ export default function Home() {
               <div className="w-16 h-1 bg-gradient-to-r from-blue-600 to-transparent"></div>
             </div>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {/* Service 1 - Fire Fighting Systems */}
             <div className="fade-in">
               <Link href="/services#service-1" className="relative block group">
-                <Image src="/images/Firefighting_homepagecard.png" alt="Fire Fighting Systems" width={400} height={300} className="w-auto h-auto cursor-pointer group-hover:brightness-75 transition-all duration-300" />
+                <Image src="/images/Firefighting_homepagecard.png" alt="Fire Fighting Systems" width={400} height={300} className="w-full h-auto cursor-pointer group-hover:brightness-75 transition-all duration-300 rounded-lg" />
                 <div className="absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 flex flex-col items-center justify-end p-4">
                   <span className="text-white text-lg sm:text-xl md:text-2xl font-normal mb-2 text-center">{langContent.service1Heading}</span>
                   <div className="flex items-center">
@@ -128,7 +136,7 @@ export default function Home() {
             {/* Service 2 - Low Voltage (LV) Systems */}
             <div className="fade-in" style={{animationDelay: '0.1s'}}>
               <Link href="/services#service-2" className="relative block group">
-                <Image src="/images/LV_homepagecard.png" alt="Low Voltage Systems" width={400} height={300} className="w-auto h-auto cursor-pointer group-hover:brightness-75 transition-all duration-300" />
+                <Image src="/images/LV_homepagecard.png" alt="Low Voltage Systems" width={400} height={300} className="w-full h-auto cursor-pointer group-hover:brightness-75 transition-all duration-300 rounded-lg" />
                 <div className="absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 flex flex-col items-center justify-end p-4">
                   <span className="text-white text-lg sm:text-xl md:text-2xl font-normal mb-2 text-center">{langContent.service2Heading}</span>
                   <div className="flex items-center">
@@ -142,7 +150,7 @@ export default function Home() {
             {/* Service 3 - Gas Piping Solutions */}
             <div className="fade-in" style={{animationDelay: '0.2s'}}>
               <Link href="/services#service-3" className="relative block group">
-                <Image src="/images/GasPipeline_homepagecard.png" alt="Gas Piping Solutions" width={400} height={300} className="w-auto h-auto cursor-pointer group-hover:brightness-75 transition-all duration-300" />
+                <Image src="/images/GasPipeline_homepagecard.png" alt="Gas Piping Solutions" width={400} height={300} className="w-full h-auto cursor-pointer group-hover:brightness-75 transition-all duration-300 rounded-lg" />
                 <div className="absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 flex flex-col items-center justify-end p-4">
                   <span className="text-white text-lg sm:text-xl md:text-2xl font-normal mb-2 text-center">{langContent.service3Heading}</span>
                   <div className="flex items-center">
@@ -156,7 +164,7 @@ export default function Home() {
             {/* Service 4 - Commercial and Residential Security Systems */}
             <div className="fade-in" style={{animationDelay: '0.3s'}}>
               <Link href="/services#service-4" className="relative block group">
-                <Image src="/images/ResenditialSec_homepagecard.png" alt="Security Systems" width={400} height={300} className="w-auto h-auto cursor-pointer group-hover:brightness-75 transition-all duration-300" />
+                <Image src="/images/ResenditialSec_homepagecard.png" alt="Security Systems" width={400} height={300} className="w-full h-auto cursor-pointer group-hover:brightness-75 transition-all duration-300 rounded-lg" />
                 <div className="absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 flex flex-col items-center justify-end p-4">
                   <span className="text-white text-lg sm:text-xl md:text-2xl font-normal mb-2 text-center">{langContent.service4Heading}</span>
                   <div className="flex items-center">
@@ -170,7 +178,7 @@ export default function Home() {
             {/* Service 5 - Sustainability Consultants & Experts */}
             <div className="fade-in" style={{animationDelay: '0.4s'}}>
               <Link href="/services#service-5" className="relative block group">
-                <Image src="/images/Sustainability_homepagecard.png" alt="Sustainability Consultants" width={400} height={300} className="w-auto h-auto cursor-pointer group-hover:brightness-75 transition-all duration-300" />
+                <Image src="/images/Sustainability_homepagecard.png" alt="Sustainability Consultants" width={400} height={300} className="w-full h-auto cursor-pointer group-hover:brightness-75 transition-all duration-300 rounded-lg" />
                 <div className="absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 flex flex-col items-center justify-end p-4">
                   <span className="text-white text-lg sm:text-xl md:text-2xl font-normal mb-2 text-center">{langContent.service5Heading}</span>
                   <div className="flex items-center">
@@ -182,7 +190,7 @@ export default function Home() {
             </div>
 
             {/* Service 6 - Solar Calculator */}
-            <div className="fade-in mt-16" style={{animationDelay: '0.5s'}}>
+            <div className="fade-in mt-16 sm:col-span-2 lg:col-span-1" style={{animationDelay: '0.5s'}}>
               <div className="relative block group cursor-pointer" onClick={() => setIsPVSSModalOpen(true)} data-pvss-trigger>
                 <div className="relative w-full h-64 bg-gradient-to-br from-emerald-500 via-teal-600 to-cyan-700 rounded-xl overflow-hidden shadow-xl group-hover:shadow-2xl transition-all duration-500 transform group-hover:scale-105">
                   {/* Animated Background Pattern */}
