@@ -6,7 +6,6 @@ import Image from 'next/image';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import PVSSModal from '@/components/PVSSModal';
-import FloatingCalculator from '@/components/FloatingCalculator';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 
@@ -53,7 +52,7 @@ export default function Home() {
       <section className="py-16 px-5 bg-gradient-to-br from-blue-50 to-green-50 sustainability-section">
         <div className="max-w-6xl mx-auto text-center">
           <div className="fade-in">
-            <h2 className="text-xl md:text-2xl lg:text-3xl font-bold mb-6 relative" style={{textAlign: 'center', direction: 'ltr'}}>
+            <h2 className="section-title text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold mb-6 relative" style={{textAlign: 'center', direction: 'ltr'}}>
               <span className="bg-gradient-to-r from-green-600 via-blue-600 to-green-700 bg-clip-text text-transparent" style={{textAlign: 'center', direction: 'ltr'}}>
                 {langContent.heroTitle}
               </span>
@@ -62,7 +61,7 @@ export default function Home() {
               <div className="absolute -bottom-1 -right-2 w-3 h-3 bg-blue-400 rounded-full opacity-70 animate-bounce" style={{animationDelay: '1s'}}></div>
             </h2>
             
-            <div className="space-y-3 text-sm md:text-base text-black leading-relaxed max-w-5xl mx-auto" style={{direction: 'ltr', textAlign: 'center', textAlignLast: 'center'}}>
+            <div className="space-y-3 text-xs sm:text-sm md:text-base text-black leading-relaxed max-w-5xl mx-auto" style={{direction: 'ltr', textAlign: 'center', textAlignLast: 'center'}}>
               <p className="fade-in" style={{animationDelay: '0.2s', direction: 'ltr', textAlign: 'center', textAlignLast: 'center', unicodeBidi: 'bidi-override', display: 'block', width: '100%'}}>
                 {langContent.heroPara1}
               </p>
@@ -95,7 +94,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto relative z-10">
           {/* Enhanced Header Section */}
           <div className="text-center mb-8">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 relative" style={{textAlign: 'center', direction: 'ltr'}}>
+            <h2 className="section-title text-2xl sm:text-3xl md:text-4xl font-bold mb-4 relative" style={{textAlign: 'center', direction: 'ltr'}}>
               <span className="bg-gradient-to-r from-gray-800 via-blue-600 to-blue-800 bg-clip-text text-transparent" style={{textAlign: 'center', direction: 'ltr'}}>
                 {langContent.servicesTitle}
               </span>
@@ -117,9 +116,9 @@ export default function Home() {
               <Link href="/services#service-1" className="relative block group">
                 <Image src="/images/Firefighting_homepagecard.png" alt="Fire Fighting Systems" width={400} height={300} className="w-auto h-auto cursor-pointer group-hover:brightness-75 transition-all duration-300" />
                 <div className="absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 flex flex-col items-center justify-end p-4">
-                  <span className="text-white text-2xl font-normal mb-2 text-center">{langContent.service1Heading}</span>
+                  <span className="text-white text-lg sm:text-xl md:text-2xl font-normal mb-2 text-center">{langContent.service1Heading}</span>
                   <div className="flex items-center">
-                    <span className="text-white text-lg font-medium">{langContent.learnMore}</span>
+                    <span className="text-white text-sm sm:text-base md:text-lg font-medium">{langContent.learnMore}</span>
                     <div className="w-8 h-0.5 bg-white ml-2"></div>
                   </div>
                 </div>
@@ -131,9 +130,9 @@ export default function Home() {
               <Link href="/services#service-2" className="relative block group">
                 <Image src="/images/LV_homepagecard.png" alt="Low Voltage Systems" width={400} height={300} className="w-auto h-auto cursor-pointer group-hover:brightness-75 transition-all duration-300" />
                 <div className="absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 flex flex-col items-center justify-end p-4">
-                  <span className="text-white text-2xl font-normal mb-2 text-center">{langContent.service2Heading}</span>
+                  <span className="text-white text-lg sm:text-xl md:text-2xl font-normal mb-2 text-center">{langContent.service2Heading}</span>
                   <div className="flex items-center">
-                    <span className="text-white text-lg font-medium">{langContent.learnMore}</span>
+                    <span className="text-white text-sm sm:text-base md:text-lg font-medium">{langContent.learnMore}</span>
                     <div className="w-8 h-0.5 bg-white ml-2"></div>
                   </div>
                 </div>
@@ -145,9 +144,9 @@ export default function Home() {
               <Link href="/services#service-3" className="relative block group">
                 <Image src="/images/GasPipeline_homepagecard.png" alt="Gas Piping Solutions" width={400} height={300} className="w-auto h-auto cursor-pointer group-hover:brightness-75 transition-all duration-300" />
                 <div className="absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 flex flex-col items-center justify-end p-4">
-                  <span className="text-white text-2xl font-normal mb-2 text-center">{langContent.service3Heading}</span>
+                  <span className="text-white text-lg sm:text-xl md:text-2xl font-normal mb-2 text-center">{langContent.service3Heading}</span>
                   <div className="flex items-center">
-                    <span className="text-white text-lg font-medium">{langContent.learnMore}</span>
+                    <span className="text-white text-sm sm:text-base md:text-lg font-medium">{langContent.learnMore}</span>
                     <div className="w-8 h-0.5 bg-white ml-2"></div>
                   </div>
                 </div>
@@ -159,9 +158,9 @@ export default function Home() {
               <Link href="/services#service-4" className="relative block group">
                 <Image src="/images/ResenditialSec_homepagecard.png" alt="Security Systems" width={400} height={300} className="w-auto h-auto cursor-pointer group-hover:brightness-75 transition-all duration-300" />
                 <div className="absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 flex flex-col items-center justify-end p-4">
-                  <span className="text-white text-2xl font-normal mb-2 text-center">{langContent.service4Heading}</span>
+                  <span className="text-white text-lg sm:text-xl md:text-2xl font-normal mb-2 text-center">{langContent.service4Heading}</span>
                   <div className="flex items-center">
-                    <span className="text-white text-lg font-medium">{langContent.learnMore}</span>
+                    <span className="text-white text-sm sm:text-base md:text-lg font-medium">{langContent.learnMore}</span>
                     <div className="w-8 h-0.5 bg-white ml-2"></div>
                   </div>
                 </div>
@@ -173,9 +172,9 @@ export default function Home() {
               <Link href="/services#service-5" className="relative block group">
                 <Image src="/images/Sustainability_homepagecard.png" alt="Sustainability Consultants" width={400} height={300} className="w-auto h-auto cursor-pointer group-hover:brightness-75 transition-all duration-300" />
                 <div className="absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 flex flex-col items-center justify-end p-4">
-                  <span className="text-white text-2xl font-normal mb-2 text-center">{langContent.service5Heading}</span>
+                  <span className="text-white text-lg sm:text-xl md:text-2xl font-normal mb-2 text-center">{langContent.service5Heading}</span>
                   <div className="flex items-center">
-                    <span className="text-white text-lg font-medium">{langContent.learnMore}</span>
+                    <span className="text-white text-sm sm:text-base md:text-lg font-medium">{langContent.learnMore}</span>
                     <div className="w-8 h-0.5 bg-white ml-2"></div>
                   </div>
                 </div>
@@ -184,7 +183,7 @@ export default function Home() {
 
             {/* Service 6 - Solar Calculator */}
             <div className="fade-in mt-16" style={{animationDelay: '0.5s'}}>
-              <div className="relative block group cursor-pointer" onClick={() => setIsPVSSModalOpen(true)}>
+              <div className="relative block group cursor-pointer" onClick={() => setIsPVSSModalOpen(true)} data-pvss-trigger>
                 <div className="relative w-full h-64 bg-gradient-to-br from-emerald-500 via-teal-600 to-cyan-700 rounded-xl overflow-hidden shadow-xl group-hover:shadow-2xl transition-all duration-500 transform group-hover:scale-105">
                   {/* Animated Background Pattern */}
                   <div className="absolute inset-0 opacity-30">
@@ -218,11 +217,11 @@ export default function Home() {
                   {/* Enhanced Content Overlay */}
                   <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black via-black/80 to-transparent bg-opacity-80 flex flex-col items-center justify-end p-8">
                     <div className="text-center">
-                      <span className="text-white text-3xl font-extrabold mb-3 text-center bg-gradient-to-r from-yellow-200 to-white bg-clip-text text-transparent">
+                      <span className="text-white text-xl sm:text-2xl md:text-3xl font-extrabold mb-3 text-center bg-gradient-to-r from-yellow-200 to-white bg-clip-text text-transparent">
                         {langContent.solarCalculator}
                       </span>
                       <div className="flex items-center justify-center group-hover:translate-x-2 transition-transform duration-300">
-                        <span className="text-white text-lg font-semibold mr-3">{langContent.calculateYourSystem}</span>
+                        <span className="text-white text-sm sm:text-base md:text-lg font-semibold mr-3">{langContent.calculateYourSystem}</span>
                         <div className="w-8 h-8 bg-white bg-opacity-20 rounded-full flex items-center justify-center">
                           <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
@@ -254,20 +253,20 @@ export default function Home() {
         <div className="max-w-6xl mx-auto relative z-10">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8 justify-items-center">
             <div className="text-center fade-in">
-              <div className="text-4xl font-bold text-white mb-2 drop-shadow-lg">10+</div>
-              <div className="text-lg text-blue-100 font-semibold">{langContent.statsYearsExperience}</div>
+              <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-2 drop-shadow-lg">10+</div>
+              <div className="text-sm sm:text-base md:text-lg text-blue-100 font-semibold">{langContent.statsYearsExperience}</div>
             </div>
             <div className="text-center fade-in" style={{animationDelay: '0.1s'}}>
-              <div className="text-4xl font-bold text-white mb-2 drop-shadow-lg">500+</div>
-              <div className="text-lg text-blue-100 font-semibold">{langContent.statsProjectsCompleted}</div>
+              <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-2 drop-shadow-lg">500+</div>
+              <div className="text-sm sm:text-base md:text-lg text-blue-100 font-semibold">{langContent.statsProjectsCompleted}</div>
             </div>
             <div className="text-center fade-in" style={{animationDelay: '0.2s'}}>
-              <div className="text-4xl font-bold text-white mb-2 drop-shadow-lg">100%</div>
-              <div className="text-lg text-blue-100 font-semibold">{langContent.statsClientSatisfaction}</div>
+              <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-2 drop-shadow-lg">100%</div>
+              <div className="text-sm sm:text-base md:text-lg text-blue-100 font-semibold">{langContent.statsClientSatisfaction}</div>
             </div>
             <div className="text-center fade-in" style={{animationDelay: '0.3s'}}>
-              <div className="text-4xl font-bold text-white mb-2 drop-shadow-lg">24/7</div>
-              <div className="text-lg text-blue-100 font-semibold">{langContent.statsSupportAvailable}</div>
+              <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-2 drop-shadow-lg">24/7</div>
+              <div className="text-sm sm:text-base md:text-lg text-blue-100 font-semibold">{langContent.statsSupportAvailable}</div>
             </div>
           </div>
         </div>
@@ -276,9 +275,6 @@ export default function Home() {
       </main>
       
       <Footer />
-      
-      {/* Floating Calculator Button */}
-      <FloatingCalculator onCalculatorClick={() => setIsPVSSModalOpen(true)} />
       
       {/* PVSS Calculator Modal */}
       <PVSSModal 

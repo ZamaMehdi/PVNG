@@ -349,7 +349,7 @@ export const content: { en: Content; ar: Content } = {
   statsClientSatisfaction: 'Client Satisfaction',
   statsSupportAvailable: 'Support Available',
   heroTitle: 'Sustainable Solutions. Lasting Impact.',
-  heroPara1: 'At PVNG Electromechanical Works L.L.C., we are committed to powering a greener tomorrow. With over a decade of experience in Dubai\'s electromechanical sector, we deliver innovative solutions that not only meet your needs today but also protect the environment for future generations.',
+  heroPara1: 'At PVNG Electromechanical Works L.L.C., we are committed to empowering a greener tomorrow. With over a decade of experience in Dubai\'s electromechanical sector, we deliver innovative solutions that not only meet your needs today but also protect the environment for future generations.',
   heroPara2: 'Our expert team integrates sustainable practices, energy-efficient systems, and cutting-edge technology to create safer, smarter, and more eco-friendly spaces. Whether it\'s for commercial or residential projects, we focus on reducing environmental impact while maximizing performance and reliability.',
   heroPara3: 'Partner with us to build a better future — one that values efficiency, responsibility, and long-term sustainability. At PVNG, it\'s more than service; it\'s a commitment to preserving the planet while driving progress.',
   learnMore: 'Learn More',

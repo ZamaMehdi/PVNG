@@ -7,7 +7,7 @@ export default function About() {
   const { langContent, currentLang } = useLanguage();
 
   return (
-    <section id="about" className="py-20 px-5 bg-white relative overflow-hidden about-section" style={{paddingTop: '6rem'}}>
+    <section id="about" className="py-20 px-5 bg-white relative overflow-hidden about-section" style={{paddingTop: '8rem'}}>
       {/* Subtle Blue Background Elements */}
       <div className="absolute top-10 right-10 w-64 h-64 bg-blue-50 rounded-full blur-3xl animate-pulse"></div>
       <div className="absolute bottom-10 left-10 w-80 h-80 bg-blue-100/30 rounded-full blur-3xl animate-pulse" style={{animationDelay: '2s'}}></div>
@@ -15,7 +15,7 @@ export default function About() {
       <div className="max-w-7xl mx-auto relative z-10">
         {/* Enhanced Header Section */}
         <div className="text-center mb-16">
-          <h2 className="text-2xl md:text-3xl font-bold mb-6 relative" style={{textAlign: 'center', direction: 'ltr'}}>
+          <h2 className="text-2xl md:text-3xl font-bold mb-3 relative" style={{textAlign: 'center', direction: 'ltr'}}>
             <span className="bg-gradient-to-r from-gray-800 via-blue-600 to-blue-800 bg-clip-text text-transparent" style={{textAlign: 'center', direction: 'ltr'}}>
               {langContent.aboutTitle}
             </span>
@@ -151,7 +151,7 @@ export default function About() {
           <div className="absolute bottom-0 right-0 w-32 h-32 bg-gray-200 rounded-full blur-3xl opacity-30"></div>
           
           <div className="text-center mb-8 relative z-10">
-            <h2 className="text-2xl md:text-3xl font-bold mb-6 relative" style={{textAlign: 'center', direction: 'ltr'}}>
+            <h2 className="text-2xl md:text-3xl font-bold mb-3 relative" style={{textAlign: 'center', direction: 'ltr'}}>
               <span className="bg-gradient-to-r from-gray-800 via-blue-600 to-blue-800 bg-clip-text text-transparent" style={{textAlign: 'center', direction: 'ltr'}}>
                 {langContent.ourLeadership}
               </span>
@@ -219,7 +219,17 @@ export default function About() {
               <div className="absolute bottom-0 right-0 w-24 h-24 bg-blue-200 rounded-full blur-3xl opacity-30"></div>
               
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 items-start relative z-10">
-                <div className="fade-in lg:order-2">
+                <div className="relative w-4/5 mx-auto h-80 lg:h-96 order-1 lg:order-1">
+                  <Image
+                    src="/images/HinaZKhan_pic.jpg"
+                    alt="Hina Zehra"
+                    fill
+                    className="object-cover object-center rounded-2xl"
+                    style={{ objectPosition: 'center 45%' }}
+                  />
+                </div>
+                
+                <div className="fade-in order-2 lg:order-2">
                   <h3 className="text-2xl font-bold text-gray-900 mb-3">{langContent.hinaZehra}</h3>
                   <div className="text-lg font-semibold text-blue-600 mb-6">{langContent.operationsManager}</div>
                   
@@ -238,16 +248,6 @@ export default function About() {
                       ))}
                     </div>
                   </div>
-                </div>
-                
-                <div className="relative w-4/5 mx-auto h-80 lg:h-96 lg:order-1">
-                  <Image
-                    src="/images/HinaZKhan_pic.jpg"
-                    alt="Hina Zehra"
-                    fill
-                    className="object-cover object-center rounded-2xl"
-                    style={{ objectPosition: 'center 45%' }}
-                  />
                 </div>
               </div>
             </div>
@@ -299,7 +299,7 @@ export default function About() {
         <div className="mt-20">
           <div className="max-w-6xl mx-auto">
               <div className="text-center mb-8">
-                <h2 className="text-2xl md:text-3xl font-bold mb-6 relative" style={{textAlign: 'center', direction: 'ltr'}}>
+                <h2 className="text-2xl md:text-3xl font-bold mb-3 relative" style={{textAlign: 'center', direction: 'ltr'}}>
                   <span className="bg-gradient-to-r from-gray-800 via-blue-600 to-blue-800 bg-clip-text text-transparent" style={{textAlign: 'center', direction: 'ltr'}}>
                     {langContent.ourAchievements}
                   </span>

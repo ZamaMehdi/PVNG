@@ -917,6 +917,78 @@ body > div {
   }
 }
 
+/* Mobile Font Sizing - Screens under 500px */
+@media (max-width: 500px) {
+  /* Base font size reduction */
+  body {
+    font-size: 16px !important;
+  }
+  
+  /* Hero section */
+  .hero-title {
+    font-size: 2rem !important;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.125rem !important;
+  }
+  
+  /* Section titles */
+  .section-title {
+    font-size: 1.75rem !important;
+  }
+  
+  /* Navigation */
+  .nav-link {
+    font-size: 0.9rem !important;
+    margin: 0 0.3rem !important;
+    padding: 0.3rem 0.6rem !important;
+  }
+  
+  /* Buttons */
+  .btn-primary, .btn-secondary {
+    padding: 0.6rem 1rem !important;
+    font-size: 1rem !important;
+  }
+  
+  /* Cards */
+  .card {
+    padding: 1rem !important;
+  }
+  
+  .service-card {
+    padding: 1rem !important;
+  }
+  
+  /* Form elements */
+  .form-input, .form-textarea {
+    font-size: 1rem !important;
+    padding: 0.6rem 1rem !important;
+  }
+  
+  /* Icon boxes */
+  .icon-box h4 {
+    font-size: 1.125rem !important;
+  }
+  
+  /* Chart elements */
+  .chart-label {
+    font-size: 16px !important;
+  }
+  
+  .chart-value-label {
+    font-size: 14px !important;
+  }
+  
+  .chart-title {
+    font-size: 20px !important;
+  }
+  
+  .chart-legend {
+    font-size: 14px !important;
+  }
+}
+
 /* Line clamp utility */
 .line-clamp-4 {
   display: -webkit-box !important;

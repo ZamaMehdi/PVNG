@@ -45,6 +45,21 @@ export default function Services() {
   const { langContent, currentLang } = useLanguage();
   const [activeModal, setActiveModal] = useState<string | null>(null);
   const [isPVSSModalOpen, setIsPVSSModalOpen] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+
+  // Check screen size for mobile banner
+  useEffect(() => {
+    const checkScreenSize = () => {
+      setIsMobile(window.innerWidth < 500);
+    };
+
+    checkScreenSize();
+    window.addEventListener('resize', checkScreenSize);
+
+    return () => {
+      window.removeEventListener('resize', checkScreenSize);
+    };
+  }, []);
 
   // Prevent body scroll when modal is open
   useEffect(() => {
@@ -134,17 +149,31 @@ export default function Services() {
     <>
       {/* Product Banner */}
       <section className="w-full pt-20 bg-black">
-        <Image
-          src="/images/productbanner.gif"
-          alt="Products Banner"
-          width={1200}
-          height={450}
-          className="w-full h-[450px] object-fill"
-          style={{
-            display: 'block',
-            imageRendering: '-webkit-optimize-contrast'
-          }}
-        />
+        {isMobile ? (
+          <Image
+            src="/images/PNVG_Services_Banner_Mobile.gif"
+            alt="Products Banner Mobile"
+            width={700}
+            height={600}
+            className="w-full h-[600px] object-fill"
+            style={{
+              display: 'block',
+              imageRendering: '-webkit-optimize-contrast'
+            }}
+          />
+        ) : (
+          <Image
+            src="/images/productbanner.gif"
+            alt="Products Banner"
+            width={1200}
+            height={450}
+            className="w-full h-[450px] object-fill"
+            style={{
+              display: 'block',
+              imageRendering: '-webkit-optimize-contrast'
+            }}
+          />
+        )}
       </section>
 
       <section id="services" className="py-12 px-5 bg-white relative overflow-hidden services-section" style={{paddingTop: '3rem'}}>
@@ -165,7 +194,7 @@ export default function Services() {
 
             {/* Main Title with Enhanced Styling */}
             <div className="fade-in relative z-10">
-              <h2 className="text-2xl md:text-4xl font-bold mb-4 relative" style={{textAlign: 'center', direction: 'ltr'}}>
+              <h2 className="section-title text-lg sm:text-2xl md:text-4xl font-bold mb-4 relative" style={{textAlign: 'center', direction: 'ltr'}}>
                 <span className="bg-gradient-to-r from-gray-900 via-blue-700 to-purple-800 bg-clip-text text-transparent drop-shadow-lg" style={{textAlign: 'center', direction: 'ltr'}}>
                   {langContent.servicesTitle}
                 </span>
@@ -188,7 +217,7 @@ export default function Services() {
             {/* Enhanced Description with Better Typography */}
             <div className="fade-in relative z-10" style={{animationDelay: '0.4s'}}>
               <div className="max-w-4xl mx-auto">
-                <p className="text-sm md:text-base leading-relaxed text-black font-medium">
+                <p className="text-xs sm:text-sm md:text-base leading-relaxed text-black font-medium">
                   {langContent.servicesIntro}
                 </p>
               </div>
@@ -206,32 +235,32 @@ export default function Services() {
                       <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center shadow-lg">
                         {getIcon(service.icon)}
                       </div>
-                      <h3 className="text-3xl font-bold text-gray-800">
+                      <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-800">
                         <span dangerouslySetInnerHTML={{ __html: service.heading }} />
                       </h3>
                     </div>
                     
                     <div className="space-y-6">
-                      <p className="text-sm md:text-base text-black leading-relaxed">
+                      <p className="text-xs sm:text-sm md:text-base text-black leading-relaxed">
                         <span dangerouslySetInnerHTML={{ __html: service.description }} />
                       </p>
                       
                       <div className="grid grid-cols-1 gap-4">
                         <div className={`flex items-start gap-3 ${currentLang === 'ar' ? 'flex-row-reverse' : ''}`}>
                           <div className="w-2 h-2 bg-gradient-to-r from-blue-500 to-blue-600 rounded-full mt-2 flex-shrink-0"></div>
-                          <p className="text-sm md:text-base text-black">
+                          <p className="text-xs sm:text-sm md:text-base text-black">
                             <span dangerouslySetInnerHTML={{ __html: langContent[`service${service.id}Feature1Desc` as keyof typeof langContent] }} />
                           </p>
                         </div>
                         <div className={`flex items-start gap-3 ${currentLang === 'ar' ? 'flex-row-reverse' : ''}`}>
                           <div className="w-2 h-2 bg-gradient-to-r from-blue-500 to-blue-600 rounded-full mt-2 flex-shrink-0"></div>
-                          <p className="text-sm md:text-base text-black">
+                          <p className="text-xs sm:text-sm md:text-base text-black">
                             <span dangerouslySetInnerHTML={{ __html: langContent[`service${service.id}Feature2Desc` as keyof typeof langContent] }} />
                           </p>
                         </div>
                         <div className={`flex items-start gap-3 ${currentLang === 'ar' ? 'flex-row-reverse' : ''}`}>
                           <div className="w-2 h-2 bg-gradient-to-r from-blue-500 to-blue-600 rounded-full mt-2 flex-shrink-0"></div>
-                          <p className="text-sm md:text-base text-black">
+                          <p className="text-xs sm:text-sm md:text-base text-black">
                             <span dangerouslySetInnerHTML={{ __html: langContent[`service${service.id}Feature3Desc` as keyof typeof langContent] }} />
                           </p>
                         </div>

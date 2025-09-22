@@ -4,7 +4,6 @@ import { useEffect, useState } from 'react';
 import Navigation from '@/components/Navigation';
 import About from '@/components/About';
 import Footer from '@/components/Footer';
-import FloatingCalculator from '@/components/FloatingCalculator';
 import PVSSModal from '@/components/PVSSModal';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
@@ -30,7 +29,14 @@ export default function AboutPage() {
         <About />
       </main>
       <Footer />
-      <FloatingCalculator onCalculatorClick={() => setIsPVSSModalOpen(true)} />
+      
+      {/* Hidden PVSS Modal Trigger for FloatingChatButton */}
+      <button 
+        onClick={() => setIsPVSSModalOpen(true)} 
+        data-pvss-trigger 
+        className="hidden"
+        aria-hidden="true"
+      />
       
       {/* PVSS Calculator Modal */}
       <PVSSModal 
