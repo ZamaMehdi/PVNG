@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import Image from 'next/image';
 import ChatSystem from './ChatSystem';
 
 export default function FloatingChatButton() {
@@ -43,9 +44,11 @@ export default function FloatingChatButton() {
             className="fixed bottom-48 right-6 z-40 p-2 hover:bg-gray-100 rounded-full transition-all duration-200 group"
             aria-label="Open Solar Calculator"
           >
-            <img 
+            <Image 
               src="/images/calculatoricon.png" 
               alt="Calculator" 
+              width={48}
+              height={40}
               className="w-12 h-10 group-hover:scale-110 transition-transform duration-200"
               onError={(e) => {
                 console.log('Calculator icon failed to load, using SVG fallback');
@@ -120,9 +123,11 @@ export default function FloatingChatButton() {
               className="p-2 hover:bg-gray-100 rounded-full transition-all duration-200 group"
               aria-label="Open Solar Calculator"
             >
-              <img 
+              <Image 
                 src="/images/calculatoricon.png" 
                 alt="Calculator" 
+                width={48}
+                height={40}
                 className="w-12 h-10 group-hover:scale-110 transition-transform duration-200"
                 onError={(e) => {
                   console.log('Calculator icon failed to load, using SVG fallback');

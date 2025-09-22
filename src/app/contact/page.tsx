@@ -227,11 +227,11 @@ export default function ContactPage() {
               </div>
                <h2 className="section-title text-4xl md:text-5xl font-bold mb-6">
                  <span className="bg-gradient-to-r from-gray-800 via-blue-600 to-purple-600 bg-clip-text text-transparent">
-                   Let's Start a Conversation
+                   Let&apos;s Start a Conversation
                  </span>
                </h2>
                <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-                 Fill out the form below and we'll get back to you within 24 hours. We're excited to hear about your project!
+                 Fill out the form below and we&apos;ll get back to you within 24 hours. We&apos;re excited to hear about your project!
                </p>
             </div>
 
