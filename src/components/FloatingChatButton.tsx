@@ -1,7 +1,6 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import Image from 'next/image';
 import ChatSystem from './ChatSystem';
 
 export default function FloatingChatButton() {
@@ -44,11 +43,9 @@ export default function FloatingChatButton() {
             className="fixed bottom-48 right-6 z-40 p-2 hover:bg-gray-100 rounded-full transition-all duration-200 group"
             aria-label="Open Solar Calculator"
           >
-            <Image 
+            <img 
               src="/images/calculatoricon.png" 
               alt="Calculator" 
-              width={48}
-              height={40}
               className="w-12 h-10 group-hover:scale-110 transition-transform duration-200"
               onError={(e) => {
                 console.log('Calculator icon failed to load, using SVG fallback');
@@ -175,11 +172,9 @@ export default function FloatingChatButton() {
                   className="py-1 hover:bg-gray-100 rounded-full transition-all duration-200 group"
                   aria-label="Open Solar Calculator"
                 >
-                  <Image 
+                  <img 
                     src="/images/calculatoricon.png" 
                     alt="Calculator" 
-                    width={48}
-                    height={40}
                     className="w-14 h-12 group-hover:scale-110 transition-transform duration-200"
                     onError={(e) => {
                       console.log('Calculator icon failed to load, using SVG fallback');
@@ -216,38 +211,22 @@ export default function FloatingChatButton() {
                 {/* Glowing background effect */}
                 <div className={`absolute inset-0 bg-blue-500 rounded-full opacity-0 group-hover:opacity-20 transition-all duration-300 ${isExpanded ? 'opacity-30' : ''}`}></div>
                 
-                {/* Custom Arrows Image Icon - positioned above blur */}
+                {/* Custom Two Arrow Heads Icon */}
                 <div className="relative z-10 flex items-center justify-center">
-                  <img 
-                    src="/images/arrows.png"
-                    alt="Arrows"
-                    className={`w-8 h-8 transition-all duration-700 group-hover:scale-110 ${isExpanded ? 'rotate-180 scale-110 drop-shadow-lg' : 'group-hover:translate-y-0.5'}`}
-                    style={{
-                      filter: isExpanded ? 'drop-shadow(0 0 8px rgba(59, 130, 246, 0.6))' : 'drop-shadow(0 0 4px rgba(59, 130, 246, 0.4))'
-                    }}
-                    onError={(e) => {
-                      console.log('Arrows image failed to load, using SVG fallback');
-                      e.currentTarget.style.display = 'none';
-                      const svgFallback = e.currentTarget.nextElementSibling as HTMLElement;
-                      if (svgFallback) svgFallback.style.display = 'block';
-                    }}
-                    onLoad={() => {
-                      console.log('Arrows image loaded successfully');
-                    }}
-                  />
-                  {/* SVG Fallback for Arrows */}
                   <svg 
                     className={`w-8 h-8 transition-all duration-700 group-hover:scale-110 ${isExpanded ? 'rotate-180 scale-110 drop-shadow-lg' : 'group-hover:translate-y-0.5'}`}
-                    style={{ 
-                      display: 'none',
+                    style={{
                       filter: isExpanded ? 'drop-shadow(0 0 8px rgba(59, 130, 246, 0.6))' : 'drop-shadow(0 0 4px rgba(59, 130, 246, 0.4))'
                     }}
                     fill="none" 
                     stroke="currentColor" 
                     viewBox="0 0 24 24"
-                    strokeWidth={2.5}
+                    strokeWidth={3}
                   >
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M7 16l-4-4m0 0l4-4m-4 4h18M17 8l4 4m0 0l-4 4m4-4H3" />
+                    {/* Top Arrow Head pointing up */}
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M8 8l4-4 4 4" />
+                    {/* Bottom Arrow Head pointing up */}
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M8 16l4-4 4 4" />
                   </svg>
                 </div>
                 
