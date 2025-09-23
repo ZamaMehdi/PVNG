@@ -29,7 +29,7 @@ export default function Home() {
         <Navigation />
       
       {/* Website Banner */}
-      <section className="w-full">
+      <section className="w-full -mt-2">
         {/* Desktop Banner */}
         <Image
           src="/images/PVNG_Hero_Banner_Desktop2.png"
@@ -57,7 +57,7 @@ export default function Home() {
       </section>
 
       {/* Sustainability Section */}
-      <section className="py-16 px-5 bg-gradient-to-br from-blue-50 to-green-50 sustainability-section">
+      <section className="py-8 md:py-12 lg:py-16 px-5 bg-gradient-to-br from-blue-50 to-green-50 sustainability-section">
         <div className="max-w-6xl mx-auto text-center">
           <div className="fade-in">
             <h2 className="section-title text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold mb-6 relative" style={{textAlign: 'center', direction: 'ltr'}}>
@@ -94,7 +94,7 @@ export default function Home() {
       </section>
 
       {/* Services Showcase */}
-      <section className="py-12 px-5 bg-white relative overflow-hidden services-showcase" style={{paddingTop: '2rem'}}>
+      <section className="py-6 md:py-10 lg:py-12 px-5 bg-white relative overflow-hidden services-showcase">
         {/* Subtle Blue Background Elements */}
         <div className="absolute top-10 right-10 w-64 h-64 bg-blue-50 rounded-full blur-3xl animate-pulse"></div>
         <div className="absolute bottom-10 left-10 w-80 h-80 bg-blue-100/30 rounded-full blur-3xl animate-pulse" style={{animationDelay: '2s'}}></div>
@@ -250,7 +250,7 @@ export default function Home() {
 
 
       {/* Stats Section */}
-      <section className="py-20 px-5 bg-gradient-to-br from-gray-900 via-blue-900 to-gray-800 relative overflow-hidden">
+      <section className="py-8 md:py-16 lg:py-20 px-5 bg-gradient-to-br from-gray-900 via-blue-900 to-gray-800 relative overflow-hidden">
         {/* Background Pattern */}
         <div className="absolute inset-0 opacity-10">
           <div className="absolute top-10 left-10 w-32 h-32 bg-blue-400 rounded-full blur-3xl"></div>
@@ -259,22 +259,22 @@ export default function Home() {
         </div>
         
         <div className="max-w-6xl mx-auto relative z-10">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 justify-items-center">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8 justify-items-center">
             <div className="text-center fade-in">
-              <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-2 drop-shadow-lg">10+</div>
-              <div className="text-sm sm:text-base md:text-lg text-blue-100 font-semibold">{langContent.statsYearsExperience}</div>
+              <div className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-1 md:mb-2 drop-shadow-lg">10+</div>
+              <div className="text-xs sm:text-sm md:text-base lg:text-lg text-blue-100 font-semibold">{langContent.statsYearsExperience}</div>
             </div>
             <div className="text-center fade-in" style={{animationDelay: '0.1s'}}>
-              <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-2 drop-shadow-lg">500+</div>
-              <div className="text-sm sm:text-base md:text-lg text-blue-100 font-semibold">{langContent.statsProjectsCompleted}</div>
+              <div className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-1 md:mb-2 drop-shadow-lg">500+</div>
+              <div className="text-xs sm:text-sm md:text-base lg:text-lg text-blue-100 font-semibold">{langContent.statsProjectsCompleted}</div>
             </div>
             <div className="text-center fade-in" style={{animationDelay: '0.2s'}}>
-              <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-2 drop-shadow-lg">100%</div>
-              <div className="text-sm sm:text-base md:text-lg text-blue-100 font-semibold">{langContent.statsClientSatisfaction}</div>
+              <div className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-1 md:mb-2 drop-shadow-lg">100%</div>
+              <div className="text-xs sm:text-sm md:text-base lg:text-lg text-blue-100 font-semibold">{langContent.statsClientSatisfaction}</div>
             </div>
             <div className="text-center fade-in" style={{animationDelay: '0.3s'}}>
-              <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-2 drop-shadow-lg">24/7</div>
-              <div className="text-sm sm:text-base md:text-lg text-blue-100 font-semibold">{langContent.statsSupportAvailable}</div>
+              <div className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-1 md:mb-2 drop-shadow-lg">24/7</div>
+              <div className="text-xs sm:text-sm md:text-base lg:text-lg text-blue-100 font-semibold">{langContent.statsSupportAvailable}</div>
             </div>
           </div>
         </div>

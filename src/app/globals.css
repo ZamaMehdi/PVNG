@@ -890,6 +890,23 @@ body > div {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+  /* Reduce section spacing on mobile/tablet */
+  .sustainability-section {
+    padding-top: 1.5rem !important;
+    padding-bottom: 1.5rem !important;
+  }
+  
+  .services-showcase {
+    padding-top: 1.5rem !important;
+    padding-bottom: 1.5rem !important;
+  }
+  
+  /* Optimize stats section */
+  section[class*="py-8"] {
+    padding-top: 1.5rem !important;
+    padding-bottom: 1.5rem !important;
+  }
+  
   .hero-title {
     font-size: 2rem !important;
   }
@@ -922,6 +939,23 @@ body > div {
   /* Base font size reduction */
   body {
     font-size: 16px !important;
+  }
+  
+  /* Reduce excessive spacing on mobile */
+  .sustainability-section {
+    padding-top: 1rem !important;
+    padding-bottom: 1rem !important;
+  }
+  
+  .services-showcase {
+    padding-top: 1rem !important;
+    padding-bottom: 1rem !important;
+  }
+  
+  /* Optimize stats section spacing */
+  section[class*="py-8"] {
+    padding-top: 1rem !important;
+    padding-bottom: 1rem !important;
   }
   
   /* Hero section */
