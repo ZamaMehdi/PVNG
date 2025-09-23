@@ -31,6 +31,14 @@ export default function ServicesPage() {
       
       <Footer />
       
+      {/* Hidden PVSS Modal Trigger for FloatingChatButton */}
+      <button 
+        onClick={() => setIsPVSSModalOpen(true)} 
+        data-pvss-trigger 
+        className="hidden"
+        aria-hidden="true"
+      />
+      
       {/* PVSS Calculator Modal */}
       <PVSSModal 
         isOpen={isPVSSModalOpen} 

@@ -171,7 +171,7 @@ export default function ContactPage() {
               <div>
                 <h2 className="text-3xl md:text-4xl font-bold text-blue-900 mb-4 uppercase tracking-wide" style={{direction: 'ltr', textAlign: 'center', textAlignLast: 'center', unicodeBidi: 'bidi-override', display: 'block', width: '100%'}}>
                   {langContent.contactSendMessage}
-                </h2>
+               </h2>
                 <p className="text-lg text-gray-600 mb-8">
                   {langContent.contactSendMessageDesc}
                 </p>
@@ -302,6 +302,13 @@ export default function ContactPage() {
 
       <Footer />
       
+      {/* Hidden PVSS Modal Trigger for FloatingChatButton */}
+      <button 
+        onClick={() => setIsPVSSModalOpen(true)} 
+        data-pvss-trigger 
+        className="hidden"
+        aria-hidden="true"
+      />
       
       {/* PVSS Calculator Modal */}
       <PVSSModal 
