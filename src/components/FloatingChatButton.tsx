@@ -218,11 +218,9 @@ export default function FloatingChatButton() {
                 
                 {/* Custom Arrows Image Icon - positioned above blur */}
                 <div className="relative z-10 flex items-center justify-center">
-                  <Image 
+                  <img 
                     src="/images/arrows.png"
                     alt="Arrows"
-                    width={32}
-                    height={32}
                     className={`w-8 h-8 transition-all duration-700 group-hover:scale-110 ${isExpanded ? 'rotate-180 scale-110 drop-shadow-lg' : 'group-hover:translate-y-0.5'}`}
                     style={{
                       filter: isExpanded ? 'drop-shadow(0 0 8px rgba(59, 130, 246, 0.6))' : 'drop-shadow(0 0 4px rgba(59, 130, 246, 0.4))'
@@ -232,6 +230,9 @@ export default function FloatingChatButton() {
                       e.currentTarget.style.display = 'none';
                       const svgFallback = e.currentTarget.nextElementSibling as HTMLElement;
                       if (svgFallback) svgFallback.style.display = 'block';
+                    }}
+                    onLoad={() => {
+                      console.log('Arrows image loaded successfully');
                     }}
                   />
                   {/* SVG Fallback for Arrows */}
