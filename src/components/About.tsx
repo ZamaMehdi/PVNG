@@ -70,7 +70,7 @@ export default function About() {
         </div>
         
         {/* Company Values & Mission */}
-        <div className="mt-8">
+        <div className="mt-4">
           <div className="bg-gradient-to-br from-blue-50 via-blue-25 to-blue-100 rounded-3xl p-6 lg:p-8 relative overflow-hidden">
             {/* Subtle Background Elements */}
             <div className="absolute top-0 right-0 w-32 h-32 bg-blue-100 rounded-full blur-3xl opacity-50"></div>
@@ -145,7 +145,7 @@ export default function About() {
         </div>
 
         {/* Our Leadership Section */}
-        <div className="mt-12 bg-gradient-to-br from-gray-50 to-blue-50 rounded-3xl p-6 lg:p-8 relative overflow-hidden">
+        <div className="mt-6 bg-gradient-to-br from-gray-50 to-blue-50 rounded-3xl p-6 lg:p-8 relative overflow-hidden">
           {/* Subtle Background Elements */}
           <div className="absolute top-0 left-0 w-40 h-40 bg-blue-100 rounded-full blur-3xl opacity-40"></div>
           <div className="absolute bottom-0 right-0 w-32 h-32 bg-gray-200 rounded-full blur-3xl opacity-30"></div>
@@ -296,7 +296,7 @@ export default function About() {
         </div>
 
         {/* Our Achievements */}
-        <div className="mt-20">
+        <div className="mt-8">
           <div className="max-w-6xl mx-auto">
               <div className="text-center mb-8">
                 <h2 className="text-2xl md:text-3xl font-bold mb-3 relative" style={{textAlign: 'center', direction: 'ltr'}}>
@@ -314,7 +314,7 @@ export default function About() {
               </div>
 
               <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
-                <div className="service-card fade-in text-center">
+                <div className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 fade-in text-center">
                   <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center shadow-lg mb-4 mx-auto">
                     <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -324,7 +324,7 @@ export default function About() {
                   <p className="text-sm text-gray-600">{langContent.yearsOfExcellence}</p>
                 </div>
 
-                <div className="service-card fade-in text-center">
+                <div className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 fade-in text-center">
                   <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-green-600 rounded-2xl flex items-center justify-center shadow-lg mb-4 mx-auto">
                     <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -334,7 +334,7 @@ export default function About() {
                   <p className="text-sm text-gray-600">{langContent.projectsCompleted}</p>
                 </div>
 
-                <div className="service-card fade-in text-center">
+                <div className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 fade-in text-center">
                   <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-purple-600 rounded-2xl flex items-center justify-center shadow-lg mb-4 mx-auto">
                     <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
@@ -344,7 +344,7 @@ export default function About() {
                   <p className="text-sm text-gray-600">{langContent.clientSatisfaction}</p>
                 </div>
 
-                <div className="service-card fade-in text-center">
+                <div className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 fade-in text-center">
                   <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-orange-600 rounded-2xl flex items-center justify-center shadow-lg mb-4 mx-auto">
                     <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
