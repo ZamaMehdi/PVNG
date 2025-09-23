@@ -218,14 +218,36 @@ export default function FloatingChatButton() {
                 
                 {/* Custom Arrows Image Icon - positioned above blur */}
                 <div className="relative z-10 flex items-center justify-center">
-                  <img 
+                  <Image 
                     src="/images/arrows.png"
                     alt="Arrows"
+                    width={32}
+                    height={32}
                     className={`w-8 h-8 transition-all duration-700 group-hover:scale-110 ${isExpanded ? 'rotate-180 scale-110 drop-shadow-lg' : 'group-hover:translate-y-0.5'}`}
                     style={{
                       filter: isExpanded ? 'drop-shadow(0 0 8px rgba(59, 130, 246, 0.6))' : 'drop-shadow(0 0 4px rgba(59, 130, 246, 0.4))'
                     }}
+                    onError={(e) => {
+                      console.log('Arrows image failed to load, using SVG fallback');
+                      e.currentTarget.style.display = 'none';
+                      const svgFallback = e.currentTarget.nextElementSibling as HTMLElement;
+                      if (svgFallback) svgFallback.style.display = 'block';
+                    }}
                   />
+                  {/* SVG Fallback for Arrows */}
+                  <svg 
+                    className={`w-8 h-8 transition-all duration-700 group-hover:scale-110 ${isExpanded ? 'rotate-180 scale-110 drop-shadow-lg' : 'group-hover:translate-y-0.5'}`}
+                    style={{ 
+                      display: 'none',
+                      filter: isExpanded ? 'drop-shadow(0 0 8px rgba(59, 130, 246, 0.6))' : 'drop-shadow(0 0 4px rgba(59, 130, 246, 0.4))'
+                    }}
+                    fill="none" 
+                    stroke="currentColor" 
+                    viewBox="0 0 24 24"
+                    strokeWidth={2.5}
+                  >
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M7 16l-4-4m0 0l4-4m-4 4h18M17 8l4 4m0 0l-4 4m4-4H3" />
+                  </svg>
                 </div>
                 
                 {/* Pulsing ring effect */}
