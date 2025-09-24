@@ -194,7 +194,7 @@ export default function Services() {
 
             {/* Main Title with Enhanced Styling */}
             <div className="fade-in relative z-10">
-              <h2 className="section-title text-lg sm:text-2xl md:text-4xl font-bold mb-4 relative" style={{textAlign: 'center', direction: 'ltr'}}>
+              <h2 className="section-title text-lg sm:text-2xl md:text-4xl font-bold mb-0 relative" style={{textAlign: 'center', direction: 'ltr'}}>
                 <span className="bg-gradient-to-r from-gray-900 via-blue-700 to-purple-800 bg-clip-text text-transparent drop-shadow-lg" style={{textAlign: 'center', direction: 'ltr'}}>
                   {langContent.servicesTitle}
                 </span>
@@ -207,7 +207,7 @@ export default function Services() {
 
             {/* Enhanced Accent Line */}
             <div className="fade-in relative z-10" style={{animationDelay: '0.2s'}}>
-              <div className="flex items-center justify-center mb-6">
+              <div className="flex items-center justify-center mb-6 -mt-6">
                 <div className="w-20 h-1.5 bg-gradient-to-r from-transparent via-blue-400 to-blue-500 rounded-full"></div>
                 <div className="w-24 h-1.5 bg-gradient-to-r from-blue-500 via-purple-500 to-blue-600 mx-6 rounded-full shadow-lg"></div>
                 <div className="w-20 h-1.5 bg-gradient-to-r from-blue-500 via-blue-400 to-transparent rounded-full"></div>

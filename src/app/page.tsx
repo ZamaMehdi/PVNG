@@ -94,7 +94,7 @@ export default function Home() {
       </section>
 
       {/* Services Showcase */}
-      <section className="py-6 md:py-10 lg:py-12 px-5 bg-white relative overflow-hidden services-showcase">
+      <section className="py-4 md:py-6 lg:py-8 px-5 bg-white relative overflow-hidden services-showcase">
         {/* Subtle Blue Background Elements */}
         <div className="absolute top-10 right-10 w-64 h-64 bg-blue-50 rounded-full blur-3xl animate-pulse"></div>
         <div className="absolute bottom-10 left-10 w-80 h-80 bg-blue-100/30 rounded-full blur-3xl animate-pulse" style={{animationDelay: '2s'}}></div>
@@ -102,7 +102,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto relative z-10">
           {/* Enhanced Header Section */}
           <div className="text-center mb-8">
-            <h2 className="section-title text-2xl sm:text-3xl md:text-4xl font-bold mb-4 relative" style={{textAlign: 'center', direction: 'ltr'}}>
+            <h2 className="section-title text-2xl sm:text-3xl md:text-4xl font-bold mb-0 relative" style={{textAlign: 'center', direction: 'ltr'}}>
               <span className="bg-gradient-to-r from-gray-800 via-blue-600 to-blue-800 bg-clip-text text-transparent" style={{textAlign: 'center', direction: 'ltr'}}>
                 {langContent.servicesTitle}
               </span>
@@ -112,7 +112,7 @@ export default function Home() {
             </h2>
             
             {/* Enhanced Accent Line */}
-            <div className="flex items-center justify-center mb-8">
+            <div className="flex items-center justify-center mb-8 -mt-6">
               <div className="w-16 h-1 bg-gradient-to-r from-transparent to-blue-400"></div>
               <div className="w-20 h-1 bg-gradient-to-r from-blue-400 to-blue-600 mx-4"></div>
               <div className="w-16 h-1 bg-gradient-to-r from-blue-600 to-transparent"></div>
@@ -250,7 +250,7 @@ export default function Home() {
 
 
       {/* Stats Section */}
-      <section className="py-8 md:py-16 lg:py-20 px-5 bg-gradient-to-br from-gray-900 via-blue-900 to-gray-800 relative overflow-hidden">
+      <section className="pt-4 pb-8 md:pt-8 md:pb-16 lg:pt-12 lg:pb-20 px-5 bg-gradient-to-br from-gray-900 via-blue-900 to-gray-800 relative overflow-hidden">
         {/* Background Pattern */}
         <div className="absolute inset-0 opacity-10">
           <div className="absolute top-10 left-10 w-32 h-32 bg-blue-400 rounded-full blur-3xl"></div>

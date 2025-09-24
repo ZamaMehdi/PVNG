@@ -91,12 +91,14 @@ export default function Navigation() {
       <div className="max-w-7xl mx-auto flex justify-between items-center px-4 py-2 md:py-4">
         {/* Logo */}
         <div className="flex items-center gap-2 md:gap-3">
-          <div className="w-8 h-8 md:w-10 md:h-10 bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl flex items-center justify-center">
-            <svg className="w-4 h-4 md:w-6 md:h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
-            </svg>
+          <div className="rounded-xl overflow-hidden -ml-6 -mt-4 w-12 h-12 md:w-[73px] md:h-[75px]">
+            <img 
+              src="/images/logo (2).png" 
+              alt="PVNG Logo" 
+              className="w-full h-full object-contain"
+            />
           </div>
-          <span className="text-base md:text-lg lg:text-xl font-bold text-white">PVNG</span>
+          <span className="text-base md:text-lg lg:text-xl font-bold italic text-white -mt-2">PVNG</span>
         </div>
         
         {/* Desktop Navigation */}
