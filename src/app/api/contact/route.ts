@@ -17,7 +17,7 @@ export async function POST(request: NextRequest) {
     }
 
     // Get database connection
-    const db = await getDatabase();
+    const { db } = await getDatabase();
     const collection = db.collection('contact_submissions');
 
     // Create submission document
@@ -64,7 +64,7 @@ export async function POST(request: NextRequest) {
 
 export async function GET() {
   try {
-    const db = await getDatabase();
+    const { db } = await getDatabase();
     const collection = db.collection('contact_submissions');
     
     // Get all submissions (for admin purposes)

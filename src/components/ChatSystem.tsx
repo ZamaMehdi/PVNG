@@ -297,11 +297,17 @@ export default function ChatSystem({ isOpen, onClose }: ChatSystemProps) {
               <div className="bg-white rounded-lg p-3 shadow-sm max-w-xs">
                 <p className="text-sm text-gray-800 mb-3">Need more help? I can connect you with our experts!</p>
                 <div className="flex gap-2">
-                  <button className="bg-blue-500 text-white px-3 py-1 rounded text-xs hover:bg-blue-600 transition-colors">
-                    Contact Us
+                  <button 
+                    onClick={() => window.open('https://wa.me/971522110379', '_blank')}
+                    className="bg-blue-500 text-white px-3 py-1 rounded text-xs hover:bg-blue-600 transition-colors"
+                  >
+                    Drop a message
                   </button>
-                  <button className="border border-blue-500 text-blue-500 px-3 py-1 rounded text-xs hover:bg-blue-50 transition-colors">
-                    Schedule Call
+                  <button 
+                    onClick={() => window.open('mailto:info@pvngelectromechanical.com', '_blank')}
+                    className="border border-blue-500 text-blue-500 px-3 py-1 rounded text-xs hover:bg-blue-50 transition-colors"
+                  >
+                    Email us at info@pvngelectromechanical.com
                   </button>
                 </div>
               </div>
