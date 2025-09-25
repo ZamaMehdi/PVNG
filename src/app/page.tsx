@@ -29,10 +29,10 @@ export default function Home() {
         <Navigation />
       
       {/* Website Banner */}
-      <section className="w-full mt-20">
+      <section className="w-full mt-0">
         {/* Desktop Banner */}
         <Image
-          src="/images/PVNG_Hero_Banner_Desktop2.png"
+          src="/images/PVNG_Hero_Banner_Desktop_increasedsize.png"
           alt="PVNG Banner"
           width={1920}
           height={1000}
@@ -40,7 +40,7 @@ export default function Home() {
         />
         {/* Tablet Banner */}
         <Image
-          src="/images/PVNG_Hero_Banner_Desktop2.png"
+          src="/images/PVNG_Hero_Banner_Desktop_increasedsize.png"
           alt="PVNG Banner"
           width={1200}
           height={800}

@@ -303,12 +303,11 @@ export default function ChatSystem({ isOpen, onClose }: ChatSystemProps) {
                   >
                     Drop a message
                   </button>
-                  <button 
-                    onClick={() => window.open('mailto:info@pvngelectromechanical.com', '_blank')}
-                    className="border border-blue-500 text-blue-500 px-3 py-1 rounded text-xs hover:bg-blue-50 transition-colors"
+                  <div 
+                    className="border border-gray-300 text-gray-500 px-3 py-1 rounded text-xs cursor-default bg-gray-50"
                   >
                     Email us at info@pvngelectromechanical.com
-                  </button>
+                  </div>
                 </div>
               </div>
             </div>
