@@ -23,44 +23,30 @@ export default function ContactForm() {
     };
 
     try {
-      // Submit to database via API
-      const response = await fetch('/api/contact', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(data),
-      });
+      // Send email notification using EmailJS
+      const emailData = {
+        fullName: data.fullName as string,
+        orgName: data.orgName as string,
+        email: data.email as string,
+        telNumber: data.telNumber as string,
+        serviceType: data.serviceType as string,
+        message: data.message as string,
+        submittedAt: new Date(),
+        ipAddress: 'Unknown' // We can't get IP from client-side
+      };
 
-      const result = await response.json();
+      const emailSent = await sendEmailJSNotification(emailData);
+      console.log('Email notification sent:', emailSent);
 
-      if (response.ok) {
-        // Send email notification using EmailJS
-        const emailData = {
-          fullName: data.fullName as string,
-          orgName: data.orgName as string,
-          email: data.email as string,
-          telNumber: data.telNumber as string,
-          serviceType: data.serviceType as string,
-          message: data.message as string,
-          submittedAt: new Date(),
-          ipAddress: 'Unknown' // We can't get IP from client-side
-        };
-
-        const emailSent = await sendEmailJSNotification(emailData);
-        console.log('Email notification sent:', emailSent);
-
+      if (emailSent) {
         // Success - show success message
         alert('Thank you for your enquiry! We will get back to you soon.');
         
         // Reset form
         (e.target as HTMLFormElement).reset();
       } else {
-        // Error - fallback to email
-        console.error('Database submission failed:', result.error);
-        
-        // Create mailto link for fallback
-        const to = 'info@pvng.com';
+        // Fallback to email if EmailJS fails
+        const to = 'info@pvngelectromechanical.com';
         const subject = encodeURIComponent(`Enquiry from ${data.fullName} (${data.orgName}) - Service: ${data.serviceType}`);
         const body = encodeURIComponent(`Full Name: ${data.fullName}\nOrganisation Name: ${data.orgName}\nEmail: ${data.email}\nTelephone Number: ${data.telNumber}\nService Required: ${data.serviceType}\n\nMessage:\n${data.message}`);
 
@@ -71,7 +57,7 @@ export default function ContactForm() {
       console.error('Error submitting form:', error);
       
       // Fallback to email
-      const to = 'info@pvng.com';
+      const to = 'info@pvngelectromechanical.com';
       const subject = encodeURIComponent(`Enquiry from ${data.fullName} (${data.orgName}) - Service: ${data.serviceType}`);
       const body = encodeURIComponent(`Full Name: ${data.fullName}\nOrganisation Name: ${data.orgName}\nEmail: ${data.email}\nTelephone Number: ${data.telNumber}\nService Required: ${data.serviceType}\n\nMessage:\n${data.message}`);
 
