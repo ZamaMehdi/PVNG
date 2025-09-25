@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import Image from 'next/image';
 import ChatSystem from './ChatSystem';
 
 export default function FloatingChatButton() {
@@ -43,16 +44,12 @@ export default function FloatingChatButton() {
             className="fixed bottom-48 right-6 z-40 p-2 hover:bg-gray-100 rounded-full transition-all duration-200 group"
             aria-label="Open Solar Calculator"
           >
-            <img 
+            <Image 
               src="/images/calculatoricon.png" 
               alt="Calculator" 
+              width={48}
+              height={40}
               className="w-12 h-10 group-hover:scale-110 transition-transform duration-200"
-              onError={(e) => {
-                console.log('Calculator icon failed to load, using SVG fallback');
-                e.currentTarget.style.display = 'none';
-                const svgFallback = e.currentTarget.nextElementSibling as HTMLElement;
-                if (svgFallback) svgFallback.style.display = 'block';
-              }}
             />
             <svg 
               className="w-12 h-10 text-gray-700 group-hover:scale-110 transition-transform duration-200" 
@@ -66,7 +63,7 @@ export default function FloatingChatButton() {
 
           {/* Call Button - Visible on tablet and mobile */}
           <a
-            href="tel:+971501234567"
+            href="tel:+971522110379"
             className="fixed bottom-28 right-6 z-40 bg-green-500 text-white p-3 rounded-full shadow-lg hover:shadow-xl hover:bg-green-600 transition-all duration-200 group lg:hidden"
             aria-label="Call Us"
           >
@@ -77,7 +74,7 @@ export default function FloatingChatButton() {
 
           {/* WhatsApp Button */}
           <a
-            href="https://wa.me/971501234567"
+            href="https://wa.me/971522110379"
             target="_blank"
             rel="noopener noreferrer"
             className="fixed bottom-28 right-6 z-40 bg-green-600 text-white p-3 rounded-full shadow-lg hover:shadow-xl hover:bg-green-700 transition-all duration-200 group"
@@ -113,7 +110,7 @@ export default function FloatingChatButton() {
         <>
           {/* Always Visible WhatsApp Button */}
           <a
-            href="https://wa.me/971501234567"
+            href="https://wa.me/971522110379"
             target="_blank"
             rel="noopener noreferrer"
             className="fixed bottom-6 right-2 z-40 bg-green-600 text-white p-2 rounded-full shadow-lg hover:shadow-xl hover:bg-green-700 transition-all duration-200 group"
@@ -131,7 +128,7 @@ export default function FloatingChatButton() {
               <div className="absolute bottom-16 right-0 space-y-3 mb-2">
                 {/* Call Button */}
                 <a
-                  href="tel:+971501234567"
+                  href="tel:+971522110379"
                   className="bg-green-500 text-white p-2 rounded-full shadow-lg hover:shadow-xl hover:bg-green-600 transition-all duration-200 group block"
                   aria-label="Call Us"
                   onClick={() => setIsExpanded(false)}
@@ -172,17 +169,12 @@ export default function FloatingChatButton() {
                   className="py-1 hover:bg-gray-100 rounded-full transition-all duration-200 group"
                   aria-label="Open Solar Calculator"
                 >
-                  <img 
+                  <Image 
                     src="/images/calculatoricon.png" 
                     alt="Calculator" 
+                    width={56}
+                    height={48}
                     className="w-14 h-12 group-hover:scale-110 transition-transform duration-200"
-                    onError={(e) => {
-                      console.log('Calculator icon failed to load, using SVG fallback');
-                      // Hide the image and show SVG fallback
-                      e.currentTarget.style.display = 'none';
-                      const svgFallback = e.currentTarget.nextElementSibling as HTMLElement;
-                      if (svgFallback) svgFallback.style.display = 'block';
-                    }}
                   />
                   {/* SVG Fallback Calculator Icon */}
                   <svg 

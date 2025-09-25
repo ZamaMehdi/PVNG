@@ -29,30 +29,30 @@ export default function Home() {
         <Navigation />
       
       {/* Website Banner */}
-      <section className="w-full -mt-2">
+      <section className="w-full mt-20">
         {/* Desktop Banner */}
         <Image
           src="/images/PVNG_Hero_Banner_Desktop2.png"
           alt="PVNG Banner"
           width={1920}
-          height={800}
-          className="hidden lg:block w-full h-auto max-w-full object-contain"
+          height={1000}
+          className="hidden lg:block w-full h-[60vh] max-w-full object-cover"
         />
         {/* Tablet Banner */}
         <Image
           src="/images/PVNG_Hero_Banner_Desktop2.png"
           alt="PVNG Banner"
           width={1200}
-          height={600}
-          className="hidden md:block lg:hidden w-full h-auto max-w-full object-contain"
+          height={800}
+          className="hidden md:block lg:hidden w-full h-[50vh] max-w-full object-cover"
         />
         {/* Mobile Banner */}
         <Image
           src="/images/PVNG_Hero_Banner_Mobile.png"
           alt="PVNG Banner"
           width={800}
-          height={600}
-          className="block md:hidden w-full h-auto max-w-full object-contain"
+          height={700}
+          className="block md:hidden w-full h-[45vh] max-w-full object-cover"
         />
       </section>
 

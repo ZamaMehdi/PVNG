@@ -2,6 +2,7 @@
 
 import { useLanguage } from '@/contexts/LanguageContext';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function Footer() {
   const { langContent, currentLang } = useLanguage();
@@ -14,8 +15,16 @@ export default function Footer() {
           
           {/* Company Info Section */}
           <div>
-            <div className="mb-6">
-              <span className={`text-lg font-semibold text-white block ${currentLang === 'ar' ? 'text-right' : 'text-center'}`}>PVNG Electromechanical Works</span>
+            <div className="mb-6 flex justify-center">
+              <div className="w-48 h-20 md:w-56 md:h-24">
+                <Image
+                  src="/images/logocheck.png"
+                  alt="PVNG Logo"
+                  width={224}
+                  height={96}
+                  className="w-full h-full object-contain"
+                />
+              </div>
             </div>
             <p className={`text-gray-300 text-sm leading-relaxed mb-8 ${currentLang === 'ar' ? 'text-right' : 'text-left'}`}>
               {langContent.footerCompanyDescription}
@@ -26,7 +35,7 @@ export default function Footer() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                 </svg>
               </a>
-              <a href="tel:+971501234567" className="w-12 h-12 bg-green-600 hover:bg-green-700 rounded-xl flex items-center justify-center transition-all duration-300 group shadow-lg hover:shadow-xl">
+              <a href="tel:+971522110379" className="w-12 h-12 bg-green-600 hover:bg-green-700 rounded-xl flex items-center justify-center transition-all duration-300 group shadow-lg hover:shadow-xl">
                 <svg className="w-6 h-6 text-white group-hover:scale-110 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                 </svg>
@@ -114,7 +123,7 @@ export default function Footer() {
               
               <div>
                 <p className="text-gray-300 text-sm font-medium">{langContent.footerPhone}</p>
-                <a href="tel:+971501234567" className="text-gray-400 text-sm hover:text-green-400 transition-colors duration-300">+971 50 123 4567</a>
+                <a href="tel:+971522110379" className="text-gray-400 text-sm hover:text-green-400 transition-colors duration-300">+971 52 211 0379</a>
               </div>
               
               <div>

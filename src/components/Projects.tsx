@@ -28,7 +28,7 @@ export default function Projects() {
   ];
 
   return (
-    <section id="projects" className="py-20 px-5 bg-white relative overflow-hidden" style={{paddingTop: '6rem'}}>
+    <section id="projects" className="py-20 px-5 bg-white relative overflow-hidden" style={{paddingTop: '10rem'}}>
       {/* Subtle Blue Background Elements */}
       <div className="absolute top-10 right-10 w-64 h-64 bg-blue-50 rounded-full blur-3xl animate-pulse"></div>
       <div className="absolute bottom-10 left-10 w-80 h-80 bg-blue-100/30 rounded-full blur-3xl animate-pulse" style={{animationDelay: '2s'}}></div>

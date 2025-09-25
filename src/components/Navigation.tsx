@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { useState, useEffect } from 'react';
@@ -87,18 +88,23 @@ export default function Navigation() {
   }, [isMobileMenuOpen, isTabletMenuOpen]);
 
   return (
-    <nav className={`${isHomePage ? (isScrolled ? 'scrolled-transparent' : 'transparent-header') : 'glass'} fixed top-0 left-0 right-0 z-50`}>
-      <div className="max-w-7xl mx-auto flex justify-between items-center px-4 py-2 md:py-4">
+        <nav className={`${isHomePage ? (isScrolled ? 'scrolled-transparent' : 'black-header') : 'glass'} fixed top-0 left-0 right-0 z-50`}>
+      <div className="max-w-7xl mx-auto flex justify-between items-center px-4 py-1 md:py-2">
         {/* Logo */}
-        <div className="flex items-center gap-2 md:gap-3">
-          <div className="rounded-xl overflow-hidden -ml-6 -mt-4 w-12 h-12 md:w-[73px] md:h-[75px]">
-            <img 
-              src="/images/logo (2).png" 
+        <div className="flex items-center">
+          <div className="rounded-xl overflow-hidden -ml-12 -mt-2 w-48 h-20 md:w-56 md:h-24">
+            <Image 
+              src="/images/logocheck.png" 
               alt="PVNG Logo" 
+              width={224}
+              height={96}
               className="w-full h-full object-contain"
+              style={{ transform: 'scale(1.0)' }}
             />
           </div>
-          <span className="text-base md:text-lg lg:text-xl font-bold italic text-white -mt-2">PVNG</span>
+          <span className="text-white text-2xl md:text-3xl font-bold italic -ml-12 -mt-1">
+            PVNG
+          </span>
         </div>
         
         {/* Desktop Navigation */}

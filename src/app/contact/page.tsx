@@ -87,7 +87,7 @@ export default function ContactPage() {
       
       <main className="flex-1">
         {/* Dark Header Section */}
-        <section className="bg-gradient-to-br from-gray-900 via-blue-900 to-gray-800 pt-32 pb-20 px-5">
+        <section className="bg-gradient-to-br from-gray-900 via-blue-900 to-gray-800 pt-40 pb-20 px-5">
           <div className="max-w-6xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-8 uppercase tracking-wide" style={{direction: 'ltr', textAlign: 'center', textAlignLast: 'center', unicodeBidi: 'bidi-override', display: 'block', width: '100%'}}>
               {langContent.contactGetInTouch}
@@ -122,7 +122,7 @@ export default function ContactPage() {
                   </div>
                 <h3 className="text-xl font-bold text-blue-900 mb-4 text-center" style={{direction: 'ltr', textAlign: 'center', textAlignLast: 'center', unicodeBidi: 'bidi-override', display: 'block', width: '100%'}}>{langContent.contactPhone}</h3>
                 <div className="space-y-2 mb-4 text-center">
-                  <p className="text-gray-700 font-medium" style={{direction: 'ltr', textAlign: 'center', textAlignLast: 'center', unicodeBidi: 'bidi-override', display: 'block', width: '100%'}}>+971 50 123 4567</p>
+                  <p className="text-gray-700 font-medium" style={{direction: 'ltr', textAlign: 'center', textAlignLast: 'center', unicodeBidi: 'bidi-override', display: 'block', width: '100%'}}>+971 52 211 0379</p>
                 </div>
                 <p className="text-sm text-gray-500 text-center" style={{direction: 'ltr', textAlign: 'center', textAlignLast: 'center', unicodeBidi: 'bidi-override', display: 'block', width: '100%'}}>{langContent.contactPhoneDesc}</p>
               </div>
