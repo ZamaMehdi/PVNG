@@ -52,7 +52,7 @@ export default function Home() {
           alt="PVNG Banner"
           width={800}
           height={700}
-          className="block md:hidden w-full h-[45vh] max-w-full object-cover"
+          className="block md:hidden w-full h-[600px] max-w-full object-cover"
         />
       </section>
 

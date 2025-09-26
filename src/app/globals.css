@@ -512,6 +512,13 @@ footer div[style*="textAlign"] {
   direction: ltr !important;
 }
 
+/* Mobile image shift for Thiru's photo */
+@media (max-width: 767px) {
+  .mobile-image-shift {
+    object-position: calc(50% + 15px) 15% !important;
+  }
+}
+
 /* Override any potential RTL styles */
 html[lang="ar"] nav,
 html[lang="ar"] .nav-link,

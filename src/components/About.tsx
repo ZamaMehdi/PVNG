@@ -259,12 +259,12 @@ export default function About() {
               <div className="absolute bottom-0 left-0 w-28 h-28 bg-blue-200 rounded-full blur-3xl opacity-30"></div>
               
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 items-start relative z-10">
-                <div className="relative w-4/5 mx-auto h-80 lg:h-96">
+                <div className="relative w-4/5 mx-auto h-80 lg:h-96 flex justify-center">
                   <Image
                     src="/images/thirugreybg.png"
                     alt="Mr. Thiru"
                     fill
-                    className="object-cover rounded-2xl"
+                    className="object-cover rounded-2xl mobile-image-shift"
                     style={{ objectPosition: 'calc(60% + 5px) 15%' }}
                   />
                 </div>
