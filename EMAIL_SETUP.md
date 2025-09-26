@@ -105,3 +105,4 @@ The notification emails include:
 4. Verify you receive the notification email
 
 Your contact form is now fully integrated with both database storage and email notifications! 🎉
+

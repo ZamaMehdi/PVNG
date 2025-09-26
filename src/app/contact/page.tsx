@@ -6,6 +6,7 @@ import Footer from '@/components/Footer';
 import PVSSModal from '@/components/PVSSModal';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
+import { sendEmailJSNotification } from '@/lib/emailjs';
 
 export default function ContactPage() {
   const { currentLang, langContent } = useLanguage();
@@ -24,47 +25,43 @@ export default function ContactPage() {
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    console.log('Contact page form submitted!'); // Debug log
     setIsSubmitting(true);
 
     const formData = new FormData(e.currentTarget);
     const data = {
-      fullName: formData.get('fullName'),
-      orgName: formData.get('orgName'),
-      telNumber: formData.get('telNumber'),
-      email: formData.get('email'),
-      serviceType: formData.get('serviceType'),
-      message: formData.get('message'),
+      fullName: formData.get('fullName') as string,
+      orgName: formData.get('orgName') as string,
+      telNumber: formData.get('telNumber') as string,
+      email: formData.get('email') as string,
+      serviceType: formData.get('serviceType') as string,
+      message: formData.get('message') as string,
     };
 
     try {
-      // Using Web3Forms for reliable email delivery
-      const response = await fetch('https://api.web3forms.com/submit', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          access_key: 'YOUR_ACCESS_KEY_HERE', // You'll need to get this from web3forms.com
-          full_name: data.fullName,
-          organisation_name: data.orgName,
-          telephone_number: data.telNumber,
-          email: data.email,
-          service_type: data.serviceType,
-          message: data.message,
-          subject: `New Contact Form Submission from ${data.fullName} (${data.orgName}) - Service: ${data.serviceType}`,
-          from_name: 'PVNG Contact Form',
-          reply_to: data.email,
-        }),
-      });
+      // Prepare data for EmailJS
+      const contactData = {
+        fullName: data.fullName,
+        orgName: data.orgName,
+        email: data.email,
+        telNumber: data.telNumber,
+        serviceType: data.serviceType,
+        message: data.message,
+        submittedAt: new Date(),
+        ipAddress: 'Unknown' // We can't get IP in client-side
+      };
 
-      const result = await response.json();
+      console.log('Sending EmailJS notification with data:', contactData);
 
-      if (result.success) {
+      // Send email using EmailJS
+      const success = await sendEmailJSNotification(contactData);
+
+      if (success) {
         alert('Thank you! Your message has been sent successfully. We will get back to you within 24 hours.');
         // Reset form
         (e.target as HTMLFormElement).reset();
       } else {
-        throw new Error('Failed to send message');
+        throw new Error('EmailJS submission failed');
       }
     } catch (error) {
       console.error('Error sending message:', error);

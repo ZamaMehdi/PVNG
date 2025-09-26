@@ -79,24 +79,24 @@ export default function Services() {
   const services = [
     {
       id: 1,
+      heading: langContent.service3Heading,
+      description: langContent.service3Para,
+      image: '/images/GasPL.jpg',
+      icon: 'gas'
+    },
+    {
+      id: 2,
       heading: langContent.service1Heading,
       description: langContent.service1Para,
       image: '/images/fire fighting system.png',
       icon: 'fire-extinguisher'
     },
     {
-      id: 2,
+      id: 3,
       heading: langContent.service2Heading,
       description: langContent.service2Para,
       image: '/images/LVsystem.jpg',
       icon: 'bolt'
-    },
-    {
-      id: 3,
-      heading: langContent.service3Heading,
-      description: langContent.service3Para,
-      image: '/images/GasPL.jpg',
-      icon: 'gas'
     },
     {
       id: 4,

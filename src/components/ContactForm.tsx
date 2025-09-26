@@ -10,51 +10,53 @@ export default function ContactForm() {
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    console.log('Form submitted!'); // Debug log
+    alert('Form submitted! Check console for details.'); // Visual confirmation
     setIsSubmitting(true);
 
     const formData = new FormData(e.currentTarget);
     const data = {
-      fullName: formData.get('fullName'),
-      orgName: formData.get('orgName'),
-      email: formData.get('email'),
-      telNumber: formData.get('telNumber'),
-      serviceType: formData.get('serviceType'),
-      message: formData.get('message'),
+      fullName: formData.get('fullName') as string,
+      orgName: formData.get('orgName') as string,
+      email: formData.get('email') as string,
+      telNumber: formData.get('telNumber') as string,
+      serviceType: formData.get('serviceType') as string,
+      message: formData.get('message') as string,
     };
 
     try {
-      // Send email notification using EmailJS
-      const emailData = {
-        fullName: data.fullName as string,
-        orgName: data.orgName as string,
-        email: data.email as string,
-        telNumber: data.telNumber as string,
-        serviceType: data.serviceType as string,
-        message: data.message as string,
+      // Prepare data for EmailJS
+      const contactData = {
+        fullName: data.fullName,
+        orgName: data.orgName,
+        email: data.email,
+        telNumber: data.telNumber,
+        serviceType: data.serviceType,
+        message: data.message,
         submittedAt: new Date(),
-        ipAddress: 'Unknown' // We can't get IP from client-side
+        ipAddress: 'Unknown' // We can't get IP in client-side
       };
 
-      const emailSent = await sendEmailJSNotification(emailData);
-      console.log('Email notification sent:', emailSent);
+      console.log('Sending EmailJS notification with data:', contactData);
+      console.log('EmailJS Service ID:', process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID);
+      console.log('EmailJS Template ID:', process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID);
+      console.log('EmailJS Public Key:', process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY);
 
-      if (emailSent) {
+      // Send email using EmailJS
+      const success = await sendEmailJSNotification(contactData);
+
+      if (success) {
         // Success - show success message
         alert('Thank you for your enquiry! We will get back to you soon.');
         
         // Reset form
         (e.target as HTMLFormElement).reset();
       } else {
-        // Fallback to email if EmailJS fails
-        const to = 'info@pvngelectromechanical.com';
-        const subject = encodeURIComponent(`Enquiry from ${data.fullName} (${data.orgName}) - Service: ${data.serviceType}`);
-        const body = encodeURIComponent(`Full Name: ${data.fullName}\nOrganisation Name: ${data.orgName}\nEmail: ${data.email}\nTelephone Number: ${data.telNumber}\nService Required: ${data.serviceType}\n\nMessage:\n${data.message}`);
-
-        const mailtoLink = `mailto:${to}?subject=${subject}&body=${body}`;
-        window.location.href = mailtoLink;
+        throw new Error('EmailJS submission failed');
       }
     } catch (error) {
       console.error('Error submitting form:', error);
+      alert('Error submitting form: ' + error.message);
       
       // Fallback to email
       const to = 'info@pvngelectromechanical.com';
@@ -104,15 +106,9 @@ export default function ContactForm() {
             <div>
               <form 
                 name="contact" 
-                method="POST" 
-                data-netlify="true"
-                data-netlify-honeypot="bot-field"
                 onSubmit={handleSubmit}
                 className="space-y-6"
               >
-                <input type="hidden" name="form-name" value="contact" />
-                <input type="hidden" name="bot-field" />
-                
                 <div>
                   <label htmlFor="fullName" className="block text-sm font-semibold text-gray-800 mb-2">
                     {langContent.labelFullName}

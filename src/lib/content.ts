@@ -126,6 +126,7 @@ export interface Content {
   footerProjects: string;
   footerContact: string;
   footerSolarEnergySystems: string;
+  footerFireFightingSystems: string;
   footerSecuritySystems: string;
   footerLowVoltageSystems: string;
   footerGasPipingSolutions: string;
@@ -292,7 +293,7 @@ export const content: { en: Content; ar: Content } = {
     service1Para: 'Ensuring the safety of your property and its occupants is paramount. Our team specialises in the design, installation, and meticulous maintenance of cutting-edge fire suppression and alarm systems. We implement tailored fire fighting strategies for residential, commercial, and industrial properties.',
     service2Heading: 'Low Voltage (LV) Systems',
     service2Para: 'In today\'s interconnected world, efficient low voltage systems are the backbone of any intelligent building. Our expertise encompasses the precise installation, rigorous testing, and ongoing maintenance of a diverse range of LV systems. These systems are crucial for creating modern, smart environments that are not only secure and connected but also remarkably efficient in their operation.',
-    service3Heading: 'Gas Piping Solutions',
+    service3Heading: 'LPG Services',
     service3Para: 'Safety and precision are at the core of our gas piping solutions. We provide secure and highly reliable gas piping installations for a wide array of commercial and residential applications. Our team of engineers is not only highly trained but also rigorously certified, adhering to the strictest safety protocols throughout every phase of the project.',
     service4Heading: 'Commercial and Residential Security Systems',
     service4Para: 'Safeguarding your assets and personnel is our priority. We offer state-of-the-art and highly customisable security solutions designed to protect your property effectively. These solutions are meticulously tailored to your specific security needs, providing maximum protection for commercial establishments and residential properties alike.',
@@ -372,6 +373,7 @@ export const content: { en: Content; ar: Content } = {
   footerProjects: 'Projects',
   footerContact: 'Contact',
   footerSolarEnergySystems: 'Solar Energy Systems',
+  footerFireFightingSystems: 'Fire Fighting Systems',
   footerSecuritySystems: 'Security Systems',
   footerLowVoltageSystems: 'Low Voltage Systems',
   footerGasPipingSolutions: 'Gas Piping Solutions',
@@ -572,7 +574,7 @@ export const content: { en: Content; ar: Content } = {
     service1Para: 'يعد ضمان سلامة ممتلكاتك وشاغليها أمراً بالغ الأهمية يتخصص فريقنا في تصميم وتركيب وصيانة أنظمة إخماد الحرائق والإنذار المتطورة ننفذ استراتيجيات مكافحة الحرائق المصممة خصيصاً للعقارات السكنية والتجارية والصناعية',
     service2Heading: 'أنظمة الجهد المنخفض (LV)',
     service2Para: 'في عالم اليوم المترابط، تعد أنظمة الجهد المنخفض الفعالة العمود الفقري لأي مبنى ذكي تشمل خبرتنا التركيب الدقيق والاختبار الصارم والصيانة المستمرة لمجموعة متنوعة من أنظمة الجهد المنخفض هذه الأنظمة ضرورية لإنشاء بيئات حديثة وذكية ليست آمنة ومتصلة فحسب، بل فعالة بشكل ملحوظ في تشغيلها',
-    service3Heading: 'حلول أنابيب الغاز',
+    service3Heading: 'خدمات الغاز المسال',
     service3Para: 'تعتبر السلامة والدقة جوهر حلول أنابيب الغاز لدينا نقدم تركيبات أنابيب غاز آمنة وموثوقة للغاية لمجموعة واسعة من التطبيقات التجارية والسكنية إن فريق المهندسين لدينا ليس مدرباً تدريباً عالياً فحسب، بل هو معتمد بشكل صارم، ويلتزم بأشد بروتوكولات السلامة صرامة في كل مرحلة من مراحل المشروع',
     service4Heading: 'أنظمة الأمن التجارية والسكنية',
     service4Para: 'حماية أصولك وموظفيك هي أولويتنا نقدم حلولاً أمنية متطورة وقابلة للتخصيص بدرجة كبيرة مصممة لحماية ممتلكاتك بفعالية تم تصميم هذه الحلول بدقة لتلبية احتياجاتك الأمنية المحددة، مما يوفر أقصى حماية وراحة بال للمؤسسات التجارية والممتلكات السكنية على حد سواء',
@@ -652,6 +654,7 @@ export const content: { en: Content; ar: Content } = {
   footerProjects: 'المشاريع',
   footerContact: 'اتصل بنا',
   footerSolarEnergySystems: 'أنظمة الطاقة الشمسية',
+  footerFireFightingSystems: 'أنظمة مكافحة الحرائق',
   footerSecuritySystems: 'أنظمة الأمان',
   footerLowVoltageSystems: 'أنظمة الجهد المنخفض',
   footerGasPipingSolutions: 'حلول أنابيب الغاز',

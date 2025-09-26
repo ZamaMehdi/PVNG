@@ -56,3 +56,4 @@ For production deployment (Vercel, Netlify, etc.):
 1. Add the environment variables in your hosting platform's dashboard
 2. Make sure to use the production MongoDB Atlas connection string
 3. Update the database name if needed
+

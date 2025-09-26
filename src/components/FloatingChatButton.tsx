@@ -41,15 +41,15 @@ export default function FloatingChatButton() {
                 window.dispatchEvent(event);
               }
             }}
-            className="fixed bottom-48 right-6 z-40 p-2 hover:bg-gray-100 rounded-full transition-all duration-200 group"
+            className="fixed bottom-48 right-4 z-40 p-2 hover:bg-gray-100 rounded-full transition-all duration-200 group"
             aria-label="Open Solar Calculator"
           >
             <Image 
               src="/images/calculatoricon.png" 
               alt="Calculator" 
-              width={48}
-              height={40}
-              className="w-12 h-10 group-hover:scale-110 transition-transform duration-200"
+              width={60}
+              height={50}
+              className="w-15 h-12 group-hover:scale-110 transition-transform duration-200"
             />
             <svg 
               className="w-12 h-10 text-gray-700 group-hover:scale-110 transition-transform duration-200" 
@@ -88,7 +88,7 @@ export default function FloatingChatButton() {
           {/* Chat Button */}
           <button
             onClick={() => setIsChatOpen(true)}
-            className="fixed bottom-6 right-6 z-40 bg-white text-gray-700 p-3 rounded-full shadow-lg hover:shadow-xl border border-gray-200 hover:border-blue-300 transition-all duration-200 group animate-bounce hover:animate-none"
+            className="fixed bottom-6 right-6 z-40 bg-white text-gray-700 p-3 rounded-full shadow-lg hover:shadow-xl border border-gray-200 hover:border-blue-300 transition-all duration-200 group animate-shake hover:animate-none"
             aria-label="Open Chat"
             style={{ animationDuration: '2s' }}
           >
@@ -172,9 +172,9 @@ export default function FloatingChatButton() {
                   <Image 
                     src="/images/calculatoricon.png" 
                     alt="Calculator" 
-                    width={56}
-                    height={48}
-                    className="w-14 h-12 group-hover:scale-110 transition-transform duration-200"
+                    width={70}
+                    height={60}
+                    className="w-16 h-14 group-hover:scale-110 transition-transform duration-200"
                   />
                   {/* SVG Fallback Calculator Icon */}
                   <svg 
@@ -192,7 +192,7 @@ export default function FloatingChatButton() {
             {/* Main Toggle Button */}
             <button
               onClick={() => setIsExpanded(!isExpanded)}
-              className={`text-gray-600 hover:text-gray-800 transition-all duration-300 group ${isExpanded ? '' : 'animate-bounce'}`}
+              className={`text-gray-600 hover:text-gray-800 transition-all duration-300 group ${isExpanded ? '' : 'animate-shake'}`}
               aria-label="Toggle Action Menu"
               style={{ animationDuration: '2s' }}
             >

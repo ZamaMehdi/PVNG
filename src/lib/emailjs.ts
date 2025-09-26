@@ -1,9 +1,9 @@
 import emailjs from '@emailjs/browser';
 
 // EmailJS configuration
-const EMAILJS_SERVICE_ID = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID || 'your-service-id';
-const EMAILJS_TEMPLATE_ID = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID || 'your-template-id';
-const EMAILJS_PUBLIC_KEY = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY || 'your-public-key';
+const EMAILJS_SERVICE_ID = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID || 'service_yj7zp02';
+const EMAILJS_TEMPLATE_ID = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID || 'template_o19jq96';
+const EMAILJS_PUBLIC_KEY = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY || 'B0Lkbh0P8QW669-n3';
 
 export interface ContactFormData {
   fullName: string;
@@ -18,6 +18,11 @@ export interface ContactFormData {
 
 export async function sendEmailJSNotification(data: ContactFormData): Promise<boolean> {
   try {
+    console.log('EmailJS Configuration:');
+    console.log('Service ID:', EMAILJS_SERVICE_ID);
+    console.log('Template ID:', EMAILJS_TEMPLATE_ID);
+    console.log('Public Key:', EMAILJS_PUBLIC_KEY);
+    
     // Initialize EmailJS
     emailjs.init(EMAILJS_PUBLIC_KEY);
 
@@ -33,15 +38,14 @@ export async function sendEmailJSNotification(data: ContactFormData): Promise<bo
     const emailPromises = recipientEmails.map(recipientEmail => {
       const templateParams = {
         to_email: recipientEmail,
-        from_name: data.fullName,
-        from_email: data.email,
+        name: data.fullName, // Changed from from_name to name
+        email: data.email, // Changed from from_email to email
         organization: data.orgName || 'Not provided',
         phone: data.telNumber || 'Not provided',
         service_type: data.serviceType || 'Not specified',
         message: data.message,
-        submitted_at: data.submittedAt.toLocaleString(),
-        ip_address: data.ipAddress,
-        subject: `New Contact Form Submission from ${data.fullName}`
+        time: data.submittedAt.toLocaleString(), // Changed from submitted_at to time
+        title: `New Contact Form Submission from ${data.fullName}` // Added title field
       };
 
       return emailjs.send(

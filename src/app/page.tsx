@@ -119,8 +119,22 @@ export default function Home() {
             </div>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-            {/* Service 1 - Fire Fighting Systems */}
+            {/* Service 1 - Gas Piping Solutions */}
             <div className="fade-in">
+              <Link href="/services#service-3" className="relative block group">
+                <Image src="/images/GasPipeline_homepagecard.png" alt="Gas Piping Solutions" width={400} height={300} className="w-full h-auto cursor-pointer group-hover:brightness-75 transition-all duration-300 rounded-lg" />
+                <div className="absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 flex flex-col items-center justify-end p-4">
+                  <span className="text-white text-lg sm:text-xl md:text-2xl font-normal mb-2 text-center">{langContent.service3Heading}</span>
+                  <div className="flex items-center">
+                    <span className="text-white text-sm sm:text-base md:text-lg font-medium">{langContent.learnMore}</span>
+                    <div className="w-8 h-0.5 bg-white ml-2"></div>
+                  </div>
+                </div>
+              </Link>
+            </div>
+
+            {/* Service 2 - Fire Fighting Systems */}
+            <div className="fade-in" style={{animationDelay: '0.1s'}}>
               <Link href="/services#service-1" className="relative block group">
                 <Image src="/images/Firefighting_homepagecard.png" alt="Fire Fighting Systems" width={400} height={300} className="w-full h-auto cursor-pointer group-hover:brightness-75 transition-all duration-300 rounded-lg" />
                 <div className="absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 flex flex-col items-center justify-end p-4">
@@ -133,26 +147,12 @@ export default function Home() {
               </Link>
             </div>
 
-            {/* Service 2 - Low Voltage (LV) Systems */}
-            <div className="fade-in" style={{animationDelay: '0.1s'}}>
+            {/* Service 3 - Low Voltage (LV) Systems */}
+            <div className="fade-in" style={{animationDelay: '0.2s'}}>
               <Link href="/services#service-2" className="relative block group">
                 <Image src="/images/LV_homepagecard.png" alt="Low Voltage Systems" width={400} height={300} className="w-full h-auto cursor-pointer group-hover:brightness-75 transition-all duration-300 rounded-lg" />
                 <div className="absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 flex flex-col items-center justify-end p-4">
                   <span className="text-white text-lg sm:text-xl md:text-2xl font-normal mb-2 text-center">{langContent.service2Heading}</span>
-                  <div className="flex items-center">
-                    <span className="text-white text-sm sm:text-base md:text-lg font-medium">{langContent.learnMore}</span>
-                    <div className="w-8 h-0.5 bg-white ml-2"></div>
-                  </div>
-                </div>
-              </Link>
-            </div>
-
-            {/* Service 3 - Gas Piping Solutions */}
-            <div className="fade-in" style={{animationDelay: '0.2s'}}>
-              <Link href="/services#service-3" className="relative block group">
-                <Image src="/images/GasPipeline_homepagecard.png" alt="Gas Piping Solutions" width={400} height={300} className="w-full h-auto cursor-pointer group-hover:brightness-75 transition-all duration-300 rounded-lg" />
-                <div className="absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 flex flex-col items-center justify-end p-4">
-                  <span className="text-white text-lg sm:text-xl md:text-2xl font-normal mb-2 text-center">{langContent.service3Heading}</span>
                   <div className="flex items-center">
                     <span className="text-white text-sm sm:text-base md:text-lg font-medium">{langContent.learnMore}</span>
                     <div className="w-8 h-0.5 bg-white ml-2"></div>
