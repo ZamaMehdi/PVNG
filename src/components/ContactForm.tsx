@@ -56,7 +56,8 @@ export default function ContactForm() {
       }
     } catch (error) {
       console.error('Error submitting form:', error);
-      alert('Error submitting form: ' + error.message);
+      const errorMessage = error instanceof Error ? error.message : 'An unknown error occurred';
+      alert('Error submitting form: ' + errorMessage);
       
       // Fallback to email
       const to = 'info@pvngelectromechanical.com';
