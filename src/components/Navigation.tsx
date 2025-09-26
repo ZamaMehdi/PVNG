@@ -91,20 +91,22 @@ export default function Navigation() {
     <nav className={`${isHomePage ? (isScrolled ? 'scrolled-transparent' : 'transparent-header') : 'glass'} fixed top-0 left-0 right-0 z-50`}>
       <div className="max-w-7xl mx-auto flex justify-between items-center px-4 py-2 md:py-4">
         {/* Logo */}
-        <Link href="/" className="flex items-center -mt-4 ml-[-50px]">
-           <Image 
-             src="/images/logoonly.png" 
-             alt="PVNG Logo" 
-             width={240} 
-             height={82} 
-             className="h-16 md:h-20 lg:h-24 w-auto"
-             priority
-           />
-           <div className="ml-2 flex flex-col">
-             <span className="text-white text-2xl md:text-3xl lg:text-4xl font-bold">PVNG</span>
-             <span className="text-white text-xs md:text-xs lg:text-xs font-medium opacity-90" style={{fontSize: '10px'}}>DRIVEN BY INNOVATION, DEFINED BY TRUST</span>
-           </div>
-        </Link>
+        <div className="flex items-center -mt-4 ml-[-50px] logo-section" style={{direction: 'ltr'}}>
+          <Link href="/" className="flex items-center">
+             <Image 
+               src="/images/logoonly.png" 
+               alt="PVNG Logo" 
+               width={240} 
+               height={82} 
+               className="h-16 md:h-20 lg:h-24 w-auto"
+               priority
+             />
+               <div className="ml-2 flex flex-col logo-text">
+                 <span className="text-white text-2xl md:text-3xl lg:text-4xl font-bold">PVNG</span>
+                 <span className="text-white text-xs md:text-xs lg:text-xs font-medium opacity-90" style={{fontSize: '10px'}}>YOUR PARTNER IN INTEGRATED SOLUTIONS</span>
+               </div>
+          </Link>
+        </div>
         
         {/* Desktop Navigation */}
         <div className="hidden lg:flex items-center ml-16">
@@ -136,7 +138,7 @@ export default function Navigation() {
             onClick={() => setIsPVSSModalOpen(true)}
             className={`nav-link ${isHomePage ? 'text-white' : ''} hover:opacity-80 transition-opacity text-sm sm:text-base`}
           >
-            Solar Calculator
+            {langContent.navPVSS}
           </button>
           <Link 
             href="/contact"
@@ -264,7 +266,7 @@ export default function Navigation() {
               }}
               className="w-full text-left py-3 px-4 rounded-lg font-semibold transition-all duration-300 text-white hover:bg-white/10 text-base"
             >
-              Solar Calculator
+              {langContent.navPVSS}
             </button>
             <Link 
               href="/contact"
@@ -333,7 +335,7 @@ export default function Navigation() {
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
                 </svg>
-                Solar Calculator
+                {langContent.navPVSS}
               </button>
               <Link 
                 href="/contact"

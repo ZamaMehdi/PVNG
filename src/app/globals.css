@@ -333,6 +333,185 @@ html[lang="ar"] .nav-link {
   direction: ltr !important;
 }
 
+/* Logo text should always be left-aligned */
+html[lang="ar"] .logo-text {
+  text-align: left !important;
+  direction: ltr !important;
+}
+
+/* Force logo section to maintain LTR layout in Arabic */
+html[lang="ar"] .logo-section {
+  direction: ltr !important;
+  text-align: left !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+}
+
+html[lang="ar"] .logo-section * {
+  text-align: left !important;
+  direction: ltr !important;
+}
+
+/* Ensure footer logo section maintains vertical layout */
+footer .logo-section {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+}
+
+.footer-logo {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+}
+
+html[lang="ar"] .footer-logo {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  direction: ltr !important;
+}
+
+/* Force footer logo to stay vertical in Arabic */
+html[lang="ar"] footer div[style*="position: relative"] {
+  direction: ltr !important;
+}
+
+html[lang="ar"] footer div[style*="textAlign: center"] {
+  text-align: center !important;
+  direction: ltr !important;
+}
+
+/* Force footer logo section to be centered in Arabic */
+html[lang="ar"] footer div[style*="position: relative"] {
+  text-align: center !important;
+  direction: ltr !important;
+}
+
+html[lang="ar"] footer div[style*="width: 100%"] {
+  text-align: center !important;
+  direction: ltr !important;
+}
+
+/* Force footer logo alignment in Arabic */
+html[lang="ar"] footer .flex.flex-col.items-center {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  text-align: center !important;
+  direction: ltr !important;
+}
+
+html[lang="ar"] footer .text-center {
+  text-align: center !important;
+  direction: ltr !important;
+}
+
+html[lang="ar"] footer .flex.justify-center {
+  display: flex !important;
+  justify-content: center !important;
+  direction: ltr !important;
+}
+
+/* Force proper text alignment in footer */
+footer ul {
+  text-align: inherit !important;
+}
+
+footer div {
+  text-align: inherit !important;
+}
+
+/* English footer alignment */
+html[lang="en"] footer ul.text-center {
+  text-align: center !important;
+}
+
+html[lang="en"] footer div.text-center {
+  text-align: center !important;
+}
+
+/* Arabic footer alignment */
+html[lang="ar"] footer ul.text-right {
+  text-align: right !important;
+}
+
+html[lang="ar"] footer div.text-right {
+  text-align: right !important;
+}
+
+/* Force Arabic alignment with more specific selectors */
+html[lang="ar"] footer ul[style*="textAlign: right"] {
+  text-align: right !important;
+}
+
+html[lang="ar"] footer div[style*="textAlign: right"] {
+  text-align: right !important;
+}
+
+/* Override any conflicting RTL styles for Arabic footer */
+html[lang="ar"] footer ul {
+  text-align: right !important;
+  direction: rtl !important;
+}
+
+html[lang="ar"] footer div {
+  text-align: right !important;
+  direction: rtl !important;
+}
+
+/* Specific footer logo container alignment */
+.footer-logo-container {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  text-align: center !important;
+}
+
+html[lang="ar"] .footer-logo-container {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: flex-end !important;
+  text-align: right !important;
+  direction: ltr !important;
+}
+
+/* Force PVNG text alignment in Arabic */
+html[lang="ar"] .footer-logo-container .text-center {
+  text-align: right !important;
+}
+
+/* Force inline text-align to work */
+footer ul[style*="textAlign"] {
+  text-align: inherit !important;
+}
+
+footer div[style*="textAlign"] {
+  text-align: inherit !important;
+}
+
+/* Language-specific footer classes */
+.rtl-footer ul {
+  text-align: right !important;
+  direction: rtl !important;
+}
+
+.rtl-footer div {
+  text-align: right !important;
+  direction: rtl !important;
+}
+
+.ltr-footer ul {
+  text-align: center !important;
+  direction: ltr !important;
+}
+
+.ltr-footer div {
+  text-align: center !important;
+  direction: ltr !important;
+}
+
 /* Override any potential RTL styles */
 html[lang="ar"] nav,
 html[lang="ar"] .nav-link,

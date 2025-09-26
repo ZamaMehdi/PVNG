@@ -6,17 +6,24 @@ import Image from 'next/image';
 
 export default function Footer() {
   const { langContent, currentLang } = useLanguage();
+  
+  // Debug: Log current language
+  console.log('Footer currentLang:', currentLang);
+  if (typeof window !== 'undefined') {
+    console.log('HTML lang attribute:', document.documentElement.lang);
+  }
 
   return (
-    <footer className="bg-gradient-to-br from-gray-900 via-black to-gray-800 text-white">
+    <footer className={`bg-gradient-to-br from-gray-900 via-black to-gray-800 text-white ${currentLang === 'ar' ? 'rtl-footer' : 'ltr-footer'}`}>
       {/* Main Footer Content */}
       <div className="max-w-7xl mx-auto px-5 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
           
           {/* Company Info Section */}
           <div>
-            <div className="mb-6 flex flex-col items-center">
-              <div className="w-64 h-24 md:w-80 md:h-32 mb-2">
+            <div className="mb-6 flex flex-col items-center footer-logo-container" style={{textAlign: currentLang === 'ar' ? 'right' : 'center'}}>
+              {/* Logo */}
+              <div className="w-64 h-24 md:w-80 md:h-32 mb-4 flex justify-center">
                 <Image
                   src="/images/logoonly.png"
                   alt="PVNG Logo"
@@ -25,10 +32,11 @@ export default function Footer() {
                   className="w-full h-full object-contain"
                 />
               </div>
-              <div className="text-center">
-                <span className="text-white text-2xl md:text-3xl lg:text-4xl font-bold">PVNG</span>
-                <div className="text-white text-xs md:text-xs lg:text-xs font-medium opacity-90 mt-1" style={{fontSize: '10px'}}>
-                  DRIVEN BY INNOVATION, DEFINED BY TRUST
+              {/* Text below logo */}
+              <div className="text-center" style={{direction: 'ltr', textAlign: currentLang === 'ar' ? 'right' : 'center'}}>
+                <div className="text-white text-2xl md:text-3xl lg:text-4xl font-bold mb-2" style={{transform: currentLang === 'ar' ? 'translateX(-50px)' : 'translateX(0)'}}>PVNG</div>
+                <div className="text-white text-xs md:text-xs lg:text-xs font-medium opacity-90" style={{fontSize: '10px'}}>
+                  YOUR PARTNER IN INTEGRATED SOLUTIONS
                 </div>
               </div>
             </div>
@@ -39,8 +47,8 @@ export default function Footer() {
 
           {/* Quick Links Section */}
           <div>
-            <h3 className={`text-lg font-semibold mb-6 text-white text-center ${currentLang === 'ar' ? 'text-right' : 'text-center'}`}>{langContent.footerQuickLinks}</h3>
-            <ul className="space-y-3">
+            <h3 className={`text-lg font-semibold mb-6 text-white ${currentLang === 'ar' ? 'text-right' : 'text-center'}`}>{langContent.footerQuickLinks}</h3>
+            <ul className="space-y-3" style={{textAlign: currentLang === 'ar' ? 'right' : 'center'}}>
               <li>
                 <Link href="/" className="text-gray-300 hover:text-blue-400 transition-colors duration-300 text-sm">
                   {langContent.footerHome}
@@ -71,40 +79,40 @@ export default function Footer() {
 
           {/* Services Section */}
           <div>
-            <h3 className={`text-lg font-semibold mb-6 text-white text-center ${currentLang === 'ar' ? 'text-right' : 'text-center'}`}>{langContent.footerOurServices}</h3>
-            <ul className="space-y-3">
+            <h3 className={`text-lg font-semibold mb-6 text-white ${currentLang === 'ar' ? 'text-right' : 'text-center'}`}>{langContent.footerOurServices}</h3>
+            <ul className="space-y-3" style={{textAlign: currentLang === 'ar' ? 'right' : 'center'}}>
               <li>
-                <span className="text-gray-300 hover:text-green-400 transition-colors duration-300 text-sm cursor-pointer">
+                <Link href="/services#service-1" className="text-gray-300 hover:text-green-400 transition-colors duration-300 text-sm">
                   {langContent.footerGasPipingSolutions}
-                </span>
+                </Link>
               </li>
               <li>
-                <span className="text-gray-300 hover:text-green-400 transition-colors duration-300 text-sm cursor-pointer">
+                <Link href="/services#service-2" className="text-gray-300 hover:text-green-400 transition-colors duration-300 text-sm">
                   {langContent.footerFireFightingSystems}
-                </span>
+                </Link>
               </li>
               <li>
-                <span className="text-gray-300 hover:text-green-400 transition-colors duration-300 text-sm cursor-pointer">
+                <Link href="/services#service-3" className="text-gray-300 hover:text-green-400 transition-colors duration-300 text-sm">
                   {langContent.footerLowVoltageSystems}
-                </span>
+                </Link>
               </li>
               <li>
-                <span className="text-gray-300 hover:text-green-400 transition-colors duration-300 text-sm cursor-pointer">
+                <Link href="/services#service-4" className="text-gray-300 hover:text-green-400 transition-colors duration-300 text-sm">
                   {langContent.footerSecuritySystems}
-                </span>
+                </Link>
               </li>
               <li>
-                <span className="text-gray-300 hover:text-green-400 transition-colors duration-300 text-sm cursor-pointer">
+                <Link href="/services#service-5" className="text-gray-300 hover:text-green-400 transition-colors duration-300 text-sm">
                   {langContent.footerSustainabilityConsulting}
-                </span>
+                </Link>
               </li>
             </ul>
           </div>
 
           {/* Contact Information Section */}
           <div>
-            <h3 className={`text-lg font-semibold mb-6 text-white text-center ${currentLang === 'ar' ? 'text-right' : 'text-center'}`}>{langContent.footerContactInfo}</h3>
-            <div className="space-y-4">
+            <h3 className={`text-lg font-semibold mb-6 text-white ${currentLang === 'ar' ? 'text-right' : 'text-center'}`}>{langContent.footerContactInfo}</h3>
+            <div className="space-y-4" style={{textAlign: currentLang === 'ar' ? 'right' : 'center'}}>
               <div>
                 <p className="text-gray-300 text-sm font-medium">{langContent.footerAddress}</p>
                 <p className="text-gray-400 text-sm">Dubai, UAE</p>
