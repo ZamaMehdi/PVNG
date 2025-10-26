@@ -1,19 +1,28 @@
 'use client';
 
-import { useLanguage } from '@/contexts/LanguageContext';
+import { useState } from 'react';
 import { generateCompanyPDF } from '@/lib/generatePDF';
 
 export default function PDFDownloadButton() {
-  const { langContent } = useLanguage();
+  const [isGenerating, setIsGenerating] = useState(false);
 
-  const handleDownload = () => {
-    generateCompanyPDF(langContent);
+  const handleDownload = async () => {
+    setIsGenerating(true);
+    try {
+      await generateCompanyPDF();
+    } catch (error) {
+      console.error('Error generating PDF:', error);
+      alert('Error generating PDF. Please try again.');
+    } finally {
+      setIsGenerating(false);
+    }
   };
 
   return (
     <button
       onClick={handleDownload}
-      className="fixed bottom-32 right-4 z-40 p-3 bg-gradient-to-r from-blue-600 to-blue-800 hover:from-blue-700 hover:to-blue-900 text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 group"
+      disabled={isGenerating}
+      className="fixed bottom-32 right-4 z-40 p-3 bg-gradient-to-r from-blue-600 to-blue-800 hover:from-blue-700 hover:to-blue-900 disabled:opacity-50 text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 group"
       aria-label="Download Company Information PDF"
       title="Download Company Information (PDF)"
     >

@@ -1,125 +1,125 @@
 import jsPDF from 'jspdf';
-import { Content } from './content';
+import html2canvas from 'html2canvas';
 
-// Helper function to strip HTML tags
-function stripHtmlTags(html: string): string {
-  const tmp = document.createElement('DIV');
-  tmp.innerHTML = html;
-  return tmp.textContent || tmp.innerText || '';
-}
+export async function generateCompanyPDF() {
+  try {
+    // Hide floating buttons during capture
+    const floatingButtons = document.querySelectorAll('.fixed');
+    floatingButtons.forEach((btn) => {
+      (btn as HTMLElement).style.visibility = 'hidden';
+    });
 
-export function generateCompanyPDF(langContent: Content) {
-  const doc = new jsPDF();
-  const pageWidth = doc.internal.pageSize.getWidth();
-  const pageHeight = doc.internal.pageSize.getHeight();
-  const margin = 15;
-  let yPosition = margin;
+    const pdf = new jsPDF('p', 'mm', 'a4');
+    const pdfWidth = 210; // A4 width in mm
+    const pdfHeight = 295; // A4 height in mm
 
-  // Helper function to add a new page if needed
-  const checkPageBreak = (requiredHeight: number) => {
-    if (yPosition + requiredHeight > pageHeight - margin) {
-      doc.addPage();
-      yPosition = margin;
-      return true;
+    // Try to find sections in order
+    const sections: HTMLElement[] = [];
+    
+    // Try to find the about section
+    const aboutSection = document.getElementById('about');
+    if (aboutSection && aboutSection instanceof HTMLElement) {
+      sections.push(aboutSection);
     }
-    return false;
-  };
 
-  // Helper function to add text with automatic wrapping
-  const addText = (text: string, fontSize: number, isBold: boolean = false, color: number[] = [0, 0, 0]) => {
-    doc.setFontSize(fontSize);
-    doc.setTextColor(color[0], color[1], color[2]);
-    if (isBold) {
-      doc.setFont('helvetica', 'bold');
-    } else {
-      doc.setFont('helvetica', 'normal');
+    // Try to find the services section
+    const servicesSection = document.getElementById('services-showcase') || 
+                           document.querySelector('.services-showcase');
+    if (servicesSection && servicesSection instanceof HTMLElement) {
+      sections.push(servicesSection);
+    }
+
+    // Try to find the contact section
+    const contactSection = document.getElementById('contact');
+    if (contactSection && contactSection instanceof HTMLElement) {
+      sections.push(contactSection);
+    }
+
+    if (sections.length === 0) {
+      // Fallback: capture the entire main content
+      const mainContent = document.querySelector('main');
+      if (mainContent) {
+        const canvas = await html2canvas(mainContent as HTMLElement, {
+          scale: 2,
+          useCORS: true,
+          logging: false,
+          windowWidth: mainContent.scrollWidth,
+          windowHeight: mainContent.scrollHeight
+        });
+        
+        const imgData = canvas.toDataURL('image/png');
+        const imgWidth = pdfWidth;
+        const imgHeight = (canvas.height * pdfWidth) / canvas.width;
+        
+        pdf.addImage(imgData, 'PNG', 0, 0, imgWidth, imgHeight);
+        
+        // Add new pages if content is longer than one page
+        let position = imgHeight - pdfHeight;
+        while (position > 0) {
+          pdf.addPage();
+          const imgHeightPage = position;
+          pdf.addImage(imgData, 'PNG', 0, -position, imgWidth, imgHeight);
+          position -= pdfHeight;
+        }
+        
+        pdf.save('PVNG-Company-Information.pdf');
+        
+        // Restore floating buttons
+        floatingButtons.forEach((btn) => {
+          (btn as HTMLElement).style.visibility = 'visible';
+        });
+        return;
+      }
+    }
+
+    // Capture each section individually
+    for (let i = 0; i < sections.length; i++) {
+      const section = sections[i];
+      
+      // Scroll section into view
+      section.scrollIntoView({ behavior: 'instant', block: 'start' });
+      
+      // Wait a bit for any animations
+      await new Promise(resolve => setTimeout(resolve, 100));
+      
+      const canvas = await html2canvas(section, {
+        scale: 2,
+        useCORS: true,
+        logging: false,
+        backgroundColor: '#ffffff',
+        windowWidth: section.scrollWidth,
+        windowHeight: section.scrollHeight
+      });
+      
+      const imgData = canvas.toDataURL('image/png');
+      const imgWidth = pdfWidth;
+      const imgHeight = (canvas.height * pdfWidth) / canvas.width;
+      
+      pdf.addImage(imgData, 'PNG', 0, 0, imgWidth, imgHeight);
+      
+      // Add new pages if content is longer than one page
+      let position = imgHeight - pdfHeight;
+      while (position > 0) {
+        pdf.addPage();
+        pdf.addImage(imgData, 'PNG', 0, -position, imgWidth, imgHeight);
+        position -= pdfHeight;
+      }
+      
+      // Add space between sections
+      if (i < sections.length - 1) {
+        pdf.addPage();
+      }
     }
     
-    const textLines = doc.splitTextToSize(stripHtmlTags(text), pageWidth - 2 * margin);
+    pdf.save('PVNG-Company-Information.pdf');
     
-    checkPageBreak(textLines.length * fontSize * 1.5);
-    
-    doc.text(textLines, margin, yPosition);
-    yPosition += textLines.length * fontSize * 1.5;
-    return yPosition;
-  };
-
-  // Title
-  addText(langContent.headerTitle, 18, true, [0, 60, 130]);
-  yPosition += 5;
-
-  // About Section
-  addText(langContent.aboutTitle, 16, true, [0, 100, 200]);
-  yPosition += 3;
-  addText(langContent.aboutPara1, 10, false, [50, 50, 50]);
-  addText(langContent.aboutPara2, 10, false, [50, 50, 50]);
-  addText(langContent.aboutPara3, 10, false, [50, 50, 50]);
-  addText(langContent.aboutPara4, 10, false, [50, 50, 50]);
-  yPosition += 10;
-
-  // Services Section
-  addText(langContent.servicesTitle, 16, true, [0, 100, 200]);
-  yPosition += 3;
-  addText(langContent.servicesIntro, 10, false, [50, 50, 50]);
-  yPosition += 5;
-
-  // Service 1
-  addText(langContent.service1Heading, 12, true, [200, 0, 0]);
-  yPosition += 3;
-  addText(langContent.service1Para, 9, false, [50, 50, 50]);
-  yPosition += 3;
-
-  // Service 2
-  addText(langContent.service2Heading, 12, true, [0, 100, 200]);
-  yPosition += 3;
-  addText(langContent.service2Para, 9, false, [50, 50, 50]);
-  yPosition += 3;
-
-  // Service 3
-  addText(langContent.service3Heading, 12, true, [200, 100, 0]);
-  yPosition += 3;
-  addText(langContent.service3Para, 9, false, [50, 50, 50]);
-  yPosition += 3;
-
-  // Service 4
-  addText(langContent.service4Heading, 12, true, [100, 0, 200]);
-  yPosition += 3;
-  addText(langContent.service4Para, 9, false, [50, 50, 50]);
-  yPosition += 3;
-
-  // Service 5
-  addText(langContent.service5Heading, 12, true, [0, 150, 0]);
-  yPosition += 3;
-  addText(langContent.service5Para, 9, false, [50, 50, 50]);
-  yPosition += 10;
-
-  // Contact Section
-  addText('Contact Information', 16, true, [0, 100, 200]);
-  yPosition += 5;
-
-  // Phone
-  addText('Phone:', 11, true, [200, 0, 100]);
-  addText('+971 52 211 0379', 9, false, [50, 50, 50]);
-  yPosition += 3;
-
-  // Email
-  addText('Email:', 11, true, [100, 0, 200]);
-  addText('finance@pvngelectromechanical.com', 9, false, [50, 50, 50]);
-  addText('info@pvngelectromechanical.com', 9, false, [50, 50, 50]);
-  addText('sales@pvngelectromechanical.com', 9, false, [50, 50, 50]);
-  addText('hr@pvngelectromechanical.com', 9, false, [50, 50, 50]);
-  yPosition += 3;
-
-  // Address
-  addText('Address:', 11, true, [200, 0, 100]);
-  addText(langContent.contactAddressLine1, 9, false, [50, 50, 50]);
-  addText(langContent.contactAddressLine2, 9, false, [50, 50, 50]);
-  addText(langContent.contactAddressLine3, 9, false, [50, 50, 50]);
-  if (langContent.contactAddressLine4) {
-    addText(langContent.contactAddressLine4, 9, false, [50, 50, 50]);
+    // Restore floating buttons
+    floatingButtons.forEach((btn) => {
+      (btn as HTMLElement).style.visibility = 'visible';
+    });
+  } catch (error) {
+    console.error('Error generating PDF:', error);
+    alert('Error generating PDF. Please try again.');
   }
-
-  // Save the PDF
-  doc.save('PVNG-Company-Information.pdf');
 }
 

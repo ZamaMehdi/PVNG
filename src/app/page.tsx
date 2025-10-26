@@ -94,7 +94,7 @@ export default function Home() {
       </section>
 
       {/* Services Showcase */}
-      <section className="py-4 md:py-6 lg:py-8 px-5 bg-white relative overflow-hidden services-showcase">
+      <section id="services-showcase" className="py-4 md:py-6 lg:py-8 px-5 bg-white relative overflow-hidden services-showcase">
         {/* Subtle Blue Background Elements */}
         <div className="absolute top-10 right-10 w-64 h-64 bg-blue-50 rounded-full blur-3xl animate-pulse"></div>
         <div className="absolute bottom-10 left-10 w-80 h-80 bg-blue-100/30 rounded-full blur-3xl animate-pulse" style={{animationDelay: '2s'}}></div>
