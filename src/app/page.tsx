@@ -56,9 +56,9 @@ export default function Home() {
         />
       </section>
 
-      {/* Sustainability Section */}
+      {/* Sustainability Section - A4 Page */}
       <section className="py-8 md:py-12 lg:py-16 px-5 bg-gradient-to-br from-blue-50 to-green-50 sustainability-section">
-        <div className="max-w-6xl mx-auto text-center">
+        <div className="a4-page max-w-6xl mx-auto text-center">
           <div className="fade-in">
             <h2 className="section-title text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold mb-6 relative" style={{textAlign: 'center', direction: 'ltr'}}>
               <span className="bg-gradient-to-r from-green-600 via-blue-600 to-green-700 bg-clip-text text-transparent" style={{textAlign: 'center', direction: 'ltr'}}>
@@ -99,7 +99,7 @@ export default function Home() {
         <div className="absolute top-10 right-10 w-64 h-64 bg-blue-50 rounded-full blur-3xl animate-pulse"></div>
         <div className="absolute bottom-10 left-10 w-80 h-80 bg-blue-100/30 rounded-full blur-3xl animate-pulse" style={{animationDelay: '2s'}}></div>
         
-        <div className="max-w-7xl mx-auto relative z-10">
+        <div className="a4-page max-w-7xl mx-auto relative z-10">
           {/* Enhanced Header Section */}
           <div className="text-center mb-8">
             <h2 className="section-title text-2xl sm:text-3xl md:text-4xl font-bold mb-0 relative" style={{textAlign: 'center', direction: 'ltr'}}>
@@ -249,7 +249,7 @@ export default function Home() {
       </section>
 
 
-      {/* Stats Section */}
+      {/* Stats Section - A4 Page */}
       <section className="pt-4 pb-8 md:pt-8 md:pb-16 lg:pt-12 lg:pb-20 px-5 bg-gradient-to-br from-gray-900 via-blue-900 to-gray-800 relative overflow-hidden">
         {/* Background Pattern */}
         <div className="absolute inset-0 opacity-10">
@@ -258,7 +258,7 @@ export default function Home() {
           <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-60 h-60 bg-blue-500 rounded-full blur-3xl"></div>
         </div>
         
-        <div className="max-w-6xl mx-auto relative z-10">
+        <div className="a4-page max-w-6xl mx-auto relative z-10">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8 justify-items-center">
             <div className="text-center fade-in">
               <div className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-1 md:mb-2 drop-shadow-lg">10+</div>
