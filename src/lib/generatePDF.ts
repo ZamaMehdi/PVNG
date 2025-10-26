@@ -10,8 +10,8 @@ export async function generateCompanyPDF() {
     });
 
     const pdf = new jsPDF('p', 'mm', 'a4');
-    const pdfWidth = 210; // A4 width in mm
-    const pdfHeight = 295; // A4 height in mm
+    const pdfWidth = 210; // A4 width in mm (210mm)
+    const pdfHeight = 297; // A4 height in mm (297mm)
 
     // Try to find sections in order
     const sections: HTMLElement[] = [];

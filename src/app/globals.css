@@ -1445,3 +1445,39 @@ html[lang="ar"] .max-w-5xl h3 {
   text-align: center !important;
   direction: ltr !important;
 }
+
+/* A4 Page Container */
+.a4-page {
+  width: 210mm;
+  min-height: 297mm;
+  max-width: 100%;
+  margin: 0 auto;
+  background: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20mm;
+  box-sizing: border-box;
+}
+
+@media screen {
+  .a4-page {
+    margin: 20px auto;
+  }
+}
+
+@media print {
+  .a4-page {
+    margin: 0;
+    box-shadow: none;
+    page-break-after: always;
+  }
+  
+  @page {
+    size: A4;
+    margin: 0;
+  }
+  
+  body {
+    margin: 0;
+    padding: 0;
+  }
+}
