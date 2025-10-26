@@ -8,7 +8,7 @@ function stripHtmlTags(html: string): string {
   return tmp.textContent || tmp.innerText || '';
 }
 
-export function generateCompanyPDF(langContent: any) {
+export function generateCompanyPDF(langContent: Content) {
   const doc = new jsPDF();
   const pageWidth = doc.internal.pageSize.getWidth();
   const pageHeight = doc.internal.pageSize.getHeight();
