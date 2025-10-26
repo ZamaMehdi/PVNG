@@ -3,6 +3,7 @@ import { Inter, Cairo } from 'next/font/google'
 import './globals.css'
 import { LanguageProvider } from '@/contexts/LanguageContext'
 import FloatingChatButton from '@/components/FloatingChatButton'
+import PDFDownloadButton from '@/components/PDFDownloadButton'
 
 const inter = Inter({ 
   subsets: ['latin'],
@@ -93,6 +94,7 @@ export default function RootLayout({
         <LanguageProvider>
           {children}
           <FloatingChatButton />
+          <PDFDownloadButton />
         </LanguageProvider>
       </body>
     </html>
