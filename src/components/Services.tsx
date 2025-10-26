@@ -249,19 +249,19 @@ export default function Services() {
                         <div className={`flex items-start gap-3 ${currentLang === 'ar' ? 'flex-row-reverse' : ''}`}>
                           <div className="w-2 h-2 bg-gradient-to-r from-blue-500 to-blue-600 rounded-full mt-2 flex-shrink-0"></div>
                           <p className="text-base text-black">
-                            <span dangerouslySetInnerHTML={{ __html: langContent[`service${service.id}Feature1Desc` as keyof typeof langContent] }} />
+                            <span dangerouslySetInnerHTML={{ __html: langContent[`service${service.id}Feature1Desc` as keyof typeof langContent] as string }} />
                           </p>
                         </div>
                         <div className={`flex items-start gap-3 ${currentLang === 'ar' ? 'flex-row-reverse' : ''}`}>
                           <div className="w-2 h-2 bg-gradient-to-r from-blue-500 to-blue-600 rounded-full mt-2 flex-shrink-0"></div>
                           <p className="text-base text-black">
-                            <span dangerouslySetInnerHTML={{ __html: langContent[`service${service.id}Feature2Desc` as keyof typeof langContent] }} />
+                            <span dangerouslySetInnerHTML={{ __html: langContent[`service${service.id}Feature2Desc` as keyof typeof langContent] as string }} />
                           </p>
                         </div>
                         <div className={`flex items-start gap-3 ${currentLang === 'ar' ? 'flex-row-reverse' : ''}`}>
                           <div className="w-2 h-2 bg-gradient-to-r from-blue-500 to-blue-600 rounded-full mt-2 flex-shrink-0"></div>
                           <p className="text-base text-black">
-                            <span dangerouslySetInnerHTML={{ __html: langContent[`service${service.id}Feature3Desc` as keyof typeof langContent] }} />
+                            <span dangerouslySetInnerHTML={{ __html: langContent[`service${service.id}Feature3Desc` as keyof typeof langContent] as string }} />
                           </p>
                         </div>
                       </div>
