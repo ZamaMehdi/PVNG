@@ -10,107 +10,41 @@ export async function generateCompanyPDF() {
     });
 
     const pdf = new jsPDF('p', 'mm', 'a4');
-    const pdfWidth = 210; // A4 width in mm (210mm)
-    const pdfHeight = 297; // A4 height in mm (297mm)
+    const pdfWidth = 210; // A4 width in mm
+    const pdfHeight = 295; // A4 height in mm
 
-    // Try to find sections in order
-    const sections: HTMLElement[] = [];
-    
-    // Try to find the about section
-    const aboutSection = document.getElementById('about');
-    if (aboutSection && aboutSection instanceof HTMLElement) {
-      sections.push(aboutSection);
-    }
-
-    // Try to find the services section
-    const servicesSection = document.getElementById('services-showcase') || 
-                           document.querySelector('.services-showcase');
-    if (servicesSection && servicesSection instanceof HTMLElement) {
-      sections.push(servicesSection);
-    }
-
-    // Try to find the contact section
-    const contactSection = document.getElementById('contact');
-    if (contactSection && contactSection instanceof HTMLElement) {
-      sections.push(contactSection);
-    }
-
-    if (sections.length === 0) {
-      // Fallback: capture the entire main content
-      const mainContent = document.querySelector('main');
-      if (mainContent) {
-        const canvas = await html2canvas(mainContent as HTMLElement, {
-          scale: 2,
-          useCORS: true,
-          logging: false,
-          windowWidth: mainContent.scrollWidth,
-          windowHeight: mainContent.scrollHeight
-        });
-        
-        const imgData = canvas.toDataURL('image/png');
-        const imgWidth = pdfWidth;
-        const imgHeight = (canvas.height * pdfWidth) / canvas.width;
-        
-        pdf.addImage(imgData, 'PNG', 0, 0, imgWidth, imgHeight);
-        
-        // Add new pages if content is longer than one page
-        let position = imgHeight - pdfHeight;
-        while (position > 0) {
-          pdf.addPage();
-          const imgHeightPage = position;
-          pdf.addImage(imgData, 'PNG', 0, -position, imgWidth, imgHeight);
-          position -= pdfHeight;
-        }
-        
-        pdf.save('PVNG-Company-Information.pdf');
-        
-        // Restore floating buttons
-        floatingButtons.forEach((btn) => {
-          (btn as HTMLElement).style.visibility = 'visible';
-        });
-        return;
-      }
-    }
-
-    // Capture each section individually
-    for (let i = 0; i < sections.length; i++) {
-      const section = sections[i];
-      
-      // Scroll section into view
-      section.scrollIntoView({ behavior: 'instant', block: 'start' });
-      
-      // Wait a bit for any animations
-      await new Promise(resolve => setTimeout(resolve, 100));
-      
-      const canvas = await html2canvas(section, {
+    // Helper function to add a page to PDF
+    const addPageToPDF = (content: HTMLElement) => {
+      return html2canvas(content, {
         scale: 2,
         useCORS: true,
         logging: false,
         backgroundColor: '#ffffff',
-        windowWidth: section.scrollWidth,
-        windowHeight: section.scrollHeight
+        windowWidth: content.scrollWidth,
+        windowHeight: content.scrollHeight
+      }).then(canvas => {
+        const imgData = canvas.toDataURL('image/png');
+        const imgWidth = pdfWidth;
+        const imgHeight = (canvas.height * pdfWidth) / canvas.width;
+
+        let remainingHeight = imgHeight;
+        
+        while (remainingHeight > 0) {
+          pdf.addPage();
+          const heightForThisPage = Math.min(remainingHeight, pdfHeight);
+          pdf.addImage(imgData, 'PNG', 0, -(imgHeight - remainingHeight), imgWidth, imgHeight);
+          remainingHeight -= pdfHeight;
+        }
       });
-      
-      const imgData = canvas.toDataURL('image/png');
-      const imgWidth = pdfWidth;
-      const imgHeight = (canvas.height * pdfWidth) / canvas.width;
-      
-      pdf.addImage(imgData, 'PNG', 0, 0, imgWidth, imgHeight);
-      
-      // Add new pages if content is longer than one page
-      let position = imgHeight - pdfHeight;
-      while (position > 0) {
-        pdf.addPage();
-        pdf.addImage(imgData, 'PNG', 0, -position, imgWidth, imgHeight);
-        position -= pdfHeight;
-      }
-      
-      // Add space between sections
-      if (i < sections.length - 1) {
-        pdf.addPage();
-      }
+    };
+
+    // Get main content from current page
+    const mainContent = document.querySelector('main');
+    if (mainContent) {
+      await addPageToPDF(mainContent as HTMLElement);
     }
-    
+
+    // Save PDF
     pdf.save('PVNG-Company-Information.pdf');
     
     // Restore floating buttons
