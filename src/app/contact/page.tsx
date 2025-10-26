@@ -136,6 +136,7 @@ export default function ContactPage() {
                   <p className="text-gray-700 font-medium" style={{direction: 'ltr', textAlign: 'center', textAlignLast: 'center', unicodeBidi: 'bidi-override', display: 'block', width: '100%'}}>finance@pvngelectromechanical.com</p>
                   <p className="text-gray-700 font-medium" style={{direction: 'ltr', textAlign: 'center', textAlignLast: 'center', unicodeBidi: 'bidi-override', display: 'block', width: '100%'}}>info@pvngelectromechanical.com</p>
                   <p className="text-gray-700 font-medium" style={{direction: 'ltr', textAlign: 'center', textAlignLast: 'center', unicodeBidi: 'bidi-override', display: 'block', width: '100%'}}>sales@pvngelectromechanical.com</p>
+                  <p className="text-gray-700 font-medium" style={{direction: 'ltr', textAlign: 'center', textAlignLast: 'center', unicodeBidi: 'bidi-override', display: 'block', width: '100%'}}>hr@pvngelectromechanical.com</p>
                 </div>
                 <p className="text-sm text-gray-500 text-center" style={{direction: 'ltr', textAlign: 'center', textAlignLast: 'center', unicodeBidi: 'bidi-override', display: 'block', width: '100%'}}>{langContent.contactEmailDesc}</p>
               </div>
@@ -286,8 +287,8 @@ export default function ContactPage() {
                         <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
                 </svg>
                       <p className="text-gray-500">Interactive Map</p>
-                      <p className="text-sm text-gray-400">BMW Road, Near Sedana Trading</p>
-                      <p className="text-sm text-gray-400">Sharjah Industrial 1, UAE</p>
+                      <p className="text-sm text-gray-400">Abraj Center, Office no. 904</p>
+                      <p className="text-sm text-gray-400">Naif, Dubai, UAE</p>
                     </div>
                   </div>
                 </div>
